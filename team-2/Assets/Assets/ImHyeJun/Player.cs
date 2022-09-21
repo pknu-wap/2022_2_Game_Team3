@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
+            Debug.Log("´Ù½Ã false·Î");
             isJump = false;
         }
     }
