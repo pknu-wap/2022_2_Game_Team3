@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     float hAxis, vAxis;     // 어느 방향으로 이동할 것인지 입력받아줄 변수.
-    float playerSpeed = 5;  // 플레이어의 기본 이동속도.
+    float playerSpeed = 10;  // 플레이어의 기본 이동속도.
     float jumpPower = 5;    // 플레이어의 점프력
 
     bool isJump;            // 점프 중인지 확인해줄 bool변수.
