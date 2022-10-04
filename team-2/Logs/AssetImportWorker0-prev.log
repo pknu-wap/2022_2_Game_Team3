@@ -1,0 +1,1768 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.10f1 (1c7d0df0160b) revision 1867021'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'ko' Physical Memory: 16268 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\unity\2021.3.10f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Wap/Game_/2022_2_Game_Team3/team-2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59213
+Successfully changed project path to: D:/Wap/Game_/2022_2_Game_Team3/team-2
+D:/Wap/Game_/2022_2_Game_Team3/team-2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 248.22 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
+[Subsystems] Discovering subsystems at path D:/unity/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Wap/Game_/2022_2_Game_Team3/team-2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Vendor:   NVIDIA
+    VRAM:     4021 MB
+    Driver:   24.21.13.9924
+Initialize mono
+Mono path[0] = 'D:/unity/2021.3.10f1/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/unity/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004310 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 185.28 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.131 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1132ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (895ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (145ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (643ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (186ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (352ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.015594 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.294 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2295ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (1775ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (539ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (172ms)
+			SetupLoadedEditorAssemblies (824ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (161ms)
+				ProcessInitializeOnLoadAttributes (551ms)
+				ProcessInitializeOnLoadMethodAttributes (92ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3767 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (1.3 MB). Loaded Objects now: 4240.
+Memory consumption went from 164.5 MB to 163.1 MB.
+Total: 6.619000 ms (FindLiveObjects: 0.669800 ms CreateObjectMapping: 0.474900 ms MarkObjects: 4.754000 ms  DeleteObjects: 0.718800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 17641.594540 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa10d29aec5969e9b5cb103052f3e07') in 1.485968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2790.563586 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f376c0d86a41e7da8b32d4a48bdbd8e6') in 0.353867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.734307 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4373e2d622db3b8bcbcc02e8d0c66414') in 0.279367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.249788 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e2718481bff57968fbbc2c086fb494') in 0.396247 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.367414 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359569263d64917fe12cf9b3adb46d63') in 0.273045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.669658 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd087188a11c741fab4ce1661e71df753') in 0.283370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.746278 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eea8f92f8388fbbee08e5119f01bd835') in 0.367519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.655725 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe8dc4694e64c5bc0553cb1facf32d1c') in 0.319574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.734572 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eef2d29fd36baab837fadbd41264d78') in 0.326817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.855940 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b5c62499e1ba9c29f6c6c80306d33cc') in 0.381504 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.975600 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f222aa8e0c4c407ab9d96846e8c5bcc') in 0.348535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.086505 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b504c2d2ba010bafaf7000f5e4fef1e2') in 0.335688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.271466 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf20ab7f7c40ccfbba0be935ce5e226') in 0.301584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.929698 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0cde0b6a94eb9b84b675ca5ac4f64b') in 0.290373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.777182 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a1b2d55f7f5784e9ce80254f4d9892') in 0.443961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.652652 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee8f10fcd8311449a4f765936d88194') in 0.297279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.324929 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b33cedc84670e599a9bf1afbb0a309b') in 0.305916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.333068 seconds.
+  path: Assets/Assets/nayeong/Maze_merge.prefab
+  artifactKey: Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/nayeong/Maze_merge.prefab using Guid(a2a8972c2f30ad84b91e87a455e5979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f493dac551d52ff790e7f08426213772') in 0.289444 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008954 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.309 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1309ms)
+		BeginReloadAssembly (173ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (1017ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (369ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (418ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (272ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.20 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (1.3 MB). Loaded Objects now: 4253.
+Memory consumption went from 166.7 MB to 165.3 MB.
+Total: 6.598900 ms (FindLiveObjects: 0.815200 ms CreateObjectMapping: 0.471200 ms MarkObjects: 4.709600 ms  DeleteObjects: 0.601400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009366 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.702 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1703ms)
+		BeginReloadAssembly (171ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1414ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (376ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (802ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (108ms)
+				ProcessInitializeOnLoadAttributes (610ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.55 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (1.3 MB). Loaded Objects now: 4256.
+Memory consumption went from 166.6 MB to 165.3 MB.
+Total: 8.435700 ms (FindLiveObjects: 0.444500 ms CreateObjectMapping: 0.397400 ms MarkObjects: 5.832500 ms  DeleteObjects: 1.759500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008875 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.885 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1886ms)
+		BeginReloadAssembly (178ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1585ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (390ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (116ms)
+			SetupLoadedEditorAssemblies (847ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (620ms)
+				ProcessInitializeOnLoadMethodAttributes (86ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.19 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (1.3 MB). Loaded Objects now: 4259.
+Memory consumption went from 166.6 MB to 165.4 MB.
+Total: 6.487600 ms (FindLiveObjects: 0.592100 ms CreateObjectMapping: 1.892000 ms MarkObjects: 3.271300 ms  DeleteObjects: 0.730900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008943 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.67 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.686 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1687ms)
+		BeginReloadAssembly (193ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1371ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (445ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (633ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (161ms)
+				ProcessInitializeOnLoadAttributes (382ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 7.64 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (1.3 MB). Loaded Objects now: 4262.
+Memory consumption went from 166.7 MB to 165.4 MB.
+Total: 6.802800 ms (FindLiveObjects: 1.662000 ms CreateObjectMapping: 0.729100 ms MarkObjects: 3.498700 ms  DeleteObjects: 0.911100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009817 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.943 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1944ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1644ms)
+			LoadAssemblies (150ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (477ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (798ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (116ms)
+				ProcessInitializeOnLoadAttributes (588ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.60 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (1.3 MB). Loaded Objects now: 4265.
+Memory consumption went from 166.7 MB to 165.4 MB.
+Total: 8.390100 ms (FindLiveObjects: 0.651000 ms CreateObjectMapping: 0.729200 ms MarkObjects: 5.151000 ms  DeleteObjects: 1.857400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009203 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Wap\Game_\2022_2_Game_Team3\team-2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.71 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.155 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2156ms)
+		BeginReloadAssembly (185ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1831ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (558ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (148ms)
+			SetupLoadedEditorAssemblies (686ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (472ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 22.65 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3705 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (1.3 MB). Loaded Objects now: 4268.
+Memory consumption went from 166.7 MB to 165.4 MB.
+Total: 9.204300 ms (FindLiveObjects: 0.466400 ms CreateObjectMapping: 0.574000 ms MarkObjects: 5.884500 ms  DeleteObjects: 2.277900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 899.374785 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Cor_A.fbx
+  artifactKey: Guid(b3455d6da5e02d44280a92b0464d7580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Cor_A.fbx using Guid(b3455d6da5e02d44280a92b0464d7580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad01e8c249468804f78b21c8fb07c6b9') in 0.431828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Door_A.fbx
+  artifactKey: Guid(6a1cbdbcd9f735f45beaa6e43bf6255e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Door_A.fbx using Guid(6a1cbdbcd9f735f45beaa6e43bf6255e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44225572c1b2094b164179b868803342') in 0.124437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Mid_A.fbx
+  artifactKey: Guid(6a7c44512bf914d4b8dcbba24c18036d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Mid_A.fbx using Guid(6a7c44512bf914d4b8dcbba24c18036d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7d2c31e052432533926cf8f3dd221a') in 0.095005 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_A.fbx
+  artifactKey: Guid(aaaa3cba39c1a594e9b35c7d7fed305a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_A.fbx using Guid(aaaa3cba39c1a594e9b35c7d7fed305a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5f6bdf22a9d6738c48d25a25189a26') in 0.127943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_B.fbx
+  artifactKey: Guid(fd23624531a719f44a4bf443aabeedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_B.fbx using Guid(fd23624531a719f44a4bf443aabeedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97b109dd2bbdcce1cc74421f880335fe') in 0.098187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_WindowGlass_A.fbx
+  artifactKey: Guid(c72be62dd9ba7fd479707075388b6e72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_WindowGlass_A.fbx using Guid(c72be62dd9ba7fd479707075388b6e72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e3e454fb9ab5c1e6b0674783a35dee8') in 0.207192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_B.fbx
+  artifactKey: Guid(a8c5be48229be9341b36a57934f9ea49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_B.fbx using Guid(a8c5be48229be9341b36a57934f9ea49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56976c14a52f783ee8ca379a3080b3b5') in 0.120299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Cor_A.fbx
+  artifactKey: Guid(d895d8176d5919c4d9768b82383a749f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Cor_A.fbx using Guid(d895d8176d5919c4d9768b82383a749f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76e8e8a7092195702c94e5d255ad9fd9') in 0.120445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_B.fbx
+  artifactKey: Guid(3f8a4d9756e417441a95a1013bd3c8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_B.fbx using Guid(3f8a4d9756e417441a95a1013bd3c8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56fe7a04b9358f09597a5639f9ed66c9') in 0.245929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Int_B.fbx
+  artifactKey: Guid(ead2e73ec878f8b42a73e03ff67ff596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Int_B.fbx using Guid(ead2e73ec878f8b42a73e03ff67ff596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d2f46156ea8f200fe3e03a8e73dad6d') in 0.142992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_A_COL.fbx
+  artifactKey: Guid(f583dd76cea3c4a429589540dd9994c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_A_COL.fbx using Guid(f583dd76cea3c4a429589540dd9994c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef8b02cc9407d1c13c0ea786286cdae9') in 0.228282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Stairs_A.fbx
+  artifactKey: Guid(6ffd7e9a2e2250941b5ab74292e78c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Stairs_A.fbx using Guid(6ffd7e9a2e2250941b5ab74292e78c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '947140919653b243e6388fb74a3284cc') in 0.123962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Mid_B.fbx
+  artifactKey: Guid(da58fceaad4545b40bbf562547c9627f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Mid_B.fbx using Guid(da58fceaad4545b40bbf562547c9627f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '835df7a6fea935b0d79112e3509e82b2') in 0.124467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_IntDivider_A.fbx
+  artifactKey: Guid(6e620a913db90694a9a58b3392d3688d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_IntDivider_A.fbx using Guid(6e620a913db90694a9a58b3392d3688d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07be5115f0abe55ac32bff2f9ab583b5') in 0.188172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Roof_Mid_A.fbx
+  artifactKey: Guid(364711e18925f244884bed0f02972b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Roof_Mid_A.fbx using Guid(364711e18925f244884bed0f02972b8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e105ca6d3214d1749c220daa671ee8fb') in 0.114383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_B_COL.fbx
+  artifactKey: Guid(b55200d7448693a43b7a848b11a46f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_B_COL.fbx using Guid(b55200d7448693a43b7a848b11a46f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e05db7c510f859126776e1e0ffc3dd6') in 0.131207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Cor_A_COL.fbx
+  artifactKey: Guid(9e41b404f42207945b15f0ffb5253cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Cor_A_COL.fbx using Guid(9e41b404f42207945b15f0ffb5253cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2d6d6ae4226e4f152d897b6d027297b') in 0.101352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Mid_A.fbx
+  artifactKey: Guid(abb38988e3920b34b8694fa4e1f0193c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Mid_A.fbx using Guid(abb38988e3920b34b8694fa4e1f0193c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e544825cd9b9b1fdefade7dd1e960b59') in 0.057486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Stairs_A_COL.fbx
+  artifactKey: Guid(e7c1a8b720a24e044b003bd80fa39ac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Base_Stairs_A_COL.fbx using Guid(e7c1a8b720a24e044b003bd80fa39ac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56be209e2cea0487c228830ab7b20a53') in 0.076716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Cor_A.fbx
+  artifactKey: Guid(42f0acf94313a9a4790bb9c1d841e75f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Cor_A.fbx using Guid(42f0acf94313a9a4790bb9c1d841e75f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e57dbbec7d73177c85362eb5595deb1e') in 0.081286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Mid_B.fbx
+  artifactKey: Guid(a4da64e6469ddb849af32c4433af3855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Mid_B.fbx using Guid(a4da64e6469ddb849af32c4433af3855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d9a22981c3ae86bdbbae48e046778b7') in 0.110217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_C_COL.fbx
+  artifactKey: Guid(b704d96549581a240ad2450e3b33b42b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_C_COL.fbx using Guid(b704d96549581a240ad2450e3b33b42b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4edf8b16b0d6bb2b58439d5e9e9650b5') in 0.039129 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Deco_Beam_A.fbx
+  artifactKey: Guid(aff3a4c3ec4f85946aec6f79aa265e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Deco_Beam_A.fbx using Guid(aff3a4c3ec4f85946aec6f79aa265e8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3e1da1aed4f179e8e8189c2cd2ceba') in 0.116888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_C.fbx
+  artifactKey: Guid(fbdc0b46211af014dbc348bcceba3018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_C.fbx using Guid(fbdc0b46211af014dbc348bcceba3018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7d267430850d48419357aa5ad8dbb7') in 0.049977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_A.fbx
+  artifactKey: Guid(2d0a5922ec5df8744a7ee8432238ba3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_A.fbx using Guid(2d0a5922ec5df8744a7ee8432238ba3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef4f7f16de82fe7628ad686e13eaaa8') in 0.139749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Cor_A.fbx
+  artifactKey: Guid(13394e3b0bd7def44903980377610326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Cor_A.fbx using Guid(13394e3b0bd7def44903980377610326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd88cd51cb7b3cbb669494a8c6d9c4cfe') in 0.124089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_B_COL.fbx
+  artifactKey: Guid(9a53775da8e00df4abed7f0224716aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_B_COL.fbx using Guid(9a53775da8e00df4abed7f0224716aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'add2286223ef8b38fe454979243946dd') in 0.114234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_C.fbx
+  artifactKey: Guid(bb90ea7b393003a4fadde51d212de48d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_C.fbx using Guid(bb90ea7b393003a4fadde51d212de48d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba54f1cc9c77ca977a49e108e8af042') in 0.106628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_E.fbx
+  artifactKey: Guid(ba55e0039e454dd48b32f2afc5b51300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_E.fbx using Guid(ba55e0039e454dd48b32f2afc5b51300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd46dfb99b9c5f215ad2b58fb5ee1eb98') in 0.139188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_A.fbx
+  artifactKey: Guid(70e5c6c9abcfa38428f7dec2ae1298ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_A.fbx using Guid(70e5c6c9abcfa38428f7dec2ae1298ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74ef6ff96baad8eee3479468de384b77') in 0.115582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_A_4x.fbx
+  artifactKey: Guid(bc91e04fa85386041b9e5dc13c8f4f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Floor_Mid_A_4x.fbx using Guid(bc91e04fa85386041b9e5dc13c8f4f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a44dc33f03451f9f3ec910f7deec7fc') in 0.038558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Mid_A_DM.fbx
+  artifactKey: Guid(32435c86cf2039a4da130e4d12df7907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Mid_A_DM.fbx using Guid(32435c86cf2039a4da130e4d12df7907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d2b0b9eeb5a2935780a19d39f173555') in 0.088950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Cor1.fbx
+  artifactKey: Guid(a8348a8caf68b214e8b9aced3556e8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Cor1.fbx using Guid(a8348a8caf68b214e8b9aced3556e8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d015e762b7d0af9bb6d4eece2edf91f') in 0.095722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Cap_A.fbx
+  artifactKey: Guid(14264e8dda7c4b243b64e218ed1d41fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Handrail1_Cap_A.fbx using Guid(14264e8dda7c4b243b64e218ed1d41fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3069af0b7eada1ec42be8b8e0a1055a') in 0.091832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Column_Top_A.fbx
+  artifactKey: Guid(b9a58136eccdcba49a7bb3b09b3036da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Column_Top_A.fbx using Guid(b9a58136eccdcba49a7bb3b09b3036da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd423c7a9a193da63575c07cc209fd25e') in 0.142513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Door_B.fbx
+  artifactKey: Guid(cff6467a6cb18b347b329fb583a43a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Door_B.fbx using Guid(cff6467a6cb18b347b329fb583a43a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e3c3c35b2f1a99245904991ad54979b') in 0.127960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Mid_A.fbx
+  artifactKey: Guid(1ea5ad505437e9a4f802fb6a24c402cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Top_Mid_A.fbx using Guid(1ea5ad505437e9a4f802fb6a24c402cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e62f0b4d4e8ae3400c8c29c9ba4f5b0') in 0.042916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_B.fbx
+  artifactKey: Guid(9de9307c0f2bea9419004289b86b255d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_B.fbx using Guid(9de9307c0f2bea9419004289b86b255d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f2b6f36193f30d1cca85c53af9a6402') in 0.128334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Column_Mid_A.fbx
+  artifactKey: Guid(bb06d490cdab16b48b82d466f97f5f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_Column_Mid_A.fbx using Guid(bb06d490cdab16b48b82d466f97f5f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1c92fed250f5044c02adfeef6fa073') in 0.065745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_D.fbx
+  artifactKey: Guid(25f99a0d3086b5c42ac46a2ab24bd6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Mid_D.fbx using Guid(25f99a0d3086b5c42ac46a2ab24bd6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c4c3ca54258a717b76be02d96c2f91') in 0.091720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_A.fbx
+  artifactKey: Guid(d4f6d897a9fc78244bb719468f1569c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Ext_A.fbx using Guid(d4f6d897a9fc78244bb719468f1569c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f7cd24a634c87e920701b5ea7e75cd6') in 0.123915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Int_A.fbx
+  artifactKey: Guid(4a65d2e0aced6644b932e1e256d14148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Int_A.fbx using Guid(4a65d2e0aced6644b932e1e256d14148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75538c0bceb4fe9d98f6caa66961700f') in 0.150267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_WindowGlass_B.fbx
+  artifactKey: Guid(2fb8692a37585c547af0e7d90026381d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_WindowGlass_B.fbx using Guid(2fb8692a37585c547af0e7d90026381d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df1ab2183d365906885fdf9b60879207') in 0.330500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_WindowGlass_C.fbx
+  artifactKey: Guid(6afaa8d7b325f4b468c5db0d0cf0d3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Deco_WindowGlass_C.fbx using Guid(6afaa8d7b325f4b468c5db0d0cf0d3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be8b46d345bb1b3a379e200212cac4d1') in 0.168343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Roof_Mid_B.fbx
+  artifactKey: Guid(cf10e39299852b544be470cecaf8e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Roof_Mid_B.fbx using Guid(cf10e39299852b544be470cecaf8e520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc78bf150c9801c3b4008d52556c05f') in 0.194958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Cor_B.fbx
+  artifactKey: Guid(59edf5b2f82448443931710724bdde9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_Wall_Cor_B.fbx using Guid(59edf5b2f82448443931710724bdde9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed27a533818409fe281df66378cf9a37') in 0.115011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_A_COL.fbx
+  artifactKey: Guid(866dc36537d3fbc4b85b2c6482d97135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla1/Villa1_IntStairs_A_COL.fbx using Guid(866dc36537d3fbc4b85b2c6482d97135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc25b569b2df49ec38cad3e6f2421842') in 0.110249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 266.197011 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Cor_A.fbx
+  artifactKey: Guid(473e0550bfcf5744d908d07506e67a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Cor_A.fbx using Guid(473e0550bfcf5744d908d07506e67a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57f53c208181411fb4b46a1f5300dae') in 0.146732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Top_A.fbx
+  artifactKey: Guid(09a44f70699a409489f373dfddb6db05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Top_A.fbx using Guid(09a44f70699a409489f373dfddb6db05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d128e2b0773c4efdffb97d8a9bec6d') in 0.046886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Cor_A_COL.fbx
+  artifactKey: Guid(8983659a0b8a2ae4e9adc3e59478b394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Cor_A_COL.fbx using Guid(8983659a0b8a2ae4e9adc3e59478b394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd986dc42e666332eeca8cc03a4e8cfaa') in 0.057938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Int_A.fbx
+  artifactKey: Guid(a79322822d34c9a439a2fbb5dc1d7ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Int_A.fbx using Guid(a79322822d34c9a439a2fbb5dc1d7ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6a8c8fcc60324dde00c7bb9b6f53638') in 0.076244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Mid_B.fbx
+  artifactKey: Guid(1cc770c065d8ef34fa49da4e6d1386e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Mid_B.fbx using Guid(1cc770c065d8ef34fa49da4e6d1386e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9babdaed8b06cf131fd3345af64a3048') in 0.104398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_B.fbx
+  artifactKey: Guid(9626f55af6a81174a952bd5cdd7d6fb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_B.fbx using Guid(9626f55af6a81174a952bd5cdd7d6fb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '441a6d92df74466ee2642c0f47b76aab') in 0.129850 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Roof_Mid_A_4x.fbx
+  artifactKey: Guid(aec74c8803cbf0f4db741e432cf1be24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Roof_Mid_A_4x.fbx using Guid(aec74c8803cbf0f4db741e432cf1be24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a213eff8a3933af7a196993527d290') in 0.071665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_D.fbx
+  artifactKey: Guid(0dafcec3076e9e143a3b8f59b6b64d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_D.fbx using Guid(0dafcec3076e9e143a3b8f59b6b64d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c37833065ad08c836bbbedf7cc4ffff') in 0.073687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_A_COL.fbx
+  artifactKey: Guid(6f527d60810a69240aeedcfa09da64bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_A_COL.fbx using Guid(6f527d60810a69240aeedcfa09da64bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac4d9bb6444b0c8a80978a802a91cfa') in 0.134192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_WindowGlass_A.fbx
+  artifactKey: Guid(b4107ce16c2641447bb94ba8e62edb98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_WindowGlass_A.fbx using Guid(b4107ce16c2641447bb94ba8e62edb98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c963fb4f37aeaa5cbf635e6f24ed6c0a') in 0.069177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_A.fbx
+  artifactKey: Guid(2e5465d56d7eba14f994250cf91117bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_A.fbx using Guid(2e5465d56d7eba14f994250cf91117bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d46a1511d0afa2c5eafbc0bf822e995') in 0.126050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Stairs_A.fbx
+  artifactKey: Guid(c13f39f1ce11d7748b3e1f112635cbba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Stairs_A.fbx using Guid(c13f39f1ce11d7748b3e1f112635cbba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48b68f34cfea86bf3fcf16c27e2c32c5') in 0.070945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Cor_B.fbx
+  artifactKey: Guid(49b691abea49c6e499af47b3d1a680c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Cor_B.fbx using Guid(49b691abea49c6e499af47b3d1a680c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b99b07b893d9c17a6e9c15fc0ca9a59') in 0.042529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Floor_Mid_B.fbx
+  artifactKey: Guid(bce99ade65d5fee418c6e9541397fb3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Floor_Mid_B.fbx using Guid(bce99ade65d5fee418c6e9541397fb3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c7e4e1ca84a1c6863ee468356b70aa') in 0.038329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Mid_A_DM.fbx
+  artifactKey: Guid(eb3d997ec2fd70045be2ef32ef3c5e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Mid_A_DM.fbx using Guid(eb3d997ec2fd70045be2ef32ef3c5e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3b054f692a5a94c7613286cb5199c1') in 0.098064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Door_A.fbx
+  artifactKey: Guid(18b3a5bc912e52242b16bd2f42d6407b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Door_A.fbx using Guid(18b3a5bc912e52242b16bd2f42d6407b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad93c7aaacaf4b122c810bbae4a9dc6') in 0.057388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Top_B.fbx
+  artifactKey: Guid(aeb5a60918fa7f044a31aec548feabe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Top_B.fbx using Guid(aeb5a60918fa7f044a31aec548feabe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b40a6bcede4849d5184197744529102') in 0.076365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Beam_A.fbx
+  artifactKey: Guid(a0fa73e6df51a784a9fc348c8822f879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Beam_A.fbx using Guid(a0fa73e6df51a784a9fc348c8822f879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c35f99475e4f103ef84b7fb4586d00a4') in 0.087919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_C.fbx
+  artifactKey: Guid(f474bed2579e4d24f93d4a697f07baf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_C.fbx using Guid(f474bed2579e4d24f93d4a697f07baf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '899c2be2af0921aadabb37453ac52a6f') in 0.068145 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Ext_A.fbx
+  artifactKey: Guid(3e780ebb357c2904895523ef05aba6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Ext_A.fbx using Guid(3e780ebb357c2904895523ef05aba6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b14b60da068a1bf083483560b39c5ddd') in 0.140623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_A_COL.fbx
+  artifactKey: Guid(877f5e325a857fb49b1f0c31a03a9c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_A_COL.fbx using Guid(877f5e325a857fb49b1f0c31a03a9c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd35f61094683b0d05a332d0ceac92a99') in 0.073305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Ext_A_COL.fbx
+  artifactKey: Guid(1182b798a2fdbcc41ab391b565c18417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Ext_A_COL.fbx using Guid(1182b798a2fdbcc41ab391b565c18417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d7a22e58baf570b965932f17f3fcd6') in 0.155646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Cor_B.fbx
+  artifactKey: Guid(671d5171ef0684740be6243a2fff6eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Cor_B.fbx using Guid(671d5171ef0684740be6243a2fff6eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddd8621ae5a8ff8325c3877d08adb20e') in 0.239145 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Int_B.fbx
+  artifactKey: Guid(c386420031e9c484182f7920f158c313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Int_B.fbx using Guid(c386420031e9c484182f7920f158c313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49443cd93c866e38f8984b427707b214') in 0.130070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_B.fbx
+  artifactKey: Guid(f59178ad67e89e2429b357e1e65e34d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_B.fbx using Guid(f59178ad67e89e2429b357e1e65e34d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd070a487a260ddc09b7494232067e269') in 0.093237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Mid_A.fbx
+  artifactKey: Guid(4ee3222ccf9f06f4dab2b1e8adca2ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Mid_A.fbx using Guid(4ee3222ccf9f06f4dab2b1e8adca2ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b14096f45757072b9734272ad8a8465d') in 0.054311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Door_B.fbx
+  artifactKey: Guid(0ab1761d299356746bb96e12c877788a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Door_B.fbx using Guid(0ab1761d299356746bb96e12c877788a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '466a9b3d2c7b3e1904710390cb4a1cb1') in 0.113203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cap_A.fbx
+  artifactKey: Guid(5fe6d00718bb8b542a8d16a00b059db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cap_A.fbx using Guid(5fe6d00718bb8b542a8d16a00b059db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c71cdf3d0662bdf311cae980dfe5853a') in 0.048511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_C.fbx
+  artifactKey: Guid(ccfe8b4c6e87c6146981e97b7a1f8123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_C.fbx using Guid(ccfe8b4c6e87c6146981e97b7a1f8123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '179b453d831acf576593e11603150d2b') in 0.137637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Mid_B.fbx
+  artifactKey: Guid(d4b17371331d7a448a1cda529133e8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Mid_B.fbx using Guid(d4b17371331d7a448a1cda529133e8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9476b495a1631b18a3f2a8e01c82433b') in 0.035021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Mid_A.fbx
+  artifactKey: Guid(94a4dae0316550a4e9e4c2b30543c7bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Mid_A.fbx using Guid(94a4dae0316550a4e9e4c2b30543c7bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08ec869d626871b0cba76fd635adf4ae') in 0.081752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_B_COL.fbx
+  artifactKey: Guid(415ea436dd055ab42bd74d612bd80d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_B_COL.fbx using Guid(415ea436dd055ab42bd74d612bd80d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f97eb9a35b43ac218c86c02a0237cf8b') in 0.086332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_E.fbx
+  artifactKey: Guid(f541faddef363a44bb98ab27fb36668b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_E.fbx using Guid(f541faddef363a44bb98ab27fb36668b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f01da90c6cbd84ab069ed5e0ef886cf8') in 0.035386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Floor_Mid_A_4x.fbx
+  artifactKey: Guid(0b790806c6256594b9fe80ac567508b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Floor_Mid_A_4x.fbx using Guid(0b790806c6256594b9fe80ac567508b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97f1d91bc741472957ef21080a8e897') in 0.029951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Base_A.fbx
+  artifactKey: Guid(d30ca19a66b5a7a4983f9b9433a77e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Column_Base_A.fbx using Guid(d30ca19a66b5a7a4983f9b9433a77e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a27840982cf7beb3d085ef28d445a59') in 0.119820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Floor_Mid_A.fbx
+  artifactKey: Guid(b8aad3ed58473334d9381ade6fb19780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Floor_Mid_A.fbx using Guid(b8aad3ed58473334d9381ade6fb19780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8d5d2c9f216a58925d96876093bae9') in 0.035694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_B_COL.fbx
+  artifactKey: Guid(ff5b3bb432adde946bb798fed576dfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_B_COL.fbx using Guid(ff5b3bb432adde946bb798fed576dfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '088533dfef5d1811db90488562bb431f') in 0.032672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_B.fbx
+  artifactKey: Guid(9dd5a77d2224725479a6aa241511c79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_B.fbx using Guid(9dd5a77d2224725479a6aa241511c79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f02a295aafc3364d36d4c4848801978') in 0.095458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Cor_A.fbx
+  artifactKey: Guid(f2b14a4ed4d4e784ba757352dd8432e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Cor_A.fbx using Guid(f2b14a4ed4d4e784ba757352dd8432e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdce58dc08ed9591c723224373be0b8c') in 0.142544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_A.fbx
+  artifactKey: Guid(1734aa20b000ddf44a644518efe5268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_A.fbx using Guid(1734aa20b000ddf44a644518efe5268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '753e404c5edea95f3f5651691eb35772') in 0.039981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Roof_Mid_A.fbx
+  artifactKey: Guid(9e52b13d1b472ec4d90d7bc47e19842d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Roof_Mid_A.fbx using Guid(9e52b13d1b472ec4d90d7bc47e19842d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4233ae8b7fc6d2b600d61c8fb435c2f2') in 0.110068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Mid_A.fbx
+  artifactKey: Guid(e1b329b5ccf8aea4d82ee4ef7c5f0e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Mid_A.fbx using Guid(e1b329b5ccf8aea4d82ee4ef7c5f0e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b0b984abe794513933c520043b95e0') in 0.106567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Mid_A.fbx
+  artifactKey: Guid(314209462b1ef6e4da2d2894045d62dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Mid_A.fbx using Guid(314209462b1ef6e4da2d2894045d62dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '004694d0f2e805e0eba3a1e93f3f1cd6') in 0.100477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_A_COL.fbx
+  artifactKey: Guid(f3acf8c6d2709d747bec015a6281a927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_A_COL.fbx using Guid(f3acf8c6d2709d747bec015a6281a927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de5bfdca8e4f7d48dbfb2450dd0ee240') in 0.077146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_B.fbx
+  artifactKey: Guid(4fc2427df03ba68419dd6f947c1e7e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Mid_B.fbx using Guid(4fc2427df03ba68419dd6f947c1e7e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29e2fb4da43cc20e7e0bb78a7b054098') in 0.087983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_A.fbx
+  artifactKey: Guid(1a04044349747144d81648d9a76f2d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_IntStairs_A.fbx using Guid(1a04044349747144d81648d9a76f2d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '398295db80c12f6e379efa07829c8890') in 0.100739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Ext_A.fbx
+  artifactKey: Guid(74f74144f25a604449bde17ae6646801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Ext_A.fbx using Guid(74f74144f25a604449bde17ae6646801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63e54a45528b7072e9878b7476603cfa') in 0.139147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Cor_C.fbx
+  artifactKey: Guid(8c56f6f982a971643a69658635f23313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Top_Cor_C.fbx using Guid(8c56f6f982a971643a69658635f23313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c6416225a6a8b0e06a5eb2ae618c3d') in 0.090449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Chimney_A.fbx
+  artifactKey: Guid(d1a841b429734634bad036e6ce13cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Chimney_A.fbx using Guid(d1a841b429734634bad036e6ce13cbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19aad9a09ba7329554a66f97a1c32d61') in 0.104376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_A.fbx
+  artifactKey: Guid(d032b0438dbb5894699b0ed344386f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Handrail1_Cor_A.fbx using Guid(d032b0438dbb5894699b0ed344386f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7fae5b3cce3f3334415e45810e4723') in 0.117083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_D.fbx
+  artifactKey: Guid(f192cad3e364e1648bd09b399d502f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_RoofPiece_D.fbx using Guid(f192cad3e364e1648bd09b399d502f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5910d5f0776930844aa37321f2d1ad9') in 0.058315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Cor_A.fbx
+  artifactKey: Guid(82342e89cae02884288aff5809271912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Wall_Cor_A.fbx using Guid(82342e89cae02884288aff5809271912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e848f86fd7456b592bbe7e21d4b19ca9') in 0.102016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Cor_B.fbx
+  artifactKey: Guid(aff33108ca713d3419f969f76a000678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Base_Cor_B.fbx using Guid(aff33108ca713d3419f969f76a000678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b104e659713512187714381afbad95') in 0.051994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Beam_A_2x.fbx
+  artifactKey: Guid(1602a3e46699b0d49a15a46f5014b01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Content/Meshes/mBuildings/mVilla2/Villa2_Deco_Beam_A_2x.fbx using Guid(1602a3e46699b0d49a15a46f5014b01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24a5f0010e1a397e8030c5338f33c449') in 0.077899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.374751 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Base_Stairs_A.prefab
+  artifactKey: Guid(5400facbffd6b5443b144ee5f7c15a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Base_Stairs_A.prefab using Guid(5400facbffd6b5443b144ee5f7c15a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7f5faf03511609dbad1cf300a191c8b') in 0.288909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_Handrail_A.prefab
+  artifactKey: Guid(6a8ddc2ca1fe3f642beafd6fdd154d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_Handrail_A.prefab using Guid(6a8ddc2ca1fe3f642beafd6fdd154d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8015249a91e49ed593e4c4752c1bd7a9') in 0.169238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_End_A.prefab
+  artifactKey: Guid(fa3b1e3b9faf39b4cbc9301d3dd1c175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_End_A.prefab using Guid(fa3b1e3b9faf39b4cbc9301d3dd1c175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e758322bbeb2d81b96194b0a753ac05') in 0.179784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntWall_A.prefab
+  artifactKey: Guid(32d75b8d1b966c6489dd7b9cea692094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntWall_A.prefab using Guid(32d75b8d1b966c6489dd7b9cea692094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee151e3dcbdfb94801d840fda4c35c2f') in 0.113866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Mid_B.prefab
+  artifactKey: Guid(f4d2356b6ba44cd408e5e133a4a1f2cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Mid_B.prefab using Guid(f4d2356b6ba44cd408e5e133a4a1f2cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d0ccc37840d4da8234d0efd8246e460') in 0.182507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Column_Base.prefab
+  artifactKey: Guid(31a01b4eec39eee4a8f9af7cd90c52da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Column_Base.prefab using Guid(31a01b4eec39eee4a8f9af7cd90c52da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0343910bbf982fcbcc0d0756da4a6e8') in 0.160019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_WindowGlass_A.prefab
+  artifactKey: Guid(b3c3cc4c79dabea40bbd7b0767d13f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_WindowGlass_A.prefab using Guid(b3c3cc4c79dabea40bbd7b0767d13f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca1a35a39e73bf56b566122bf3844f74') in 0.645650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Cor_A.prefab
+  artifactKey: Guid(27c15c3480e146944b29c1661765cc65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Cor_A.prefab using Guid(27c15c3480e146944b29c1661765cc65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '219e05963cdb7d9cbca4f0d57608f0ed') in 0.115004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Base_Mid_A.prefab
+  artifactKey: Guid(5f8119929abe75e4e8f9da64a6263f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Base_Mid_A.prefab using Guid(5f8119929abe75e4e8f9da64a6263f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63634c35ad1d0a9a5d76e71d852b2bc1') in 0.102419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/Indbuilding1_Door_A.prefab
+  artifactKey: Guid(1ba84d4b2929a2b4eb599316f738c0f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/Indbuilding1_Door_A.prefab using Guid(1ba84d4b2929a2b4eb599316f738c0f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '313f4bce6bba04f1ed213a23cbb0d0a8') in 0.153695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Roof_Mid_A.prefab
+  artifactKey: Guid(8b12109de90b0e74ca16680ae843457f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Roof_Mid_A.prefab using Guid(8b12109de90b0e74ca16680ae843457f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a86b13bda214bf4b2acc7eaa20eba3') in 0.125490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Base_Cor_A.prefab
+  artifactKey: Guid(0a81ac6994fc89e46890e21d8e33ab34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Base_Cor_A.prefab using Guid(0a81ac6994fc89e46890e21d8e33ab34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6bca01559aa29006f9dea91e9f9b529') in 0.120087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Ext_A.prefab
+  artifactKey: Guid(84c0630e2101a764bb50018ae3b3ae41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Ext_A.prefab using Guid(84c0630e2101a764bb50018ae3b3ae41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d9e5e525216915d99f7abf98071d3e') in 0.178866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Column_Mid.prefab
+  artifactKey: Guid(53ac28d4b9ad6684181c2de777dc2f4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Column_Mid.prefab using Guid(53ac28d4b9ad6684181c2de777dc2f4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23896fae95ed99434a685def2f093f8') in 0.127002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Handrail_Cor_A.prefab
+  artifactKey: Guid(d37b5c027abc7384c904ecf9baf35076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Handrail_Cor_A.prefab using Guid(d37b5c027abc7384c904ecf9baf35076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e4d2eced8259d5285ea28adc4543df') in 0.235896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_C.prefab
+  artifactKey: Guid(fe546dac68b4ae943a161dec60c98fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_C.prefab using Guid(fe546dac68b4ae943a161dec60c98fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67714da4a02151d7a7f7bcfd83b9155a') in 0.119927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_End_A.prefab
+  artifactKey: Guid(7144982b2dbf65f4ab9f5f9ce98309e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_End_A.prefab using Guid(7144982b2dbf65f4ab9f5f9ce98309e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '296eca5353a2cfe673a32404d60dbb47') in 0.192986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_A_DM_A.prefab
+  artifactKey: Guid(929978fd58ecd9f4a8dfb230290db510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_A_DM_A.prefab using Guid(929978fd58ecd9f4a8dfb230290db510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20cf31d40d8e6f782540557aeb2ed93') in 0.112092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Handrail_Mid_A.prefab
+  artifactKey: Guid(7579c08e8ad921f4aac1f2ae2dac25cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Handrail_Mid_A.prefab using Guid(7579c08e8ad921f4aac1f2ae2dac25cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec73ae9e14c65319044f9bc34227c5f0') in 0.150262 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntWall_C.prefab
+  artifactKey: Guid(9e6595faa92cb044993f2ce0fedd7047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntWall_C.prefab using Guid(9e6595faa92cb044993f2ce0fedd7047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d16a42769f6a89a240f2d024bca74b9') in 0.061856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Ext_B.prefab
+  artifactKey: Guid(19dabbbfc2c1ea246a20ea6c8c8c2e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Ext_B.prefab using Guid(19dabbbfc2c1ea246a20ea6c8c8c2e92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3071d3c9b1cf35c67eb029f48a8907c8') in 0.141106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Top_Cor_A.prefab
+  artifactKey: Guid(99595bd0d03112b4480b3101e8806de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Top_Cor_A.prefab using Guid(99595bd0d03112b4480b3101e8806de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4824cbe128ce7dbe6786fd75c018e3f') in 0.102597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_IntColumn_B.prefab
+  artifactKey: Guid(f8fde9bffcef94e43beea47e6903b1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_IntColumn_B.prefab using Guid(f8fde9bffcef94e43beea47e6903b1f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ff9453b9247eb20de7390e86487d2b2') in 0.169337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_IntColumn_A.prefab
+  artifactKey: Guid(91aa488086ba1864bac8975b7b13487b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_IntColumn_A.prefab using Guid(91aa488086ba1864bac8975b7b13487b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303194ed7752a8d2cdd76bac87229e17') in 0.122998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_A.prefab
+  artifactKey: Guid(241fefb01734dcb4bb0b659e97880922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_A.prefab using Guid(241fefb01734dcb4bb0b659e97880922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f5d6d5cea37607bc42042fc7e022665') in 0.140049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_A_DM_B.prefab
+  artifactKey: Guid(172519860681a8b4cba807037132dde8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_A_DM_B.prefab using Guid(172519860681a8b4cba807037132dde8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db8161787b16fc9b2ff1a6472879e65') in 0.173399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntStairs_A.prefab
+  artifactKey: Guid(f20c46319d796fd49812eef9f80d87a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntStairs_A.prefab using Guid(f20c46319d796fd49812eef9f80d87a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1371fb18003dad5d2a90ed8017af2d1e') in 0.226600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Floor_Mid_A.prefab
+  artifactKey: Guid(812c9b36537fa8146bed44183a36cf7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Floor_Mid_A.prefab using Guid(812c9b36537fa8146bed44183a36cf7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd029c123a1f038d3431a3a795d50c5') in 0.123168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_End_A_DM_A.prefab
+  artifactKey: Guid(e2e47abf26e89c2468ffd16360aa882a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_End_A_DM_A.prefab using Guid(e2e47abf26e89c2468ffd16360aa882a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3264d0ddc7e75612912619504ab274') in 0.136831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_IntStairs_A.prefab
+  artifactKey: Guid(8a201771cc9ff174098d36a9f9bca350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_IntStairs_A.prefab using Guid(8a201771cc9ff174098d36a9f9bca350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '492a9d50d63c78f5510030fcd9d1fc96') in 0.181526 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_Handrail_Cap_A.prefab
+  artifactKey: Guid(57aced364abddec4c936cf4c8f9bf1c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_Handrail_Cap_A.prefab using Guid(57aced364abddec4c936cf4c8f9bf1c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2310b24589f89f53f9cf7fc60edeab') in 0.143583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Int_A.prefab
+  artifactKey: Guid(b5c6f1e15b5541a4990e2f0b2715e6be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Int_A.prefab using Guid(b5c6f1e15b5541a4990e2f0b2715e6be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d6818db3c865ba0400be3cb52e6436') in 0.121186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Top_Mid_A.prefab
+  artifactKey: Guid(4364c4769d122564abbf7277ef60854f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Top_Mid_A.prefab using Guid(4364c4769d122564abbf7277ef60854f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd84edc928b74949cb8802d3babffe890') in 0.101941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Column_Top.prefab
+  artifactKey: Guid(112948aafeb21724f8d6f18be1b0127c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_Column_Top.prefab using Guid(112948aafeb21724f8d6f18be1b0127c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83012cf68b76710cd90384cb800c3703') in 0.101739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_IntColumn_Base.prefab
+  artifactKey: Guid(13ed963c6fa73cc49a2e107856da590e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_IntColumn_Base.prefab using Guid(13ed963c6fa73cc49a2e107856da590e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5eb0fee9447cd9b56ad3735ab9c5ae') in 0.225007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Roof_Mid_A_4x.prefab
+  artifactKey: Guid(a9dab6aa18391414e848ba3c6c0959b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Roof_Mid_A_4x.prefab using Guid(a9dab6aa18391414e848ba3c6c0959b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e742d4feff93297d9443fa065e103f') in 0.190882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Mid_C.prefab
+  artifactKey: Guid(3a7314dcf081b7f40a4bf8fc185bc9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Mid_C.prefab using Guid(3a7314dcf081b7f40a4bf8fc185bc9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3190084c5c28712541d17c2501fc26fb') in 0.202195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Door_A.prefab
+  artifactKey: Guid(7c026980fc17fa642b7a22557ebb0007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Door_A.prefab using Guid(7c026980fc17fa642b7a22557ebb0007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99fc539105d90340c624741b37a26388') in 0.074238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntWall_B.prefab
+  artifactKey: Guid(b6995a63df49222409e4c1ba3567bb78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_IntWall_B.prefab using Guid(b6995a63df49222409e4c1ba3567bb78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a199e59e5ec8a15f00b09326448267ec') in 0.057910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Mid_A.prefab
+  artifactKey: Guid(a169505b1ca79d04e97789db788de88c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Mid_A.prefab using Guid(a169505b1ca79d04e97789db788de88c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a25f5dd2ab71575b652b010f5f7361') in 0.104992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_WindowGlass_A.prefab
+  artifactKey: Guid(7e9dc500b042d594f976c40103e5aa08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_WindowGlass_A.prefab using Guid(7e9dc500b042d594f976c40103e5aa08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad5dd906d93e0894805640dbac138ec') in 0.074960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Base_Stairs.prefab
+  artifactKey: Guid(844d555ff5b93b246b2e27f48bc4732f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Base_Stairs.prefab using Guid(844d555ff5b93b246b2e27f48bc4732f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12d320af0ea324992730490ec1bc3652') in 0.108730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_A.prefab
+  artifactKey: Guid(16c6f5a63ed8092489595b871a61c620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_A.prefab using Guid(16c6f5a63ed8092489595b871a61c620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b33d8a97e28fa04a15321db8f61104') in 0.128921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_WindowGlass_B.prefab
+  artifactKey: Guid(eaaa713946d21c349acbc0f8b739f316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Deco_WindowGlass_B.prefab using Guid(eaaa713946d21c349acbc0f8b739f316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e85fa07c8a108293763b0cddb80e77b') in 0.090041 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Floor_Mid_A_4x.prefab
+  artifactKey: Guid(0605deaa6afb37547a376b965328a405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Floor_Mid_A_4x.prefab using Guid(0605deaa6afb37547a376b965328a405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8785d2c177b431294a5db4ad12349c1') in 0.057681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_IntColumn_Top.prefab
+  artifactKey: Guid(c77c9941a488b844f81552ee194644cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_IntColumn_Top.prefab using Guid(c77c9941a488b844f81552ee194644cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87f3683d6a902fb035593ef3388047af') in 0.086793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_D.prefab
+  artifactKey: Guid(524061fa15faee94887d05ced93705bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_D.prefab using Guid(524061fa15faee94887d05ced93705bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1da9bf4be1da52cf27c2c99e3e7076a') in 0.109291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Int_B.prefab
+  artifactKey: Guid(49b7895d0e133d24ca6c78d4ea46be33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Int_B.prefab using Guid(49b7895d0e133d24ca6c78d4ea46be33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e214fcf6bb7dd07fc706efeef6e933c') in 0.115087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_End_B.prefab
+  artifactKey: Guid(60a191e2da86e1544948ebd2bc4c7a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_End_B.prefab using Guid(60a191e2da86e1544948ebd2bc4c7a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f10b834b9866f8e2376da92ab64dce') in 0.144399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_B.prefab
+  artifactKey: Guid(3f9bb54b0ba0f5a4b8aa264f45880ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/BrickHouse/BrickHouse_Floor_Mid_B.prefab using Guid(3f9bb54b0ba0f5a4b8aa264f45880ffc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5706bfa1f3e7661f612d36909e6aa24') in 0.113089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Ext_A.prefab
+  artifactKey: Guid(2625fd40f9742e041adae0733e5b7bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Ext_A.prefab using Guid(2625fd40f9742e041adae0733e5b7bda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3496226965d923757b7d4e4c5dfa6f') in 0.169281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_IntColumn_Mid.prefab
+  artifactKey: Guid(dc203fb0cc8d7e34c8a64e7cba631d02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Deco_IntColumn_Mid.prefab using Guid(dc203fb0cc8d7e34c8a64e7cba631d02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4bd5fce47a5629df5cfe04ad9d6192a') in 0.100008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_B.prefab
+  artifactKey: Guid(0e2897fcb74ccda48aee1804d6464e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/IndBuilding1/IndBuilding1_Wall_Mid_B.prefab using Guid(0e2897fcb74ccda48aee1804d6464e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad75df5694f78d2963ed941d38c6b949') in 0.155051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.694581 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Cor_A.prefab
+  artifactKey: Guid(78a0483eabda41a40ab66ec11a4434a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Cor_A.prefab using Guid(78a0483eabda41a40ab66ec11a4434a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8481554e8bfcd02e45eff595b57fcc') in 0.222264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Beam_A.prefab
+  artifactKey: Guid(909999d1c675e9141bd20febde2629f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Beam_A.prefab using Guid(909999d1c675e9141bd20febde2629f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1167bbefbc2f3781e4014757fdb128') in 0.117115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Stairs_A.prefab
+  artifactKey: Guid(35a756c42404b894ea8cc2e61487fabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Stairs_A.prefab using Guid(35a756c42404b894ea8cc2e61487fabb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f6977fbf16a84c1ca87956b6874d81') in 0.073589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Door_A.prefab
+  artifactKey: Guid(1c25ef6b060067847bed35e736f9aa4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Door_A.prefab using Guid(1c25ef6b060067847bed35e736f9aa4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f56650f19c42c1ddfba70122f712e4f2') in 0.193237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Ext_A.prefab
+  artifactKey: Guid(287365a760f34774c89f2f14c93e3251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Ext_A.prefab using Guid(287365a760f34774c89f2f14c93e3251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c28d3faa0e6f0a521a446f93d007342') in 0.097804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_IntStairs_B.prefab
+  artifactKey: Guid(f1f3a6b5d79f5d74c9c6fa29dc791dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_IntStairs_B.prefab using Guid(f1f3a6b5d79f5d74c9c6fa29dc791dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eebedd94f3a288772e849a0b0dc29a4') in 0.074744 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Roof_Mid_A.prefab
+  artifactKey: Guid(6c1222a5c1b101d4b8780debc7845431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Roof_Mid_A.prefab using Guid(6c1222a5c1b101d4b8780debc7845431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c156251d8cac195d2a866d7980282a51') in 0.086532 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_WindowGlass_A.prefab
+  artifactKey: Guid(15694160f3f4559468922f6c406043a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_WindowGlass_A.prefab using Guid(15694160f3f4559468922f6c406043a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02d2fadcfa8842dce41b1753a8fbec3') in 0.127497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_D.prefab
+  artifactKey: Guid(3db4b54e649f80f4287b6ea21e0d14f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_D.prefab using Guid(3db4b54e649f80f4287b6ea21e0d14f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0215e190e57bfb042803ffb8b1f9c69a') in 0.087826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Cor_A.prefab
+  artifactKey: Guid(f75c1a412cade5e44931c36aad22a16c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Cor_A.prefab using Guid(f75c1a412cade5e44931c36aad22a16c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06bbedd8e70b2099afcb81479808c4f3') in 0.070457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_IntStairs_A.prefab
+  artifactKey: Guid(714cb16bea7083341a0e15e142a2bede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_IntStairs_A.prefab using Guid(714cb16bea7083341a0e15e142a2bede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b4b657a36b8b9f5961fed57acd5797d') in 0.050854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_E.prefab
+  artifactKey: Guid(0629b26a98ce01a46b7bf9348c41bb30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_E.prefab using Guid(0629b26a98ce01a46b7bf9348c41bb30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e1feed934acdeaaabf3a7c90e921ca') in 0.049337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_C.prefab
+  artifactKey: Guid(d781bf1f233fcee4781b7107a23fe74a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_C.prefab using Guid(d781bf1f233fcee4781b7107a23fe74a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c55298b9bad50dc206f222d123f2a9a8') in 0.071686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_B.prefab
+  artifactKey: Guid(d36395ac826e6f04f94518e05e52b105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_B.prefab using Guid(d36395ac826e6f04f94518e05e52b105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36a17a87f0b3e68a759d2d9cc4410612') in 0.051038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Int_A.prefab
+  artifactKey: Guid(b3697fca2cda39f418b6b897bcf90cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Int_A.prefab using Guid(b3697fca2cda39f418b6b897bcf90cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d58a65e59290d6aabfd37f4fa8c1840') in 0.055077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_A.prefab
+  artifactKey: Guid(1893b7edd0ad11b4e9f6f17eeb9455b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_A.prefab using Guid(1893b7edd0ad11b4e9f6f17eeb9455b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01e6aa6224baf8e4675fae7b7bd7c6e5') in 0.055848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Mid_A_DM.prefab
+  artifactKey: Guid(8c6ce316555e68a41a558dece7d76b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Mid_A_DM.prefab using Guid(8c6ce316555e68a41a558dece7d76b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '818894e6e4fc4a7facdc8b7b78f826f1') in 0.050868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Mid_B.prefab
+  artifactKey: Guid(113eb02b1f4058248bf628b2fde16564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Mid_B.prefab using Guid(113eb02b1f4058248bf628b2fde16564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14f6defcb5bd90ad29ae703b7505ac2') in 0.081590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Cor_B.prefab
+  artifactKey: Guid(1cb997d50bcf8e540b2ac46cc6196a86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Cor_B.prefab using Guid(1cb997d50bcf8e540b2ac46cc6196a86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d9fb9e74892b663dceeecfe2ed3322') in 0.052154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Door_B.prefab
+  artifactKey: Guid(4ba8e211073bd4c4883585b581504113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Door_B.prefab using Guid(4ba8e211073bd4c4883585b581504113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac0ba6bff4620abfc1bc0126d02b4a22') in 0.059866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Column_Top_A.prefab
+  artifactKey: Guid(201c750a85d617249b8405c7d042da15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Column_Top_A.prefab using Guid(201c750a85d617249b8405c7d042da15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163bb0a3f98c75214c297c82945a7c4a') in 0.047848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Ext_B.prefab
+  artifactKey: Guid(4415536e331f8864c8582faaf82f5fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Ext_B.prefab using Guid(4415536e331f8864c8582faaf82f5fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5fa2be948c1cc336183d35df24cbcb') in 0.059359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Cap_A.prefab
+  artifactKey: Guid(19c68d79f0c9834478587f0dc3a6d944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Cap_A.prefab using Guid(19c68d79f0c9834478587f0dc3a6d944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3e4ac87310d28f3991c29bbdf415979') in 0.052337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_A_4x.prefab
+  artifactKey: Guid(e268c3025a2a0864f9c404b68a8cedcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_A_4x.prefab using Guid(e268c3025a2a0864f9c404b68a8cedcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab27cb256ec962156c476129bebbae6') in 0.048361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Roof_Mid_B.prefab
+  artifactKey: Guid(e479fb829761ad7408092fe346314659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Roof_Mid_B.prefab using Guid(e479fb829761ad7408092fe346314659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3210494ef541efbe3980d5bba987798b') in 0.047027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Mid_A.prefab
+  artifactKey: Guid(eb76103868aa7dc4c8e39613a5835fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Base_Mid_A.prefab using Guid(eb76103868aa7dc4c8e39613a5835fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '501684e64ffa689d5fa7f1979b4d54fd') in 0.052366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_IntDivider_A.prefab
+  artifactKey: Guid(9141863ac11ac0e4d8288c88f8d38bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_IntDivider_A.prefab using Guid(9141863ac11ac0e4d8288c88f8d38bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c8570c71a60ddfe571cf6d6f1798a3') in 0.569982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_WindowGlass_B.prefab
+  artifactKey: Guid(475b1b6b7e2809143be41cfe67240ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_WindowGlass_B.prefab using Guid(475b1b6b7e2809143be41cfe67240ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00358e2b8ea1767d03f9093dbd61962e') in 0.028538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_B.prefab
+  artifactKey: Guid(6a62bff5fa244c447b5f2c5eea538a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Floor_Mid_B.prefab using Guid(6a62bff5fa244c447b5f2c5eea538a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '796bcac966f8fd0b639f174a86ff8a40') in 0.054329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Top_Cor_A.prefab
+  artifactKey: Guid(c07e4a61a403f6c4d9c06befc65876fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Top_Cor_A.prefab using Guid(c07e4a61a403f6c4d9c06befc65876fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '458d44e673310934222a28aa00df57e1') in 0.055182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_A.prefab
+  artifactKey: Guid(5d6e0b09bf6588c4194b0574def66713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_A.prefab using Guid(5d6e0b09bf6588c4194b0574def66713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46aadca20cc966b70cbc84021bc29de4') in 0.046493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Top_Mid_B.prefab
+  artifactKey: Guid(88fbf37b7e4fff740bf50f2441298c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Top_Mid_B.prefab using Guid(88fbf37b7e4fff740bf50f2441298c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb732507234831f600744fccad17e07') in 0.070972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_WindowGlass_C.prefab
+  artifactKey: Guid(058d6c4dd4db88e4f8b9dbe1b34054ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_WindowGlass_C.prefab using Guid(058d6c4dd4db88e4f8b9dbe1b34054ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ac5ffb9bab812d3d9d4419ba10743f') in 0.031176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Top_Mid_A.prefab
+  artifactKey: Guid(419a8536db6f54646b66c61dcdf5a2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Top_Mid_A.prefab using Guid(419a8536db6f54646b66c61dcdf5a2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e640627df00b107f91fc60ebff9053a') in 0.052575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Int_B.prefab
+  artifactKey: Guid(3f7bd70355e6e0646aad871c1e7859b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Int_B.prefab using Guid(3f7bd70355e6e0646aad871c1e7859b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f257bd2f42488ce228cceddfdb854e0') in 0.048101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Cor_A.prefab
+  artifactKey: Guid(5231b1ce9b6dd08469350cd29d28d50d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Cor_A.prefab using Guid(5231b1ce9b6dd08469350cd29d28d50d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08804db3f033dc8f467574f106137047') in 0.051866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Column_Mid_A.prefab
+  artifactKey: Guid(5296e314f038d5946b1e87c49325871e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Column_Mid_A.prefab using Guid(5296e314f038d5946b1e87c49325871e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1da12bc90900970eb884f38612a1b4fa') in 0.053595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_C.prefab
+  artifactKey: Guid(1eb7717755343d844afec811c03c3ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Wall_Mid_C.prefab using Guid(1eb7717755343d844afec811c03c3ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e98145d0c32059991d6f5017b82336f') in 0.046647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Mid_A.prefab
+  artifactKey: Guid(3f034e995143d7c48aceeca0168460c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Assets_Store/Flooded_Grounds/Prefabs/Buildings/Villa1/Villa1_Deco_Handrail1_Mid_A.prefab using Guid(3f034e995143d7c48aceeca0168460c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d656810c7b40c74d8235d526c249e33') in 0.063407 seconds 
