@@ -21,16 +21,16 @@ public class Cammove : MonoBehaviour
         float rotX = Input.GetAxis("Mouse Y") * rotSpeed;
         float rotY = Input.GetAxis("Mouse X") * rotSpeed;
 
-        // ¸¶¿ì½º ¹ÝÀü
+        // ï¿½ï¿½ï¿½ì½º ï¿½ï¿½ï¿½ï¿½
         currentRot -= rotX;
 
-        // ¸¶¿ì½º°¡ Æ¯Á¤ °¢µµ¸¦ ³Ñ¾î°¡Áö ¾Ê°Ô ¿¹¿ÜÃ³¸®
+        // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ Æ¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
         currentRot = Mathf.Clamp(currentRot, -60f, 60f);
 
 
         player.transform.localRotation *= Quaternion.Euler(0, rotY, 0);
-        // CameraÀÇ transform ÄÄÆ÷³ÍÆ®ÀÇ ·ÎÄÃ·ÎÅ×ÀÌ¼ÇÀÇ ¿ÀÀÏ·¯°¢¿¡ 
-        // ÇöÀçXÃà ·ÎÅ×ÀÌ¼ÇÀ» ³ªÅ¸³»´Â ¿ÀÀÏ·¯°¢À» ÇÒ´çÇØÁØ´Ù.
+        // Cameraï¿½ï¿½ transform ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ 
+        // ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
         transform.localEulerAngles = new Vector3(currentRot, 0f, 0f);
     }
 }
