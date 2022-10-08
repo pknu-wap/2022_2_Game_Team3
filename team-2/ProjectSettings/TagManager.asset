@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Flame
   - Item
+  - Zone
+  - Test
   layers:
   - Default
   - TransparentFX

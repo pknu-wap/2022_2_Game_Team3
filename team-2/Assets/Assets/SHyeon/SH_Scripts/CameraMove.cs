@@ -7,14 +7,17 @@ public class CameraMove : MonoBehaviour
     public float turnSpeed = 4.0f;
     private float xRotate = 0.0f;
     private Transform playerTransform;
+
+    private Vector3 offset;
     void Start()
     {
         playerTransform = GameObject.FindWithTag("Player").transform;
+        offset = transform.position - playerTransform.position;
     }
 
     void LateUpdate()
     {
-        transform.position = playerTransform.position;
+        transform.position = playerTransform.position + offset;
         //MouseRotation();
     }
     
@@ -33,5 +36,6 @@ public class CameraMove : MonoBehaviour
     
         // 카메라 회전량을 카메라에 반영(X, Y축만 회전)
         transform.eulerAngles = new Vector3(xRotate, yRotate, 0);
+        playerTransform.LookAt(transform.eulerAngles);
     }
 }
