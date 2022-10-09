@@ -28,11 +28,10 @@ public class RandomPosition : MonoBehaviour
     
     IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(5f);
-        
         Vector3 spawnPos = GetRandomPosition();
 
         transform.position = spawnPos;
+        yield return new WaitForSeconds(5f);
         StartCoroutine("Spawn");
     }
 }
