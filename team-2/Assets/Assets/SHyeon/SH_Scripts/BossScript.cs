@@ -29,20 +29,20 @@ public class BossScript : MonoBehaviour
         if (!isRush)
         {
             timer = 0;
-            heading = transform.position - playerTransform.position;
+            heading = playerTransform.transform.position - transform.position;
             float distance = heading.magnitude;
             direction = heading.normalized;
             direction.y = 0;
 
             if (distance > 30 * Time.deltaTime)
             {
-                transform.Translate(-direction * (float)100 * Time.deltaTime);
+                transform.Translate(direction * (float)100 * Time.deltaTime);
             }
         }
         else
         {
             timer += Time.deltaTime;
-            if (timer > 5)
+            if (timer > 8)
             {
                 isRush = false;
             }
@@ -56,9 +56,11 @@ public class BossScript : MonoBehaviour
             Vector3 dir = collision.gameObject.transform.position - transform.position;
             dir.y = 0f;
             dir = (dir.normalized) * 30;
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(dir, ForceMode.Impulse);
+            collision.gameObject.GetComponent<CharacterController>().Move(dir*100);
             Debug.Log("밀치기");
             isRush = true;
         }
     }
+
+    
 }

@@ -25,6 +25,7 @@ public class FlameWall : MonoBehaviour
     {
         for (int i = 0; i < 8; i++)
         {
+            
             GameObject.Find("FlameWallGroup").transform.GetChild(i).gameObject.SetActive(true);
         }
 
@@ -42,7 +43,7 @@ public class FlameWall : MonoBehaviour
             Vector3 dir = other.gameObject.transform.position - transform.position;
             dir.y = 0f;
             dir = (dir.normalized) * 30;
-            other.gameObject.GetComponent<Rigidbody>().AddForce(dir, ForceMode.Impulse);
+            other.gameObject.GetComponent<TestPlayer>().isaddforce = true;
             Debug.Log("용암 밀치기");
         }
     }
