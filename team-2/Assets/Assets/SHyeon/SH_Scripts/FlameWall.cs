@@ -40,9 +40,6 @@ public class FlameWall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Vector3 dir = other.gameObject.transform.position - transform.position;
-            dir.y = 0f;
-            dir = (dir.normalized) * 30;
             other.gameObject.GetComponent<TestPlayer>().isaddforce = true;
             Debug.Log("용암 밀치기");
         }
