@@ -9,7 +9,7 @@ public class RandomPosition : MonoBehaviour
     private BoxCollider area;
     void Start()
     {
-        area = GameObject.Find("Random").GetComponent<BoxCollider>();
+        area = GameObject.Find("RandomPosition").GetComponent<BoxCollider>();
         StartCoroutine("Spawn");
     }
 
@@ -21,7 +21,7 @@ public class RandomPosition : MonoBehaviour
         float posX = basePosition.x + Random.Range(-size.x/2f, size.x/2f);
         float posZ = basePosition.z + Random.Range(-size.z/2f, size.z/2f);
         
-        Vector3 spawnPos = new Vector3(posX, 1, posZ);
+        Vector3 spawnPos = new Vector3(posX, 0.5f, posZ);
         
         return spawnPos;
     }
@@ -31,7 +31,7 @@ public class RandomPosition : MonoBehaviour
         Vector3 spawnPos = GetRandomPosition();
 
         transform.position = spawnPos;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(15f);
         StartCoroutine("Spawn");
     }
 }

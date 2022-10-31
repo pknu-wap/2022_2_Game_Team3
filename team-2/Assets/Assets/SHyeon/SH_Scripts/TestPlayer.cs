@@ -20,21 +20,20 @@ public class TestPlayer : MonoBehaviour
     private bool jumped = false;
 
     private Vector3 jumpVector;
-
     private Vector3 movingWay;
 
+    private Transform bossWay;
     private Animator anim;
-
     private Rigidbody rigid;
-
-    private CharacterController cc;
+    private CharacterController playerController;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        cc = GetComponent<CharacterController>();
+        playerController = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
+        bossWay = GameObject.Find("Boss").transform;
     }
 
     private void Start()
@@ -75,19 +74,20 @@ public class TestPlayer : MonoBehaviour
         movingWay = new Vector3(hAxis, 0, vAxis).normalized;
         if (isaddforce)
         {
-            cc.Move(-movingWay * 100 * Time.deltaTime);
+            movingWay = (bossWay.transform.position - gameObject.transform.position).normalized;
+            playerController.Move(-movingWay * 100 * Time.deltaTime);
             Invoke("addFrocedFalse", 0.5f);
             return;
         }
 
         if (wDown)
         {
-            cc.Move(movingWay * playerSpeed * 0.3f * Time.deltaTime);
+            playerController.Move(movingWay * playerSpeed * 0.3f * Time.deltaTime);
             anim.SetBool("IsWalk", wDown);
         }
         else
         {
-            cc.Move(movingWay * playerSpeed * Time.deltaTime);
+            playerController.Move(movingWay * playerSpeed * Time.deltaTime);
             anim.SetBool("IsRun", movingWay != Vector3.zero);
         }
     }
@@ -102,7 +102,7 @@ public class TestPlayer : MonoBehaviour
     {
         if (jumped)
         {
-            cc.Move(jumpVector * (float)2.5 * Time.deltaTime);
+            playerController.Move(jumpVector * (float)3.5 * Time.deltaTime);
             Invoke("JumpFalse", 0.5f);
         }
 
@@ -128,7 +128,7 @@ public class TestPlayer : MonoBehaviour
 
         //movingWay = Vector3.zero;
         //movingWay.y -= gravity;
-        cc.Move(jumpVector * Time.deltaTime);
+        playerController.Move(jumpVector * Time.deltaTime);
         //movingWay.y = 0;
     }
 
@@ -173,23 +173,22 @@ public class TestPlayer : MonoBehaviour
         {
             playerSpeed *= (float)0.5;
             //isStunned = true;
-            //anim.SetBool("IsRun", false);
-            Debug.Log("속도 느려짐");
+            Debug.Log("플레이어 속도 느려짐");
         }
     }
 
-    void StunnedOut()
+    void SlowOut()
     {
         playerSpeed *= (float)2.0;
         //isStunned = false;
-        Debug.Log("실행됨");
+        Debug.Log("플레이어 속도 되돌아옴");
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Zone"))
         {
-            Invoke("StunnedOut", 3f);
+            Invoke("SlowOut", 3f);
         }
     }
 

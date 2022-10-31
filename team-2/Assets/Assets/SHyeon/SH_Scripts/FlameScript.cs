@@ -9,8 +9,7 @@ public class FlameScript : MonoBehaviour
     {
         if (floorState == true)
         {
-            transform.localScale += new Vector3(0, 0.01f, 0);
-            Debug.Log("용암 차오름");   
+            transform.localScale += new Vector3(0, 0.005f, 0);
         }
     }
 }
