@@ -12,6 +12,8 @@ public class BossScript : MonoBehaviour
     private bool isRush = false;
     private Vector3 heading;
     private Vector3 direction;
+
+    public float bossSpeed = 75f;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +37,8 @@ public class BossScript : MonoBehaviour
 
             if (distance > 30 * Time.deltaTime)
             {
-                transform.Translate(direction * (float)100 * Time.deltaTime);
-                Debug.Log("테스트");
+                transform.Translate(direction * bossSpeed * Time.deltaTime);
+                Invoke("isRushFalse", 1f);
             }
         }
         else
@@ -49,11 +51,16 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    void isRushFalse()
+    {
+        isRush = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<TestPlayer>().isaddforce = true;
+            collision.gameObject.GetComponent<TestPlayer>().isAttacked = true;
             isRush = true;
         }
     }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TestPlayer : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TestPlayer : MonoBehaviour
     private float hAxis, vAxis;
     private bool wDown;
     private bool jDown;
-    public bool isaddforce = false;
+    public bool isAttacked = false;
     private bool isJump;
     private bool isDodge;
     private bool isStunned = false;
@@ -72,11 +73,11 @@ public class TestPlayer : MonoBehaviour
     private void Move()
     {
         movingWay = new Vector3(hAxis, 0, vAxis).normalized;
-        if (isaddforce)
+        if (isAttacked)
         {
             movingWay = (bossWay.transform.position - gameObject.transform.position).normalized;
             playerController.Move(-movingWay * 100 * Time.deltaTime);
-            Invoke("addFrocedFalse", 0.5f);
+            Invoke("isAttackedFalse", 0.5f);
             return;
         }
 
@@ -172,11 +173,16 @@ public class TestPlayer : MonoBehaviour
         if (other.gameObject.CompareTag("Zone"))
         {
             playerSpeed *= (float)0.5;
-            //isStunned = true;
             Debug.Log("플레이어 속도 느려짐");
         }
     }
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Zone"))
+        {
+            SlowOut();
+        }
+    }
     void SlowOut()
     {
         playerSpeed *= (float)2.0;
@@ -184,16 +190,8 @@ public class TestPlayer : MonoBehaviour
         Debug.Log("플레이어 속도 되돌아옴");
     }
 
-    private void OnTriggerExit(Collider other)
+    void isAttackedFalse()
     {
-        if (other.gameObject.CompareTag("Zone"))
-        {
-            Invoke("SlowOut", 3f);
-        }
-    }
-
-    void addFrocedFalse()
-    {
-        isaddforce = false;
+        isAttacked = false;
     }
 }
