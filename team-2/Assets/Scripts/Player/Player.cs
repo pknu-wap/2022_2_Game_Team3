@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     float hAxis, vAxis;     // 어느 방향으로 이동할 것인지 입력받아줄 변수.
     float playerSpeed = 10;  // 플레이어의 기본 이동속도.
-    float jumpPower = 5;    // 플레이어의 점프력
+    float jumpPower = 10;    // 플레이어의 점프력
 
     bool isJump;            // 점프 중인지 확인해줄 bool변수.
 
@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     GameObject clickObject;  // 플레이어가 상호작용 할 오브젝트를 넣어줄 변수.
 
     public GameManager gameManager; // 게임매니저
+
+    public GameObject feildPointObj; // 필드이동에 사용되는 포인트 지점 체크하는 변수 
 
     void Awake()
     {
@@ -67,23 +69,28 @@ public class Player : MonoBehaviour
 
     void Interaction()
     {
-        if (iDown)
+        if (iDown && feildPointObj)
         {
-            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 2.5f)) // 레이저, 레이저 맞춘 대상, 사거리
-            {
-                if (hit.collider.CompareTag("Door"))
-                {
-                    clickObject = hit.collider.gameObject;
-                    gameManager.Field_Change(clickObject);
-                    isLoading = true;
-                }
-            }
-            Debug.Log(clickObject.name);
+            Debug.Log("Interaction + " + feildPointObj.name);
+            gameManager.Field_Change(feildPointObj);
+            isLoading = true;
         }
+        /*
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 2.5f)) // 레이저, 레이저 맞춘 대상, 사거리
+        {
+            if (hit.collider.CompareTag("Door"))
+            {
+                clickObject = hit.collider.gameObject;
+                gameManager.Field_Change(clickObject);
+                isLoading = true;
+            }
+        }
+        Debug.Log(clickObject.name);
+        */
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -92,5 +99,17 @@ public class Player : MonoBehaviour
         {
             isJump = false;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Trigger IN + " + other.name);
+        feildPointObj = other.gameObject;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Trigger Out + " + other.name);
+        feildPointObj = null;
     }
 }
