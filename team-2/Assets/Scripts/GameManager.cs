@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] fields;
     public Transform[] spawnPoints;
 
+    public GameObject[] save_Artifacts;
+
     public void Field_Change(GameObject interactionOBJ)
     {
         Transform nextPos = interactionOBJ.GetComponent<Objects>().NextRoomPosition;
