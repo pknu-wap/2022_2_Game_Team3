@@ -6,29 +6,29 @@ public class EnemyFSM : MonoBehaviour
 {
     NavMeshAgent smith;
     //public float moveSpeed = 5f;
-    public float attackDistance = 2f;//°ø°Ý »ç°Å¸®
-    public float findDistance = 8f;//ÇÃ·¹ÀÌ¾î ÀÎ½Ä °Å¸®
-    public float stopDistance = 100;//Idle»óÅÂ·Î µ¹¾Æ¿À´Â °Å¸® 
-    public int attackPower = 3;//°ø°Ý·Â
+    public float attackDistance = 2f;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½
+    public float findDistance = 8f;//ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Î½ï¿½ ï¿½Å¸ï¿½
+    public float stopDistance = 100;//Idleï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ 
+    public int attackPower = 3;//ï¿½ï¿½ï¿½Ý·ï¿½
     
-    Transform player;//ÇÃ·¹ÀÌ¾îÀÇ ÁÂÇ¥ ÂüÁ¶º¯¼ö
-    CharacterController cc;//Ä³¸¯ÅÍ ÄÁÆ®·Ñ·¯
+    Transform player;//ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    CharacterController cc;//Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½
     // Start is called before the first frame update
     public enum EnemyState{
-        Idle,//±âº» »óÅÂ(°¡¸¸È÷ ÀÖÀ½)
-        Move,//ÇÃ·¹ÀÌ¾î¸¦ °ø°ÝÇÏ±â À§ÇØ ¿òÁ÷ÀÌ´Â »óÅÂ
-        Attack,//ÇÃ·¹ÀÌ¾î¸¦ °ø°ÝÇÏ·Á´Â »óÅÂ
-        Attacking//°ø°Ý¸ð¼ÇÀ» Ã³¸®ÇÏ´Â »óÅÂ 2 1.3 44
+        Idle,//ï¿½âº» ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        Move,//ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Attack,//ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Attacking//ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ 2 1.3 44
     }
-    float currentTime = 0;//°ø°Ý¼Óµµ¿¡ ¾²ÀÌ´Â ½Ã°£º¯¼ö
-    float attackDelay = 2f;//°ø°Ý°£ °£°Ý
-    public EnemyState m_State;//ÀûÀÇ »óÅÂ
+    float currentTime = 0;//ï¿½ï¿½ï¿½Ý¼Óµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½
+    float attackDelay = 2f;//ï¿½ï¿½ï¿½Ý°ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public EnemyState m_State;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     void Start()
     {
         m_State = EnemyState.Idle;
         cc = GetComponent<CharacterController>();
-        player = GameObject.Find("Test_Player").transform;//ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡¸¦ °¡Á®¿È
-        smith = GetComponent<NavMeshAgent>();//¿¡³Ê¹ÌÀÇ ³×ºê¸Þ½Ã¿¡ÀÌÀüÆ® °¡Á®¿À±â
+        player = GameObject.Find("Test_Player").transform;//ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        smith = GetComponent<NavMeshAgent>();//ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ ï¿½×ºï¿½Þ½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class EnemyFSM : MonoBehaviour
                 Move();
                 break;
             case EnemyState.Attack:
-                Attack();
+                DeafultAttack();
                 break;
             case EnemyState.Attacking:
                 Attacking();
@@ -53,7 +53,7 @@ public class EnemyFSM : MonoBehaviour
 
     void Idle()
     {
-        if(Vector3.Distance(transform.position, player.position) < findDistance)//ÇÃ·¹ÀÌ¾î°¡ ÀÎ½Ä °Å¸® ³»¿¡ µé¾î¿À¸é ¿òÁ÷ÀÌ´Â »óÅÂ·Î ÀüÈ¯
+        if(Vector3.Distance(transform.position, player.position) < findDistance)//ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½Î½ï¿½ ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½È¯
         {
             m_State = EnemyState.Move;
             print("Idle -> Move");
@@ -62,9 +62,9 @@ public class EnemyFSM : MonoBehaviour
 
     void Move()
     {
-        float Distance = Vector3.Distance(transform.position, player.position);//ÃÖÀûÈ­
+        float Distance = Vector3.Distance(transform.position, player.position);//ï¿½ï¿½ï¿½ï¿½È­
 
-        if (Distance > attackDistance && Distance < stopDistance)//ÇÃ·¹ÀÌ¾î°¡ °ø°Ý »ç°Å¸®º¸´Ù ¸Ö°í, ÇöÀç ½ºÅ×ÀÌÁö¿¡¼­ Å»ÃâÇÏÁö ¾Ê¾ÒÀ»¶§ ±æÃ£±â·Î ÇÃ·¹ÀÌ¾î Ã£¾Æ°¡±â
+        if (Distance > attackDistance && Distance < stopDistance)//ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ Ã£ï¿½Æ°ï¿½ï¿½ï¿½
         {
             //Vector3 dir = (player.position - transform.position).normalized;
 
@@ -78,21 +78,21 @@ public class EnemyFSM : MonoBehaviour
 
             smith.destination = player.position;
         }
-        else if (Distance > stopDistance)// ÇÃ·¹ÀÌ¾î°¡ ½ºÅ×ÀÌÁö¸¦ Å»ÃâÇßÀ»¶§ Idle»óÅÂ·Î ÀüÈ¯
+        else if (Distance > stopDistance)// ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Idleï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½È¯
         {
             m_State = EnemyState.Move;
             print("Move -> Idle");
         }
-        else//ÇÃ·¹ÀÌ¾î°¡ °ø°Ý»ç°Å¸® ¾ÈÀÏ¶§(else if·Î?)
+        else//ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½Ý»ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½Ï¶ï¿½(else ifï¿½ï¿½?)
         {
             m_State = EnemyState.Attack;
             print("Move -> Attack");
-            currentTime = attackDelay;//°ø°Ý »óÅÂ ÀüÈ¯ ½Ã ¹Ù·Î °ø°ÝÇÒ ¼ö ÀÖ°Ô ¸¸µë
+            currentTime = attackDelay;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
 
     }
 
-    void Attack()//°ø°Ý °¡´É »óÅÂ ÇÃ·¹ÀÌ¾î°¡ °ø°Ý »ç°Å¸® ¾ÈÀÌ¸écurrentTimeÀ» º¸°í attackDelayº¸´Ù Å©¸é °ø°Ý, °ø°Ý ÈÄ °ø°Ý¸ð¼Ç »óÅÂ·Î ³Ñ±è
+    void DeafultAttack()//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½currentTimeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ attackDelayï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½Ñ±ï¿½
     {
         if(Vector3.Distance(transform.position, player.position) < attackDistance)
         {
@@ -100,29 +100,29 @@ public class EnemyFSM : MonoBehaviour
             if(currentTime > attackDelay)
             {
                 print("Attack");
-                player.GetComponent<Player2>().DamageAction(attackPower);//player½ºÅ©¸³Æ®¿¡ ÀÖ´Â ÇÃ·¹ÀÌ¾î ÇÇÇØ ÇÔ¼ö¸¦ °¡Á®¿Í ½ÇÇà
-                currentTime = 0;//°ø°Ý °£ µô·¹ÀÌ¸¦ À§ÇØ 0À¸·Î 
+                player.GetComponent<Player2>().DamageAction(attackPower);//playerï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                currentTime = 0;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ 
                 m_State = EnemyState.Attacking;
             }
             
         }
-        else//ÇÃ·¹ÀÌ¾î°¡ °ø°Ý »ç°Å¸®¿¡¼­ ¹þ¾î³ª¸é Move»óÅÂ·Î ÀüÈ¯
+        else//ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³ªï¿½ï¿½ Moveï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½È¯
         {
             m_State = EnemyState.Move;
             print("Attack -> Move");
         }
     }
 
-    void Attacking()//°ø°Ý ¸ð¼Ç »óÅÂ¿¡¼­ »ç¿ëµÉ ÇÔ¼ö
+    void Attacking()//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
-        StartCoroutine(Attackmotion());//ÄÚ·çÆ¾ÇÔ¼ö¸¦ ÀÌ¿ë
+        StartCoroutine(Attackmotion());//ï¿½Ú·ï¿½Æ¾ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½
     }
 
-    IEnumerator Attackmotion()//°ø°Ý ¸ð¼Ç Áß Ã³¸®
+    IEnumerator Attackmotion()//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
     {
-        yield return new WaitForSeconds(0.5f);//0.5ÃÊ ÈÄ¿¡ »óÅÂ¸¦ attackÀ¸·Î ¸¸µë->0.5ÃÊ µ¿¾È Attacking »óÅÂ°¡ À¯ÁöµÇ¸ç ±× µ¿¾ÈÀº ¿¡³Ê¹Ì°¡ °¡¸¸È÷ ÀÖÀ½
+        yield return new WaitForSeconds(0.5f);//0.5ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ attackï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½->0.5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Attacking ï¿½ï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê¹Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         m_State = EnemyState.Attack;          //
-        StopCoroutine(Attackmotion());        //Attacking »óÅÂ¿¡¼­ Attacking ÇÔ¼ö°¡ ¿©·¯ ¹ø ½ÃÇàµÊ¿¡ µû¶ó ÄÚ·çÆ¾ ÇÔ¼ö°¡ ½×ÀÓ ÀÌ ÇÔ¼ö¸¦ ÀÌ¿ëÇØ ½×ÀÎ ÄÚ·çÆ¾ ÇÔ¼ö Á¦°Å
+        StopCoroutine(Attackmotion());        //Attacking ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ Attacking ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Æ¾ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Æ¾ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 
 }

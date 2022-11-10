@@ -1,23 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TestPlayer : MonoBehaviour
 {
+    public enum playState//�÷��̾� ���� ����
+    {
+        Normal,
+        Stun
+    }
+    float hp = 15f;
     public float playerSpeed;
     private float hAxis, vAxis;
     private bool wDown;
     private bool jDown;
+    private bool iDown;
     public bool isAttacked = false;
     private bool isJump;
     private bool isDodge;
     private bool isStunned = false;
     public float speed;
     public float gravity;
-    public float jumpSpeed;
+    public float jumpSpeed = 15;
     private bool jumped = false;
 
     private Vector3 jumpVector;
@@ -28,6 +30,15 @@ public class TestPlayer : MonoBehaviour
     private Rigidbody rigid;
     private CharacterController playerController;
 
+    
+    
+    public bool isLoading;  // �ε����϶� �÷��̾� �Ͻ��������(������ �� ���� x).
+    
+    GameObject clickObject;  // �÷��̾ ��ȣ�ۿ� �� ������Ʈ�� �־��� ����.
+
+    public GameManager gameManager; // ���ӸŴ���
+    public playState p_State;
+    public Transform enemypos;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -35,6 +46,8 @@ public class TestPlayer : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody>();
         bossWay = GameObject.Find("Boss").transform;
+        isJump = false;
+        p_State = playState.Normal;//�÷��̾� ���¸� �⺻ ���·� 
     }
 
     private void Start()
@@ -53,6 +66,7 @@ public class TestPlayer : MonoBehaviour
         //Turn();
         Jump();
         //Dodge();
+        Interaction();
     }
 
     void GetInput()
@@ -66,12 +80,14 @@ public class TestPlayer : MonoBehaviour
             hAxis = Input.GetAxis("Horizontal");
             vAxis = Input.GetAxis("Vertical");
             wDown = Input.GetButton("Walk");
-            jDown = Input.GetButtonDown("Jump");
+            iDown = Input.GetKeyDown(KeyCode.E);
         }
     }
 
     private void Move()
     {
+        if(isLoading)
+            return;
         movingWay = new Vector3(hAxis, 0, vAxis).normalized;
         if (isAttacked)
         {
@@ -92,7 +108,6 @@ public class TestPlayer : MonoBehaviour
             anim.SetBool("IsRun", movingWay != Vector3.zero);
         }
     }
-
     void JumpFalse()
     {
         jumped = false;
@@ -150,23 +165,34 @@ public class TestPlayer : MonoBehaviour
         isDodge = false;
     } */
 
-    void Turn()
+    void Interaction()
     {
-        if (movingWay != Vector3.zero)
+        if (iDown)
         {
-            Vector3 relativePos = (transform.position + movingWay) - transform.position;
-            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 10);
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 2.5f)) // ������, ������ ���� ���, ��Ÿ�
+            {
+                if (hit.collider.CompareTag("Door"))
+                {
+                    clickObject = hit.collider.gameObject;
+                    gameManager.Field_Change(clickObject);
+                    isLoading = true;
+                }
+            }
+            Debug.Log(clickObject.name);
         }
     }
 
-    /*private void OnCollisionEnter(Collision collision)
-    {
+    private void OnCollisionEnter(Collision collision)
+    { 
         if (collision.gameObject.CompareTag("Floor"))
         {
             isJump = false;
         }
-    }*/
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -193,5 +219,11 @@ public class TestPlayer : MonoBehaviour
     void isAttackedFalse()
     {
         isAttacked = false;
+    }
+    
+    public void DamageAction(int damage)
+    {
+        hp -= damage;
+        print("현재 남은 체력: " + hp);
     }
 }
