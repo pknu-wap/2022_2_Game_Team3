@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class EnemySkill : MonoBehaviour
 {
-    public GameObject fireball; //È­¿°±¸ ¿ÀºêÁ§Æ® ¹Þ¾Æ¿À±â
-    public Transform throwpoint;//ÇÃ·¹ÀÌ¾î ´ç°Ü¿À±â ½ºÅ³ ÄðÅ¸ÀÓ¿ë 
-    float grep_currentTime;//È­¿°±¸ ½ºÅ³ ÄðÅ¸ÀÓ¿ë
+    public GameObject fireball; //È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ¾Æ¿ï¿½ï¿½ï¿½
+    public Transform throwpoint;//ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½ï¿½Å¸ï¿½Ó¿ï¿½ 
+    float grep_currentTime;//È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½ï¿½Å¸ï¿½Ó¿ï¿½
     float fireball_currentTIme = 5f;
-    float grepTime = 5f;//ÇÃ·¹ÀÌ¾î ´ç°Ü¿À±â ½ºÅ³ ÄðÅ¸ÀÓ
-    float fireTIme = 5f;//È­¿°±¸ ¹ß»ç ÄðÅ¸ÀÓ
+    float grepTime = 5f;//ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½ï¿½Å¸ï¿½ï¿½
+    float fireTIme = 5f;//È­ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½
     //CharacterController playercc;
     Transform playerpos;
-    EnemyFSM.EnemyState enemyState;
+    BossScript.EnemyState enemyState;
     // Start is called before the first frame update
     void Start()
     {
         playerpos = GameObject.Find("Test_Player").transform;
         //playercc = playerpos.GetComponent<CharacterController>();
-        enemyState = GameObject.Find("Enemy").transform.GetComponent<EnemyFSM>().m_State;
+        enemyState = GameObject.Find("Boss").transform.GetComponent<BossScript>().m_State;
     }
 
     // Update is called once per frame
@@ -26,9 +26,9 @@ public class EnemySkill : MonoBehaviour
     {
         grep_currentTime += Time.deltaTime;
         fireball_currentTIme += Time.deltaTime;
-        if (grep_currentTime > grepTime)//½ºÅ³ ÄðÅ¸ÀÓÀÌ µ¹¸é ÇÃ·¹ÀÌ¾î ²ø¾î´ç±â±â À§ÇØ ÇÃ·¹ÀÌ¾î »óÅÂ¸¦ ½ºÅÏÀ¸·Î ¸¸µë
+        if (grep_currentTime > grepTime)//ï¿½ï¿½Å³ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         {
-            playerpos.GetComponent<Player2>().p_State = Player2.playState.Stun;
+            playerpos.GetComponent<BossPlayer>().p_State = BossPlayer.playState.Stun;
             StartCoroutine(grepingend());
             /*Vector3 way = (transform.position - playerpos.position).normalized;
             playercc.Move(way * 2 *Time.deltaTime);*/
@@ -36,16 +36,16 @@ public class EnemySkill : MonoBehaviour
         }
         /*if (enemyState == EnemyFSM.EnemyState.Move)
         {*/
-            if (fireball_currentTIme > fireTIme)//½ºÅ³ ÄðÅ¸ÀÓÀÌ µ¹¸é ÇÃ·¹ÀÌ¾î¸¦ ÇâÇØ È­¿°±¸¸¦ ´øÁü
+            if (fireball_currentTIme > fireTIme)//ï¿½ï¿½Å³ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             {
                 Instantiate(fireball, throwpoint);
                 fireball_currentTIme = 0;
             }
         //}
     }
-    IEnumerator grepingend()//°ø°Ý ¸ð¼Ç Áß Ã³¸®
+    IEnumerator grepingend()//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½
     {
-        yield return new WaitForSeconds(1f);//0.5ÃÊ ÈÄ¿¡ »óÅÂ¸¦ attackÀ¸·Î ¸¸µë->0.5ÃÊ µ¿¾È Attacking »óÅÂ°¡ À¯ÁöµÇ¸ç ±× µ¿¾ÈÀº ¿¡³Ê¹Ì°¡ °¡¸¸È÷ ÀÖÀ½
-        playerpos.GetComponent<Player2>().p_State = Player2.playState.Normal;//
+        yield return new WaitForSeconds(1f);//0.5ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ attackï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½->0.5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Attacking ï¿½ï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê¹Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        playerpos.GetComponent<BossPlayer>().p_State = BossPlayer.playState.Normal;//
     }
 }

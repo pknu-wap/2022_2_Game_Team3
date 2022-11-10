@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestPlayer : MonoBehaviour
+public class BossPlayer : MonoBehaviour
 {
     public enum playState//�÷��̾� ���� ����
     {
@@ -8,26 +8,21 @@ public class TestPlayer : MonoBehaviour
         Stun
     }
     float hp = 15f;
-    public float playerSpeed;
+    
     private float hAxis, vAxis;
-    private bool wDown;
     private bool jDown;
     private bool iDown;
+    
+    public float playerSpeed;
+
     public bool isAttacked = false;
-    private bool isJump;
     private bool isDodge;
-    private bool isStunned = false;
-    public float speed;
-    public float gravity;
-    public float jumpSpeed = 15;
-    private bool jumped = false;
 
     private Vector3 jumpVector;
     private Vector3 movingWay;
 
     private Transform bossWay;
     private Animator anim;
-    private Rigidbody rigid;
     private CharacterController playerController;
 
     
@@ -44,44 +39,36 @@ public class TestPlayer : MonoBehaviour
     {
         playerController = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
-        rigid = GetComponent<Rigidbody>();
         bossWay = GameObject.Find("Boss").transform;
-        isJump = false;
         p_State = playState.Normal;//�÷��̾� ���¸� �⺻ ���·� 
     }
 
     private void Start()
     {
-        speed = 6.0f;
-        jumpSpeed = 9.8f;
-        gravity = 9.8f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(p_State == playState.Stun)//스턴(적 위치로 플레이어 끌어당기기) 상태가 되면 실행
+        {
+            Vector3 way = (enemypos.position - transform.position).normalized;//플레이어를 당겨오기 위해 벡터로 방향을 계산하고
+            transform.Translate(way * 2 * Time.deltaTime, Space.World);//스턴 동안 해당 값만큼 당겨온다.
+            return;//플레이어가 스턴 상태면 위의 내용먼 실행시키고 리턴->사용자의 움직임 입력을 받지못함
+        }
         Gravity();
         GetInput();
         Move();
-        //Turn();
-        Jump();
-        //Dodge();
+        Dodge();
         Interaction();
     }
 
     void GetInput()
     {
-        if (isStunned == true)
-        {
-            return;
-        }
-        else
-        {
-            hAxis = Input.GetAxis("Horizontal");
-            vAxis = Input.GetAxis("Vertical");
-            wDown = Input.GetButton("Walk");
-            iDown = Input.GetKeyDown(KeyCode.E);
-        }
+        hAxis = Input.GetAxis("Horizontal");
+        vAxis = Input.GetAxis("Vertical");
+        iDown = Input.GetKeyDown(KeyCode.E);
+        jDown = Input.GetKeyDown(KeyCode.Space);
     }
 
     private void Move()
@@ -96,74 +83,37 @@ public class TestPlayer : MonoBehaviour
             Invoke("isAttackedFalse", 0.5f);
             return;
         }
-
-        if (wDown)
-        {
-            playerController.Move(movingWay * playerSpeed * 0.3f * Time.deltaTime);
-            anim.SetBool("IsWalk", wDown);
-        }
-        else
-        {
-            playerController.Move(movingWay * playerSpeed * Time.deltaTime);
-            anim.SetBool("IsRun", movingWay != Vector3.zero);
-        }
-    }
-    void JumpFalse()
-    {
-        jumped = false;
-        isJump = false;
-    }
-
-    void Jump()
-    {
-        if (jumped)
-        {
-            playerController.Move(jumpVector * (float)3.5 * Time.deltaTime);
-            Invoke("JumpFalse", 0.5f);
-        }
-
-        if (jDown && !isJump)
-        {
-            jumpVector.y = jumpSpeed;
-            //cc.Move(Vector3.up * 35 * Time.deltaTime);
-            //cc.Move(jumpVector);
-            isJump = true;
-            jumped = true;
-        }
+        playerController.Move(movingWay * playerSpeed * Time.deltaTime);
+        anim.SetBool("IsRun", movingWay != Vector3.zero);
     }
 
     void Gravity()
     {
-        if (jumped == true)
-        {
-            return;
-        }
-
         jumpVector = new Vector3(0f, -20.0f, 0f);
-        //jumpVector.y -= gravity;
-
-        //movingWay = Vector3.zero;
-        //movingWay.y -= gravity;
         playerController.Move(jumpVector * Time.deltaTime);
-        //movingWay.y = 0;
     }
 
-    /*void Dodge()
+    void Dodge()
     {
-        if (jDown && movingWay != Vector3.zero &&!isJump && !isDodge)
+        if (jDown && movingWay != Vector3.zero && !isDodge)
         {
             playerSpeed *= 2;
             isDodge = true;
             
-            Invoke("DodgeOut", 3.0f);
+            Invoke("DodgeOut", 0.5f);
         }
     }
 
     void DodgeOut()
     {
         playerSpeed *= (float)0.5;
+        Invoke("DodgeFalse", 10.0f);
+    }
+
+    void DodgeFalse()
+    {
         isDodge = false;
-    } */
+    }
 
     void Interaction()
     {
@@ -185,15 +135,6 @@ public class TestPlayer : MonoBehaviour
             Debug.Log(clickObject.name);
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    { 
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isJump = false;
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Zone"))
@@ -212,7 +153,6 @@ public class TestPlayer : MonoBehaviour
     void SlowOut()
     {
         playerSpeed *= (float)2.0;
-        //isStunned = false;
         Debug.Log("플레이어 속도 되돌아옴");
     }
 

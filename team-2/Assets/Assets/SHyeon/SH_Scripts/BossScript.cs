@@ -6,13 +6,12 @@ public class BossScript : MonoBehaviour
 {
     NavMeshAgent smith;
     private Transform playerTransform;
-    private float timer;
     private Vector3 heading;
     private Vector3 direction;
 
+    BossPlayer PlayerAttacked;
+
     public float bossSpeed = 75f;
-    
-    //혜준 코드
     public float attackDistance = 2f;//���� ��Ÿ�
     public float findDistance = 8f;//�÷��̾� �ν� �Ÿ�
     public float stopDistance = 100;//Idle���·� ���ƿ��� �Ÿ� 
@@ -26,12 +25,14 @@ public class BossScript : MonoBehaviour
         Attacking,
         Rush//���ݸ���� ó���ϴ� ���� 2 1.3 44
     }
+    private float rushCoolTime;
     float currentTime;//���ݼӵ��� ���̴� �ð�����
     float attackDelay = 2f;//���ݰ� ����
     public EnemyState m_State;
     
     void Start()
     {
+        PlayerAttacked = GameObject.Find("Player").GetComponent<BossPlayer>();
         playerTransform = GameObject.FindWithTag("Player").transform;
         m_State = EnemyState.Idle;
         smith = GetComponent<NavMeshAgent>();//���ʹ��� �׺�޽ÿ�����Ʈ ��������
@@ -105,7 +106,7 @@ public class BossScript : MonoBehaviour
             if(currentTime > attackDelay)
             {
                 print("Attack");
-                playerTransform.GetComponent<Player2>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
+                playerTransform.GetComponent<BossPlayer>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
                 currentTime = 0;//���� �� �����̸� ���� 0���� 
                 m_State = EnemyState.Attacking;
             }
@@ -119,7 +120,7 @@ public class BossScript : MonoBehaviour
     }
     void Rush()
     {
-        timer = 0;
+        rushCoolTime = 0;
         heading = playerTransform.transform.position - transform.position;
         float distance = heading.magnitude;
         direction = heading.normalized;
@@ -132,8 +133,8 @@ public class BossScript : MonoBehaviour
         }
         else
         {
-            timer += Time.deltaTime;
-            if (timer > 30)
+            rushCoolTime += Time.deltaTime;
+            if (rushCoolTime > 30)
             {
                 m_State = EnemyState.Rush;
             }
@@ -161,7 +162,7 @@ public class BossScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<TestPlayer>().isAttacked = true;
+            PlayerAttacked.isAttacked = true;
             m_State = EnemyState.Idle;
         }
     }
