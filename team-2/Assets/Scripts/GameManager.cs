@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Transform[] spawnPoints;
 
     public GameObject[] save_Artifacts;
+    public GameObject[] maze_Spawn_point;
 
     public void Field_Change(GameObject interactionOBJ)
     {

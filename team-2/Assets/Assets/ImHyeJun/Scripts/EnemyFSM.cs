@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyFSM : MonoBehaviour
 {
-    NavMeshAgent smith;
+    private NavMeshAgent smith;
     //public float moveSpeed = 5f;
     public float attackDistance = 2f;//공격 사거리
     public float findDistance = 8f;//플레이어 인식 거리
@@ -12,8 +14,19 @@ public class EnemyFSM : MonoBehaviour
     public int attackPower = 3;//공격력
     
     Transform player;//플레이어의 좌표 참조변수
-    CharacterController cc;//캐릭터 컨트롤러
-    // Start is called before the first frame update
+
+    private void OnDrawGizmos()
+    {
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, findDistance);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
+
+    }
+
     public enum EnemyState{
         Idle,//기본 상태(가만히 있음)
         Move,//플레이어를 공격하기 위해 움직이는 상태
@@ -23,10 +36,9 @@ public class EnemyFSM : MonoBehaviour
     float currentTime = 0;//공격속도에 쓰이는 시간변수
     float attackDelay = 2f;//공격간 간격
     public EnemyState m_State;//적의 상태
-    void Start()
+    void Awake()
     {
         m_State = EnemyState.Idle;
-        cc = GetComponent<CharacterController>();
         player = GameObject.Find("Test_Player").transform;//플레이어의 위치를 가져옴
         smith = GetComponent<NavMeshAgent>();//에너미의 네브메시에이전트 가져오기
     }
@@ -76,11 +88,11 @@ public class EnemyFSM : MonoBehaviour
 
             smith.stoppingDistance = attackDistance;
 
-            smith.destination = player.position;
+            smith.SetDestination(player.position);
         }
         else if (Distance > stopDistance)// 플레이어가 스테이지를 탈출했을때 Idle상태로 전환
         {
-            m_State = EnemyState.Move;
+            m_State = EnemyState.Idle;
             print("Move -> Idle");
         }
         else//플레이어가 공격사거리 안일때(else if로?)
