@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] save_Artifacts;
     public GameObject[] maze_Spawn_point;
     public GameObject[] room_Artifacts;
+    public GameObject[] rooms;
 
     public void Field_Change(GameObject interactionOBJ)
     {
@@ -35,7 +36,27 @@ public class GameManager : MonoBehaviour
         if(artifact.name == room_Artifacts[0].name)
         {
             room_Artifacts[0].SetActive(false);
+            Maze_Room_Second_Phase();
         }
+    }
+
+    // 미로 2페이즈
+    public void Maze_Room_Second_Phase()
+    {
+        for(int i = 0; i < maze_Spawn_point.Length; i++)
+        {
+            maze_Spawn_point[i].SetActive(true);
+        }
+    }
+
+    // 미로 초기화!
+    public void Maze_Room_First_Phase()
+    {
+        for (int i = 0; i < maze_Spawn_point.Length; i++)
+        {
+            maze_Spawn_point[i].SetActive(false);
+        }
+        room_Artifacts[0].SetActive(true);
     }
 
     IEnumerator tpPos(Transform nextPos)
