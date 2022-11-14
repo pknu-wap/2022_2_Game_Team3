@@ -10,6 +10,7 @@ TagManager:
   - Item
   - Zone
   - Test
+  - Artifact
   layers:
   - Default
   - TransparentFX
