@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] save_Artifacts;
     public GameObject[] maze_Spawn_point;
+    public GameObject[] room_Artifacts;
 
     public void Field_Change(GameObject interactionOBJ)
     {
@@ -26,6 +27,15 @@ public class GameManager : MonoBehaviour
         systemManager.GetComponent<FadeInOut>().FadeFunc();
 
         StartCoroutine(tpPos(nextPos));
+    }
+
+    public void Get_Artifact(GameObject artifact)
+    {
+        Debug.Log("얻은 유물 이름 : " + artifact.name);
+        if(artifact.name == room_Artifacts[0].name)
+        {
+            room_Artifacts[0].SetActive(false);
+        }
     }
 
     IEnumerator tpPos(Transform nextPos)

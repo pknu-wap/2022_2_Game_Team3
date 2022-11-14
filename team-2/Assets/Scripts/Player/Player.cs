@@ -21,11 +21,11 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;        // 플레이어의 리지드바디.
 
-    GameObject clickObject;  // 플레이어가 상호작용 할 오브젝트를 넣어줄 변수.
+    public GameObject clickObject;  // 플레이어가 상호작용 할 오브젝트를 넣어줄 변수.
 
     public GameManager gameManager; // 게임매니저
 
-    public GameObject feildPointObj; // 필드이동에 사용되는 포인트 지점 체크하는 변수 
+    //public GameObject feildPointObj; // 필드이동에 사용되는 포인트 지점 체크하는 변수 
 
     void Awake()
     {
@@ -71,11 +71,15 @@ public class Player : MonoBehaviour
 
     void Interaction()
     {
-        if (iDown && feildPointObj)
+        if (iDown && clickObject.CompareTag("Door"))
         {
-            Debug.Log("Interaction + " + feildPointObj.name);
-            gameManager.Field_Change(feildPointObj);
+            Debug.Log("Interaction + " + clickObject.name);
+            gameManager.Field_Change(clickObject);
             isLoading = true;
+        }
+        else if(iDown && clickObject.CompareTag("Artifact"))
+        {
+            gameManager.Get_Artifact(clickObject);
         }
         /*
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
@@ -105,13 +109,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger IN + " + other.name);
-        feildPointObj = other.gameObject;
+        clickObject = other.gameObject;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger Out + " + other.name);
-        feildPointObj = null;
+        clickObject = null;
     }
 }

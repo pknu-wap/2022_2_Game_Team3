@@ -65,10 +65,10 @@ public class EnemyFSM : MonoBehaviour
 
     void Idle()
     {
-        if(Vector3.Distance(transform.position, player.position) < findDistance)//플레이어가 인식 거리 내에 들어오면 움직이는 상태로 전환
+        if(Vector3.Distance(transform.position, player.position) <= findDistance)//플레이어가 인식 거리 내에 들어오면 움직이는 상태로 전환
         {
             m_State = EnemyState.Move;
-            print("Idle -> Move");
+            Debug.Log("Idle -> Move");
         }
     }
 
@@ -76,29 +76,29 @@ public class EnemyFSM : MonoBehaviour
     {
         float Distance = Vector3.Distance(transform.position, player.position);//최적화
 
-        if (Distance > attackDistance && Distance < stopDistance)//플레이어가 공격 사거리보다 멀고, 현재 스테이지에서 탈출하지 않았을때 길찾기로 플레이어 찾아가기
+        if (Distance > attackDistance && Distance <= stopDistance)//플레이어가 공격 사거리보다 멀고, 현재 스테이지에서 탈출하지 않았을때 길찾기로 플레이어 찾아가기
         {
             //Vector3 dir = (player.position - transform.position).normalized;
 
             //cc.Move(dir * moveSpeed * Time.deltaTime);
 
-            smith.isStopped = true;
+            //smith.isStopped = true;
 
-            smith.ResetPath();
+            //smith.ResetPath();
 
-            smith.stoppingDistance = attackDistance;
+            //smith.stoppingDistance = attackDistance;
 
             smith.SetDestination(player.position);
         }
         else if (Distance > stopDistance)// 플레이어가 스테이지를 탈출했을때 Idle상태로 전환
         {
             m_State = EnemyState.Idle;
-            print("Move -> Idle");
+            Debug.Log("Move -> Idle");
         }
-        else//플레이어가 공격사거리 안일때(else if로?)
+        else if(Distance <= attackDistance)//플레이어가 공격사거리 안일때(else if로?)
         {
             m_State = EnemyState.Attack;
-            print("Move -> Attack");
+            Debug.Log("Move -> Attack");
             currentTime = attackDelay;//공격 상태 전환 시 바로 공격할 수 있게 만듬
         }
 
@@ -111,8 +111,8 @@ public class EnemyFSM : MonoBehaviour
             currentTime += Time.deltaTime;
             if(currentTime > attackDelay)
             {
-                print("Attack");
-                player.GetComponent<Player2>().DamageAction(attackPower);//player스크립트에 있는 플레이어 피해 함수를 가져와 실행
+                Debug.Log("Attack");
+                //player.GetComponent<Player2>().DamageAction(attackPower);//player스크립트에 있는 플레이어 피해 함수를 가져와 실행
                 currentTime = 0;//공격 간 딜레이를 위해 0으로 
                 m_State = EnemyState.Attacking;
             }
@@ -121,7 +121,7 @@ public class EnemyFSM : MonoBehaviour
         else//플레이어가 공격 사거리에서 벗어나면 Move상태로 전환
         {
             m_State = EnemyState.Move;
-            print("Attack -> Move");
+            Debug.Log("Attack -> Move");
         }
     }
 
