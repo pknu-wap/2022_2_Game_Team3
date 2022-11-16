@@ -5,4 +5,6 @@ using UnityEngine;
 public class Objects : MonoBehaviour
 {
     public Transform NextRoomPosition;
+    public bool inRoom;
+
 }
