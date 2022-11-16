@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    Dictionary<GameObject, int> roomState; // Room Clear?
     // 플레이어
     public Player player;
 
     // 시스템 매니저
     public GameObject systemManager;
+
+    // 상태 조건
+    private bool isGetArtifact = false; // Room Artifact Get?
+    private bool isInRoom = false;  // now player in Room? condition
+    private bool isNeedArtifact = false; // if Get Room Artifact Player can Escape
 
     // 필드 및 스폰포인트.
     public GameObject[] fields;
@@ -20,14 +26,53 @@ public class GameManager : MonoBehaviour
     public GameObject[] maze_Spawn_point;
     public GameObject[] room_Artifacts;
     public GameObject[] rooms;
+    
+    // 현재 플레이어 방오브젝트
+    public GameObject playerInRoom;
+
+    // 현재 먹은 유물 번호
+    public int artifactNum = -1;    // 0 -> Maze Artifact, 1 -> Jump Artifact, 2 -> treasure Artifact, 3 -> Quiz Artifact 
+
+    void Start()
+    {
+        roomState = new Dictionary<GameObject, int>();
+        
+        for(int i = 0; i < rooms.Length; i++)
+        {
+            roomState.Add(rooms[i], 0);
+        }
+
+        foreach(KeyValuePair<GameObject, int> pair in roomState)
+        {
+            Debug.Log(pair.Key.name + "," + pair.Value);
+        }
+    }
 
     public void Field_Change(GameObject interactionOBJ)
     {
-        Transform nextPos = interactionOBJ.GetComponent<Objects>().NextRoomPosition;
-
-        systemManager.GetComponent<FadeInOut>().FadeFunc();
-
-        StartCoroutine(tpPos(nextPos));
+        Objects OBJcomponent = interactionOBJ.GetComponent<Objects>();
+        if(!isGetArtifact && !isNeedArtifact)  {    
+            Transform nextPos = OBJcomponent.NextRoomPosition;
+            systemManager.GetComponent<FadeInOut>().FadeFunc();
+            
+            StartCoroutine(tpPos(nextPos));
+        }
+        else{
+            Debug.Log("Can't exit");
+            player.isLoading = false;
+        }
+        if(OBJcomponent.inRoom)
+        {
+            isInRoom = true;    // 입구인가를 표시하는 bool형 변수
+            isNeedArtifact = true;
+        }
+        else
+        {
+            if(artifactNum >= 0) {
+                save_Artifacts[artifactNum].SetActive(true);
+            }
+            //save();
+        }
     }
 
     public void Get_Artifact(GameObject artifact)
@@ -37,6 +82,12 @@ public class GameManager : MonoBehaviour
         {
             room_Artifacts[0].SetActive(false);
             Maze_Room_Second_Phase();
+            roomState[rooms[0]] = 1;
+            artifactNum = 0;
+        }
+        if(isNeedArtifact)
+        {
+            isNeedArtifact = false;
         }
     }
 

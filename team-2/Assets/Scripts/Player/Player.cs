@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int life = 2; // 생명력.
-
+    
     float hAxis, vAxis;     // 어느 방향으로 이동할 것인지 입력받아줄 변수.
     float playerSpeed = 10;  // 플레이어의 기본 이동속도.
     float jumpPower = 10;    // 플레이어의 점프력
@@ -74,29 +74,13 @@ public class Player : MonoBehaviour
         if (iDown && clickObject.CompareTag("Door"))
         {
             Debug.Log("Interaction + " + clickObject.name);
-            gameManager.Field_Change(clickObject);
             isLoading = true;
+            gameManager.Field_Change(clickObject);
         }
         else if(iDown && clickObject.CompareTag("Artifact"))
         {
             gameManager.Get_Artifact(clickObject);
         }
-        /*
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 2.5f)) // 레이저, 레이저 맞춘 대상, 사거리
-        {
-            if (hit.collider.CompareTag("Door"))
-            {
-                clickObject = hit.collider.gameObject;
-                gameManager.Field_Change(clickObject);
-                isLoading = true;
-            }
-        }
-        Debug.Log(clickObject.name);
-        */
     }
 
     private void OnCollisionEnter(Collision collision)
