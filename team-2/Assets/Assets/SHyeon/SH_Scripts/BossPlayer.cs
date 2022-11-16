@@ -76,9 +76,11 @@ public class BossPlayer : MonoBehaviour
         if(isLoading)
             return;
         movingWay = new Vector3(hAxis, 0, vAxis).normalized;
+        movingWay = transform.TransformDirection(movingWay);
         if (isAttacked)
         {
             movingWay = (bossWay.transform.position - gameObject.transform.position).normalized;
+            movingWay = transform.TransformDirection(movingWay);
             playerController.Move(-movingWay * 100 * Time.deltaTime);
             Invoke("isAttackedFalse", 0.5f);
             return;
@@ -123,7 +125,7 @@ public class BossPlayer : MonoBehaviour
 
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 2.5f)) // ������, ������ ���� ���, ��Ÿ�
+            if (Physics.Raycast(ray, out hit, 2.5f))
             {
                 if (hit.collider.CompareTag("Door"))
                 {

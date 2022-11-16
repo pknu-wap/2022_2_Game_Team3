@@ -16,7 +16,7 @@ public class EnemySkill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerpos = GameObject.Find("Test_Player").transform;
+        playerpos = GameObject.Find("Player").transform;
         //playercc = playerpos.GetComponent<CharacterController>();
         enemyState = GameObject.Find("Boss").transform.GetComponent<BossScript>().m_State;
     }
