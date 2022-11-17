@@ -10,7 +10,7 @@ public class FlameScript : MonoBehaviour
     {
         if (floorState == true)
         {
-            transform.localScale += new Vector3(0, flameSpeed, 0);
+            transform.localScale += new Vector3(0, flameSpeed*Time.deltaTime, 0);
         }
     }
 }
