@@ -11,6 +11,7 @@ public class BossScript : MonoBehaviour
 
     BossPlayer PlayerAttacked;
 
+    public int hp = 50;//보스 체력
     public float bossSpeed = 75f;
     public float attackDistance = 2f;//���� ��Ÿ�
     public float findDistance = 8f;//�÷��̾� �ν� �Ÿ�
@@ -23,7 +24,10 @@ public class BossScript : MonoBehaviour
         Move,//�÷��̾ �����ϱ� ���� �����̴� ����
         Attack,//�÷��̾ �����Ϸ��� ����
         Attacking,
-        Rush//���ݸ���� ó���ϴ� ���� 2 1.3 44
+        Rush,//���ݸ���� ó���ϴ� ���� 2 1.3 44
+        Damaged,/////////////////////////////////////////////데미지 처리상태
+        Die/////////////////////////죽음 처리 상태
+
     }
     private float rushCoolTime;
     float currentTime;//���ݼӵ��� ���̴� �ð�����
@@ -57,6 +61,10 @@ public class BossScript : MonoBehaviour
                 break;
             case EnemyState.Rush:
                 Rush();
+                break;
+            case EnemyState.Damaged://///////////////////////////////////
+                break;
+            case EnemyState.Die:///////////////////////
                 break;
         }
     }
@@ -156,6 +164,53 @@ public class BossScript : MonoBehaviour
     void IsRushFalse()
     {
         m_State = EnemyState.Idle;
+    }
+
+    public void HitEnemy(int hitPower)//플레이어에 의해 호출될 보스에게 데미지를 입히는 함수
+    {
+        hp -= hitPower;
+
+        if (hp > 0)
+        {
+            m_State = EnemyState.Damaged;
+            print("->Damaged");
+            Damaged();
+        }
+        else
+        {
+            m_State = EnemyState.Die;
+            print("->Die");
+            Die();
+        }
+    }
+
+    void Damaged()//데미지를 입는 동안의 처리 
+    {
+        StartCoroutine(DamageProcess());
+
+    }
+
+    IEnumerator DamageProcess()//데미지 상태 처리용 코루틴 함수 0.1초 보스가 멈추게 함(공격 받을 시)
+    {
+        print("보스의 남은 체력" + hp);
+        yield return new WaitForSeconds(0.1f);
+
+        m_State = EnemyState.Move;
+        print("Damaged -> Move");
+    }
+
+    void Die()//보스의 죽음을 처리하는 함수
+    {
+        StopAllCoroutines();
+
+        StartCoroutine(DieProcess());
+    }
+
+    IEnumerator DieProcess()//보스 죽음 처리용 코루틴 함수 2초 후 보스가 스테이지에서 사라진다. 
+    {
+        yield return new WaitForSeconds(2f);
+        print("Die");
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)

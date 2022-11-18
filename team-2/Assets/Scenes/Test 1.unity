@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9463,6 +9463,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 454854, guid: e268c3025a2a0864f9c404b68a8cedcd, type: 3}
   m_PrefabInstance: {fileID: 210848569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &214169968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214169969}
+  m_Layer: 0
+  m_Name: attackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214169969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214169968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.46, y: 0.89, z: 1.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1642088376}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &220171531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17061,8 +17092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f628aef6890b5ab449ea0dee49880444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPower: 3
   playerSpeed: 15
   isAttacked: 0
+  attackPoint: {fileID: 0}
   isLoading: 0
   gameManager: {fileID: 0}
   p_State: 0
@@ -64647,12 +64680,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f628aef6890b5ab449ea0dee49880444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPower: 3
   playerSpeed: 15
   isAttacked: 0
+  attackPoint: {fileID: 214169969}
   isLoading: 0
   gameManager: {fileID: 0}
   p_State: 0
-  enemypos: {fileID: 0}
+  enemypos: {fileID: 2139435366}
 --- !u!143 &1642088375
 CharacterController:
   m_ObjectHideFlags: 0
@@ -83356,6 +83391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0959c9da19215da4fb9d44e1316c0094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 50
   bossSpeed: 75
   attackDistance: 2
   findDistance: 8
