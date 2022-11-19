@@ -35,12 +35,13 @@ public class GameManager : MonoBehaviour
 
     // 함정들
     // 1. Lava Set parameter
-    public GameObject lava;
+    public GameObject Jump_Map_lava;
     public Vector3 lavaStartPos;
 
     void Start()
     {
         roomState = new Dictionary<GameObject, int>();
+        lavaStartPos = new Vector3(0, -37, 300);
         
         for(int i = 0; i < rooms.Length; i++)
         {
@@ -128,19 +129,14 @@ public class GameManager : MonoBehaviour
     // 점프맵 2페이즈
     public void Jump_Room_Second_Phase()
     {
-        lavaStartPos = new Vector3(0, lava.transform.position.y, 0);
-
-        while(lava.transform.position.y <= 50)
-        {
-            lava.transform.position += new Vector3(0, 1f, 0);
-        }
+        StartCoroutine(LavaON(Jump_Map_lava));
     }
 
     public void Jump_Room_First_Phase()
     {
         room_Artifacts[artifactNum].SetActive(true);
         save_Artifacts[artifactNum].SetActive(false);
-        lava.transform.position = lavaStartPos;
+        Jump_Map_lava.transform.position = lavaStartPos;
         artifactNum = -1;
     }
 
@@ -164,5 +160,20 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         Vector3 spawnPos = new Vector3(nextPos.position.x, nextPos.position.y + 1, nextPos.position.z);
         player.transform.position = spawnPos;
+    }
+
+    IEnumerator LavaON(GameObject lava)
+    {
+        yield return new WaitForSeconds(0.15f);
+        if(lava.transform.position.y <= 50)
+        {
+            lava.transform.Translate(Vector3.up * Time.deltaTime);
+            Debug.Log(Jump_Map_lava.transform.position);
+            StartCoroutine(LavaON(lava));
+        }
+        else
+        {
+            Jump_Room_Second_Phase();
+        }
     }
 }

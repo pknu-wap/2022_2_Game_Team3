@@ -41,6 +41,7 @@ public class EnemyFSM : MonoBehaviour
         m_State = EnemyState.Idle;
         player = GameObject.Find("Test_Player").transform;//플레이어의 위치를 가져옴
         smith = GetComponent<NavMeshAgent>();//에너미의 네브메시에이전트 가져오기
+        smith.speed = 10.0f;
     }
 
     // Update is called once per frame
