@@ -82,10 +82,12 @@ public class Player : MonoBehaviour
             else if(clickObject.CompareTag("Artifact"))
             {
                 gameManager.Get_Artifact(clickObject);
+                clickObject = null;
             }
             else if(clickObject.CompareTag("Treasure"))
             {
                 clickObject.GetComponent<Treasure>().OpenBox();
+                clickObject = null;
             }
         }
         /*
