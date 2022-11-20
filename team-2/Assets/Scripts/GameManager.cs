@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
     {
         for(int i = 0; i < maze_Spawn_point.Length; i++)
         {
-            maze_Spawn_point[i].transform.GetChild(0).transform.position = new Vector3(0,0,0);
+            maze_Spawn_point[i].transform.GetChild(0).transform.localPosition = new Vector3(0,0,0);
             maze_Spawn_point[i].SetActive(true);
         }
     }
