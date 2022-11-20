@@ -12,6 +12,7 @@ public class EnemyFSM : MonoBehaviour
     public float findDistance = 8f;//플레이어 인식 거리
     public float stopDistance = 100;//Idle상태로 돌아오는 거리 
     public int attackPower = 3;//공격력
+    float extraRotationSpeed = 5f;
     
     Transform player;//플레이어의 좌표 참조변수
 
@@ -46,7 +47,10 @@ public class EnemyFSM : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        Vector3 lookrotation = smith.steeringTarget-transform.position;
+        transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(lookrotation), extraRotationSpeed*Time.deltaTime); 
+
         switch (m_State)
         {
             case EnemyState.Idle:
