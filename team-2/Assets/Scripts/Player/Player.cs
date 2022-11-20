@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
 
     void Interaction()
     {
-        if (iDown && clickObject.CompareTag("Door"))
+        if (iDown && clickObject.CompareTag("Door") && !isLoading)
         {
             Debug.Log("Interaction + " + clickObject.name);
             isLoading = true;
