@@ -71,6 +71,24 @@ public class Player : MonoBehaviour
 
     void Interaction()
     {
+        if(iDown && clickObject != null && !isLoading)
+        {
+            if (clickObject.CompareTag("Door"))
+            {
+                Debug.Log("Interaction + " + clickObject.name);
+                isLoading = true;
+                gameManager.Field_Change(clickObject);
+            }
+            else if(clickObject.CompareTag("Artifact"))
+            {
+                gameManager.Get_Artifact(clickObject);
+            }
+            else if(clickObject.CompareTag("Treasure"))
+            {
+                clickObject.GetComponent<Treasure>().OpenBox();
+            }
+        }
+        /*
         if (iDown && clickObject.CompareTag("Door") && !isLoading)
         {
             Debug.Log("Interaction + " + clickObject.name);
@@ -81,6 +99,11 @@ public class Player : MonoBehaviour
         {
             gameManager.Get_Artifact(clickObject);
         }
+        else if(iDown && clickObject.CompareTag("Treasure"))
+        {
+            clickObject.GetComponent<Treasure>().OpenBox();
+        }
+        */
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -11,6 +11,7 @@ TagManager:
   - Zone
   - Test
   - Artifact
+  - Treasure
   layers:
   - Default
   - TransparentFX
