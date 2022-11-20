@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] maze_Spawn_point;
     public GameObject[] room_Artifacts;
     public GameObject[] rooms;
+    public GameObject[] treasuresBox;
     
     // 현재 플레이어 방오브젝트
     public GameObject playerInRoomOBJ;
@@ -99,6 +100,13 @@ public class GameManager : MonoBehaviour
             roomState[rooms[1]] = 1;
             artifactNum = 1;
         }
+        else if(artifact.name == room_Artifacts[2].name)
+        {
+            room_Artifacts[2].SetActive(false);
+            Treasure_Second_Phase();
+            roomState[rooms[2]] = 1;
+            artifactNum = 2;
+        }
         if(isNeedArtifact)
         {
             isNeedArtifact = false;
@@ -110,6 +118,7 @@ public class GameManager : MonoBehaviour
     {
         for(int i = 0; i < maze_Spawn_point.Length; i++)
         {
+            maze_Spawn_point[i].transform.GetChild(0).transform.position = new Vector3(0,0,0);
             maze_Spawn_point[i].SetActive(true);
         }
     }
@@ -137,6 +146,23 @@ public class GameManager : MonoBehaviour
         room_Artifacts[artifactNum].SetActive(true);
         save_Artifacts[artifactNum].SetActive(false);
         Jump_Map_lava.transform.position = lavaStartPos;
+        artifactNum = -1;
+    }
+
+    public void Treasure_Second_Phase()
+    {
+
+    }
+
+    public void Treasure_First_Phase()
+    {
+        for(int i = 0; i < treasuresBox.Length; i++)
+        {
+            treasuresBox[i].GetComponent<Treasure>().reward.SetActive(false);
+            treasuresBox[i].GetComponent<Treasure>().box.SetActive(true);
+            treasuresBox[i].gameObject.GetComponent<BoxCollider>().enabled = true;        
+        }
+        save_Artifacts[artifactNum].SetActive(false);
         artifactNum = -1;
     }
 
