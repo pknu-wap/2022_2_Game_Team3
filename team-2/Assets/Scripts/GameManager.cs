@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     // 상태 조건
     private bool isGetArtifact = false; // Room Artifact Get?
-    private bool isInRoom = false;  // now player in Room? condition
     private bool isNeedArtifact = false; // if Get Room Artifact Player can Escape
 
     // 필드 및 스폰포인트.
@@ -58,24 +57,35 @@ public class GameManager : MonoBehaviour
     public void Field_Change(GameObject interactionOBJ)
     {
         Objects OBJcomponent = interactionOBJ.GetComponent<Objects>();
-        if(!isGetArtifact && !isNeedArtifact)  {    
+        if(OBJcomponent.inRoom)
+        {
+            //isNeedArtifact = true;
+            playerInRoomOBJ = OBJcomponent.RoomOBJ;
+            if(roomState[playerInRoomOBJ] != 0)
+            {
+                player.isLoading = false;
+                Debug.Log("Aready Clear!!");
+                return;
+            }
+            isNeedArtifact = true;
             Transform nextPos = OBJcomponent.NextRoomPosition;
             systemManager.GetComponent<FadeInOut>().FadeFunc();
                 
             StartCoroutine(tpPos(nextPos));
         }
-        else{
-            Debug.Log("Can't exit");
-            player.isLoading = false;
-        }
-        if(OBJcomponent.inRoom)
-        {
-            isInRoom = true;    // 입구인가를 표시하는 bool형 변수
-            isNeedArtifact = true;
-            playerInRoomOBJ = OBJcomponent.RoomOBJ;
-        }
         else
         {
+            if(!isGetArtifact && !isNeedArtifact)  {    
+                Transform nextPos = OBJcomponent.NextRoomPosition;
+                systemManager.GetComponent<FadeInOut>().FadeFunc();
+                    
+                StartCoroutine(tpPos(nextPos));
+            }
+            else{
+                Debug.Log("Can't exit");
+                player.isLoading = false;
+                return;
+            }
             if(artifactNum >= 0) {
                 save_Artifacts[artifactNum].SetActive(true);
             }
