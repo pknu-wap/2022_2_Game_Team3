@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int life = 2; // 생명력.
+    public bool live;
     
     float hAxis, vAxis;     // 어느 방향으로 이동할 것인지 입력받아줄 변수.
     float playerSpeed = 10;  // 플레이어의 기본 이동속도.
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         isJump = false; 
+        live = true;
     }
 
     void Update()
@@ -119,6 +121,16 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         clickObject = other.gameObject;
+        if(other.gameObject.CompareTag("Monster")&& live == true)
+        {
+            live = false;
+            gameManager.GameOver();
+        }
+        else if(other.gameObject.CompareTag("Flame")&&live == true)
+        {
+            live = false;
+            gameManager.GameOver();
+        }
     }
 
     private void OnTriggerExit(Collider other)

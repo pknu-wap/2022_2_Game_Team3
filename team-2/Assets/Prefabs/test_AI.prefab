@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7997764623639016532}
   - component: {fileID: 7997764623639016535}
   - component: {fileID: 3287791820124326726}
+  - component: {fileID: 7263104189975492224}
   m_Layer: 0
   m_Name: test_AI
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,3 +139,16 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &7263104189975492224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997764623639016618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}

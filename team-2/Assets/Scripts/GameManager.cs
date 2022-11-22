@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
     {
         room_Artifacts[artifactNum].SetActive(true);
         save_Artifacts[artifactNum].SetActive(false);
-        Jump_Map_lava.transform.position = lavaStartPos;
+        Jump_Map_lava.transform.localPosition = lavaStartPos;
         artifactNum = -1;
     }
 
@@ -179,10 +179,8 @@ public class GameManager : MonoBehaviour
     // 게임 오버
     public void GameOver()
     {
-        if(artifactNum == 0)
-        {
-            Maze_Room_First_Phase();
-        }
+        player.isLoading=true;
+        StartCoroutine(GameOverLoadSetting());
     }
 
     IEnumerator Current_Save()
@@ -200,16 +198,31 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LavaON(GameObject lava)
     {
-        yield return new WaitForSeconds(0.15f);
-        if(lava.transform.position.y <= 50)
+        yield return new WaitForSeconds(0.125f);
+        if(lava.transform.position.y <= 50 && player.live == true)
         {
             lava.transform.Translate(Vector3.up * Time.deltaTime);
             Debug.Log(Jump_Map_lava.transform.position);
             StartCoroutine(LavaON(lava));
         }
-        else
+    }
+
+    IEnumerator GameOverLoadSetting()
+    {
+        systemManager.GetComponent<FadeInOut>().GameOverFadeFunc();
+        yield return new WaitForSeconds(3.0f);
+
+        player.transform.position = spawnPoints[1].transform.position;
+        player.live = true;
+        if(artifactNum == 0)
         {
-            Jump_Room_Second_Phase();
+            roomState[rooms[artifactNum]] = 0;
+            Maze_Room_First_Phase();
+        }
+        else if(artifactNum == 1)
+        {
+            roomState[rooms[artifactNum]] = 0;
+            Jump_Room_First_Phase();
         }
     }
 }
