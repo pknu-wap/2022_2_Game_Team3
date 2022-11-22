@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
             if(artifactNum >= 0) {
                 save_Artifacts[artifactNum].SetActive(true);
             }
-            Current_Save();
+            StartCoroutine(Current_Save());
         }
     }
 
