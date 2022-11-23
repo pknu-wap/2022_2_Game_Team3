@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public GameObject clickObject;  // 플레이어가 상호작용 할 오브젝트를 넣어줄 변수.
 
     public GameManager gameManager; // 게임매니저
+    public SystemManager systemManager; // 시스템 매니저
 
     //public GameObject feildPointObj; // 필드이동에 사용되는 포인트 지점 체크하는 변수 
 
@@ -45,9 +46,9 @@ public class Player : MonoBehaviour
 
     void GetInput()
     {
-        hAxis = Input.GetAxis("Horizontal");
-        vAxis = Input.GetAxis("Vertical");
-        jDown = Input.GetButtonDown("Jump");
+        hAxis = systemManager.isAction ? 0 : Input.GetAxis("Horizontal");
+        vAxis = systemManager.isAction ? 0 : Input.GetAxis("Vertical");
+        jDown = systemManager.isAction ? false : Input.GetButtonDown("Jump");
         iDown = Input.GetKeyDown(KeyCode.E);
     }
 
@@ -90,6 +91,10 @@ public class Player : MonoBehaviour
             {
                 clickObject.GetComponent<Treasure>().OpenBox();
                 clickObject = null;
+            }
+            else if(clickObject.gameObject.CompareTag("NPC"))
+            {
+                systemManager.SetAction(clickObject.gameObject);
             }
         }
         /*

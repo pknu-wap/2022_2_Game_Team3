@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     // 시스템 매니저
     public GameObject systemManager;
+    
 
     // 상태 조건
     private bool isGetArtifact = false; // Room Artifact Get?
