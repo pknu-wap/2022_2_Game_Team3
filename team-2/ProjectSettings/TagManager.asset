@@ -13,6 +13,7 @@ TagManager:
   - Artifact
   - Treasure
   - Monster
+  - NPC
   layers:
   - Default
   - TransparentFX
