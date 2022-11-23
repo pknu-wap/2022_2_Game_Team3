@@ -11,12 +11,16 @@ public class SystemManager : MonoBehaviour
     public NPC npc_Cat;
     public GameManager gameManager;
     public GameObject talkPanel;
+    public GameObject Information_Panel;
     public Text talkText;
     public Text nameText;
     public bool isAction;
+    public bool isInformationAction = false;
 
     public int talkId = 0;
+    public int informationId = -1;
     public int contentNum = 0;
+    public int informationNum = 0;
 
 
     public void SetTextPanel(GameObject scanObject)
@@ -25,8 +29,21 @@ public class SystemManager : MonoBehaviour
         Debug.Log("content : " + content);
         if(content == null)
         {
-            talkId = talkId >= 2 ? 2 : talkId+1;
+            if(talkId >= 2)
+            {
+                if(isInformationAction == false)
+                {
+                    isInformationAction = true;
+                    SetInformationPanel();
+                }
+                else 
+                {
+                    GetInformation(informationId, informationNum);
+                }
+                return;
+            }
             contentNum = 0;
+            talkId = talkId >= 2 ? 2 : talkId+1;
             isAction = false; 
         }
         else {
@@ -38,5 +55,59 @@ public class SystemManager : MonoBehaviour
         }
 
         talkPanel.SetActive(isAction);
+    }
+
+    public void SetInformationPanel()
+    {
+        Information_Panel.SetActive(true);
+    }
+
+    public void GetInformation(int information_id, int information_num)
+    {
+        string information = npc_Cat.GetInformation(information_id, information_num);
+
+        if(information == null)
+        {
+            isInformationAction = false;
+            informationNum = 0;
+            informationId = -1;
+            isAction = false;
+            contentNum = 0;
+
+            talkPanel.SetActive(isAction);
+        }
+        else
+        {
+            talkText.text = information;
+            informationNum++;
+        }
+    }
+
+    public void MazeInformation()
+    {
+        informationId = 0;
+        Information_Panel.SetActive(false);
+        GetInformation(informationId, informationNum);
+    }
+
+    public void JumpInformation()
+    {
+        informationId = 1;
+        Information_Panel.SetActive(false);
+        GetInformation(informationId, informationNum);
+    }
+
+    public void TreasureInformation()
+    {
+        informationId = 2;
+        Information_Panel.SetActive(false);
+        GetInformation(informationId, informationNum);
+    }
+
+    public void RCPInformation()
+    {
+        informationId = 3;
+        Information_Panel.SetActive(false);
+        GetInformation(informationId, informationNum);
     }
 }
