@@ -15,17 +15,26 @@ public class SystemManager : MonoBehaviour
     public Text nameText;
     public bool isAction;
 
+    public int talkId = 0;
+    public int contentNum = 0;
 
-    public void SetAction(GameObject scanObject)
+
+    public void SetTextPanel(GameObject scanObject)
     {
-        if(isAction)
+        string content = npc_Cat.GetContent(talkId, contentNum);
+        Debug.Log("content : " + content);
+        if(content == null)
         {
-            isAction = false;
+            talkId = talkId >= 2 ? 2 : talkId+1;
+            contentNum = 0;
+            isAction = false; 
         }
         else {
             isAction = true;
             scanOBJ = scanObject;
             nameText.text = scanOBJ.name;
+            talkText.text = content;
+            contentNum++;
         }
 
         talkPanel.SetActive(isAction);

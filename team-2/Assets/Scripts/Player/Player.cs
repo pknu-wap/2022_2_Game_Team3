@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
             }
             else if(clickObject.gameObject.CompareTag("NPC"))
             {
-                systemManager.SetAction(clickObject.gameObject);
+                systemManager.SetTextPanel(clickObject.gameObject);
             }
         }
         /*
