@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         hAxis = systemManager.isAction ? 0 : Input.GetAxis("Horizontal");
         vAxis = systemManager.isAction ? 0 : Input.GetAxis("Vertical");
         jDown = systemManager.isAction ? false : Input.GetButtonDown("Jump");
-        iDown = Input.GetKeyDown(KeyCode.E);
+        iDown = systemManager.isSelectInformation ? false : Input.GetKeyDown(KeyCode.E);
     }
 
     private void Move()

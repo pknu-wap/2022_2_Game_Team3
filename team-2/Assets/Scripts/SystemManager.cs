@@ -15,6 +15,7 @@ public class SystemManager : MonoBehaviour
     public Text talkText;
     public Text nameText;
     public bool isAction;
+    public bool isSelectInformation;
     public bool isInformationAction = false;
 
     public int talkId = 0;
@@ -59,6 +60,7 @@ public class SystemManager : MonoBehaviour
 
     public void SetInformationPanel()
     {
+        isSelectInformation = true;
         Information_Panel.SetActive(true);
     }
 
@@ -87,6 +89,7 @@ public class SystemManager : MonoBehaviour
     {
         informationId = 0;
         Information_Panel.SetActive(false);
+        isSelectInformation = false;
         GetInformation(informationId, informationNum);
     }
 
@@ -94,6 +97,7 @@ public class SystemManager : MonoBehaviour
     {
         informationId = 1;
         Information_Panel.SetActive(false);
+        isSelectInformation = false;
         GetInformation(informationId, informationNum);
     }
 
@@ -101,6 +105,7 @@ public class SystemManager : MonoBehaviour
     {
         informationId = 2;
         Information_Panel.SetActive(false);
+        isSelectInformation = false;
         GetInformation(informationId, informationNum);
     }
 
@@ -108,6 +113,7 @@ public class SystemManager : MonoBehaviour
     {
         informationId = 3;
         Information_Panel.SetActive(false);
+        isSelectInformation = false;
         GetInformation(informationId, informationNum);
     }
 }

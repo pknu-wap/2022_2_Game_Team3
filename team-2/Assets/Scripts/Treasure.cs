@@ -12,5 +12,6 @@ public class Treasure : MonoBehaviour
         reward.SetActive(true);
         box.SetActive(false);
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        reward.GetComponent<SurpirseImage>().Surpirse();
     }
 }
