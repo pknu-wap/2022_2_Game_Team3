@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
         content = new Dictionary<int, string[]>();
         information_Rooms = new Dictionary<int, string[]>();
         GenerateContent();
-
+        GenerateInformationRooms();
     }
 
     void GenerateContent()
