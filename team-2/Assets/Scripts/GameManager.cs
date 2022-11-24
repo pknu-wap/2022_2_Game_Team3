@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] save_Artifacts;
     public GameObject[] maze_Spawn_point;
+    public GameObject[] treasure_Spawn_point;
     public GameObject[] room_Artifacts;
     public GameObject[] rooms;
     public GameObject[] treasuresBox;
@@ -162,11 +163,19 @@ public class GameManager : MonoBehaviour
 
     public void Treasure_Second_Phase()
     {
-
+        for(int i = 0; i < treasure_Spawn_point.Length; i++)
+        {
+            treasure_Spawn_point[i].transform.GetChild(0).transform.localPosition = new Vector3(0,0,0);
+            treasure_Spawn_point[i].SetActive(true);
+        }
     }
 
     public void Treasure_First_Phase()
     {
+        for(int i = 0; i < treasure_Spawn_point.Length; i++)
+        {
+            treasure_Spawn_point[i].SetActive(false);
+        }
         for(int i = 0; i < treasuresBox.Length; i++)
         {
             treasuresBox[i].GetComponent<Treasure>().reward.SetActive(false);
@@ -224,6 +233,11 @@ public class GameManager : MonoBehaviour
         {
             roomState[rooms[artifactNum]] = 0;
             Jump_Room_First_Phase();
+        }
+        else if(artifactNum == 2)
+        {
+            roomState[rooms[artifactNum]] = 0;
+            Treasure_First_Phase();
         }
     }
 }

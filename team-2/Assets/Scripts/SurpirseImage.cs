@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SurpirseImage : MonoBehaviour
 {
-    void Awake()
+    public void Surpirse()
     {
         StartCoroutine(FadeInStartSurprise());
     }
