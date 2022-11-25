@@ -7,6 +7,8 @@ public class SystemManager : MonoBehaviour
 {
     // 시스템 매니저는 각종 UI 및 음향을 담당.
     public Player player;
+    public Camera playerCamera;
+    public GameObject MainMenu;
     public GameObject scanOBJ;
     public NPC npc_Cat;
     public GameManager gameManager;
@@ -34,6 +36,8 @@ public class SystemManager : MonoBehaviour
     {
         gameManager.PauseFunc();
         mainMenu_Panel.SetActive(true);
+        player.gameObject.SetActive(false);
+        MainMenu.gameObject.SetActive(true);
     }
 
 
