@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    Data data;
     Dictionary<GameObject, int> roomState; // Room Clear?
     // 플레이어
     public Player player;
@@ -21,7 +22,6 @@ public class GameManager : MonoBehaviour
 
     public bool getIsPause() {return isPause;}
     // 필드 및 스폰포인트.
-    public GameObject[] fields;
     public Transform[] spawnPoints;
 
     public GameObject[] save_Artifacts;
@@ -93,8 +93,25 @@ public class GameManager : MonoBehaviour
                 player.isLoading = false;
                 return;
             }
-            if(artifactNum >= 0) {
+            if(artifactNum == 0) {
                 save_Artifacts[artifactNum].SetActive(true);
+                
+                PlayerPrefs.SetInt("maze_state", 1);
+            }
+            else if(artifactNum == 1) {
+                save_Artifacts[artifactNum].SetActive(true);
+                
+                PlayerPrefs.SetInt("jump_state", 1);
+            }
+            else if(artifactNum == 2) {
+                save_Artifacts[artifactNum].SetActive(true);
+                
+                PlayerPrefs.SetInt("treasure_state", 1);
+            }
+            else if(artifactNum == 3) {
+                save_Artifacts[artifactNum].SetActive(true);
+                
+                PlayerPrefs.SetInt("RCP_state", 1);
             }
             StartCoroutine(Current_Save());
         }
@@ -215,6 +232,64 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameOverLoadSetting());
     }
 
+    public void Gameload()
+    {
+        systemManager.GetComponent<SystemManager>().talkId = 0;
+        systemManager.GetComponent<SystemManager>().informationId = -1;
+        systemManager.GetComponent<SystemManager>().contentNum = 0;
+        systemManager.GetComponent<SystemManager>().informationNum = 0;
+
+        if(PlayerPrefs.HasKey("spawnPoint"))
+        {
+            player.transform.position = spawnPoints[PlayerPrefs.GetInt("spawnPoint")].transform.position;
+        }
+        else
+        {
+            player.transform.position = spawnPoints[0].transform.position;
+        }
+
+        if(PlayerPrefs.HasKey("maze_state"))
+        {
+            roomState[rooms[0]] = 1;
+            rooms[0].SetActive(false);
+            save_Artifacts[0].SetActive(true);
+        }
+        else
+        {
+            roomState[rooms[0]] = 0;
+            rooms[0].SetActive(true);
+            save_Artifacts[0].SetActive(false);
+            Maze_Room_First_Phase();
+        }
+
+        if(PlayerPrefs.HasKey("jump_state"))
+        {
+            roomState[rooms[1]] = 1;
+            rooms[1].SetActive(false);
+            save_Artifacts[1].SetActive(true);
+        }
+        else
+        {
+            roomState[rooms[1]] = 0;
+            rooms[1].SetActive(true);
+            save_Artifacts[1].SetActive(false);
+            Jump_Room_First_Phase();
+        }
+
+        if(PlayerPrefs.HasKey("treasure_state"))
+        {
+            roomState[rooms[2]] = 1;
+            rooms[2].SetActive(false);
+            save_Artifacts[2].SetActive(true);
+        }
+        else
+        {
+            roomState[rooms[2]] = 0;
+            rooms[2].SetActive(true);
+            save_Artifacts[2].SetActive(false);
+            Treasure_First_Phase();
+        }
+    }
     IEnumerator Current_Save()
     {
         yield return new WaitForSeconds(3.0f);

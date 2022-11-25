@@ -40,15 +40,21 @@ public class SystemManager : MonoBehaviour
         MainMenu.gameObject.SetActive(true);
     }
 
-
     public void NewGameButton()
     {
-
+        mainMenu_Panel.SetActive(false);
+        PlayerPrefs.DeleteAll();
+        gameManager.Gameload();
+        MainMenu.gameObject.SetActive(false);
+        player.gameObject.SetActive(true);
     }
 
     public void ContinueGameButton()
     {
-
+        mainMenu_Panel.SetActive(false);
+        gameManager.Gameload();
+        MainMenu.gameObject.SetActive(false);
+        player.gameObject.SetActive(true);
     }
 
     public void Exit()
@@ -60,7 +66,6 @@ public class SystemManager : MonoBehaviour
     {
         if(OBJ.CompareTag("Door"))
         {
-            Debug.Log("태그명 : " + OBJ.tag);
             nameText.text = "도우미";
             talkText.text = "신비로운 힘에 의해서 문이 열리지 않는다. 유물을 찾아보자.";
             talkPanel.SetActive(true);
@@ -81,6 +86,14 @@ public class SystemManager : MonoBehaviour
             isAction = false;
         }
         talkPanel.SetActive(isAction);   
+    }
+
+    public void StartMessage()
+    {
+        nameText.text = "NPC_CAT";
+        talkText.text = "안녕? 나랑 대화하지 않을래?";
+        talkPanel.SetActive(true);
+        StartCoroutine(TextPanelOut());
     }
 
     public void SetTextPanel(GameObject scanObject)
