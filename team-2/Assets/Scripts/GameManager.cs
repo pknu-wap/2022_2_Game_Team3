@@ -164,8 +164,11 @@ public class GameManager : MonoBehaviour
         {
             maze_Spawn_point[i].SetActive(false);
         }
-        room_Artifacts[artifactNum].SetActive(true);
-        save_Artifacts[artifactNum].SetActive(false);
+        if(artifactNum == 0)
+        {
+            room_Artifacts[artifactNum].SetActive(true);
+            save_Artifacts[artifactNum].SetActive(false);
+        }
         artifactNum = -1;
     }
 
@@ -177,8 +180,11 @@ public class GameManager : MonoBehaviour
 
     public void Jump_Room_First_Phase()
     {
-        room_Artifacts[artifactNum].SetActive(true);
-        save_Artifacts[artifactNum].SetActive(false);
+        if(artifactNum == 1)
+        {
+            room_Artifacts[artifactNum].SetActive(true);
+            save_Artifacts[artifactNum].SetActive(false);
+        }
         Jump_Map_lava.transform.localPosition = lavaStartPos;
         artifactNum = -1;
     }
@@ -204,7 +210,10 @@ public class GameManager : MonoBehaviour
             treasuresBox[i].GetComponent<Treasure>().box.SetActive(true);
             treasuresBox[i].gameObject.GetComponent<BoxCollider>().enabled = true;        
         }
-        save_Artifacts[artifactNum].SetActive(false);
+        if(artifactNum == 2) 
+        {
+            save_Artifacts[artifactNum].SetActive(false);
+        }
         artifactNum = -1;
     }
 
