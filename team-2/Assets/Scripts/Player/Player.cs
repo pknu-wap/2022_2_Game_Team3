@@ -151,5 +151,11 @@ public class Player : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         clickObject = null;
+        if(other.name == "StartMessage")
+        {
+            systemManager.StartMessage();
+            other.gameObject.SetActive(false);
+            PlayerPrefs.SetInt("spawnPoint", 1);
+        }
     }
 }
