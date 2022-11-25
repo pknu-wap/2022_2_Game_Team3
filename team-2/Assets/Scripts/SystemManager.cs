@@ -22,6 +22,8 @@ public class SystemManager : MonoBehaviour
     public bool isSelectInformation;
     public bool isInformationAction = false;
 
+    public GameObject startMessage;
+
     public int talkId = 0;
     public int informationId = -1;
     public int contentNum = 0;
@@ -47,6 +49,7 @@ public class SystemManager : MonoBehaviour
         gameManager.Gameload();
         MainMenu.gameObject.SetActive(false);
         player.gameObject.SetActive(true);
+        startMessage.SetActive(true);
     }
 
     public void ContinueGameButton()
