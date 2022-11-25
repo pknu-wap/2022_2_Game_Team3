@@ -23,6 +23,32 @@ public class SystemManager : MonoBehaviour
     public int contentNum = 0;
     public int informationNum = 0;
 
+    public void narration(GameObject OBJ = null)
+    {
+        if(OBJ.CompareTag("Door"))
+        {
+            Debug.Log("태그명 : " + OBJ.tag);
+            nameText.text = "도우미";
+            talkText.text = "신비로운 힘에 의해서 문이 열리지 않는다. 유물을 찾아보자.";
+            talkPanel.SetActive(true);
+            StartCoroutine(TextPanelOut());
+        }
+    }
+
+    public void PlayerText(GameObject scanObject)
+    {
+        if(scanObject.CompareTag("Broken_Door") && isAction == false)
+        {
+            isAction = true;
+            nameText.text = "Player";
+            talkText.text = "문이 열리지 않는다...";
+        }
+        else
+        {
+            isAction = false;
+        }
+        talkPanel.SetActive(isAction);   
+    }
 
     public void SetTextPanel(GameObject scanObject)
     {
@@ -30,6 +56,7 @@ public class SystemManager : MonoBehaviour
         Debug.Log("content : " + content);
         if(content == null)
         {
+            Debug.Log("콘텐트없어");
             if(talkId >= 2)
             {
                 if(isInformationAction == false)
@@ -48,6 +75,7 @@ public class SystemManager : MonoBehaviour
             isAction = false; 
         }
         else {
+            Debug.Log("콘텐트있어");
             isAction = true;
             scanOBJ = scanObject;
             nameText.text = scanOBJ.name;
@@ -115,5 +143,11 @@ public class SystemManager : MonoBehaviour
         Information_Panel.SetActive(false);
         isSelectInformation = false;
         GetInformation(informationId, informationNum);
+    }
+
+    IEnumerator TextPanelOut()
+    {
+        yield return new WaitForSeconds(2.0f);
+        talkPanel.SetActive(false);
     }
 }

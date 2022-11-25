@@ -92,9 +92,13 @@ public class Player : MonoBehaviour
                 clickObject.GetComponent<Treasure>().OpenBox();
                 clickObject = null;
             }
-            else if(clickObject.gameObject.CompareTag("NPC"))
+            else if(clickObject.CompareTag("NPC"))
             {
                 systemManager.SetTextPanel(clickObject.gameObject);
+            }
+            else if(clickObject.CompareTag("Broken_Door"))
+            {
+                systemManager.PlayerText(clickObject);
             }
         }
         /*

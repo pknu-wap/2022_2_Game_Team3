@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
 
     void GenerateContent()
     {
-        content.Add(0, new string[] {"어서와", "여기는 처음이지?"});
+        content.Add(0, new string[] {"어서와", "여기는 처음이지?", "나도 너처럼 여기 같인 사람들중 한명이야."});
         content.Add(1, new string[] {"여기서 나갈려면 각 방에 존재하는 유물 4개를 모아와야해.", "방은 미로, 점프맵, 보물찾기, 가위바위보로 구성되어있어.","각 방의 정보는 내가 알고 있어.", "원하는 정보를 알고싶다면 나에게 대화를 걸어!"});
         content.Add(2, new string[] {"어떤 정보를 원하니?"});
     }

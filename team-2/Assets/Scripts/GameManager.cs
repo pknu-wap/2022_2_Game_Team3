@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(tpPos(nextPos));
             }
             else{
+                systemManager.GetComponent<SystemManager>().narration(interactionOBJ);
                 Debug.Log("Can't exit");
                 player.isLoading = false;
                 return;
@@ -186,6 +187,24 @@ public class GameManager : MonoBehaviour
         artifactNum = -1;
     }
 
+
+
+    public void NewGameButton()
+    {
+
+    }
+
+    public void ContinueGameButton()
+    {
+
+    }
+
+    public void Exit()
+    {
+
+    }
+
+    
     // 게임 오버
     public void GameOver()
     {
@@ -202,7 +221,7 @@ public class GameManager : MonoBehaviour
     IEnumerator tpPos(Transform nextPos)
     {
         yield return new WaitForSeconds(2.0f);
-        Vector3 spawnPos = new Vector3(nextPos.position.x, nextPos.position.y + 1, nextPos.position.z);
+        Vector3 spawnPos = new Vector3(nextPos.position.x, nextPos.position.y + 0.5f, nextPos.position.z);
         player.transform.position = spawnPos;
     }
 
