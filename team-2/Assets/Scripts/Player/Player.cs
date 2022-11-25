@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     bool jDown;             // 점프 키
     bool iDown;             // 상호작용 키
+    bool pauseDown;         // pause Button
         
     public bool isLoading;  // 로딩중일때 플레이어 일시정지기능(움직임 및 점프 x).
 
@@ -42,6 +43,10 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Interaction();
+        if(pauseDown == true)
+        {
+            gameManager.PauseFunc();
+        }
     }
 
     void GetInput()
@@ -50,6 +55,7 @@ public class Player : MonoBehaviour
         vAxis = systemManager.isAction ? 0 : Input.GetAxis("Vertical");
         jDown = systemManager.isAction ? false : Input.GetButtonDown("Jump");
         iDown = systemManager.isSelectInformation ? false : Input.GetKeyDown(KeyCode.E);
+        pauseDown = Input.GetKeyDown(KeyCode.Escape);
     }
 
     private void Move()
