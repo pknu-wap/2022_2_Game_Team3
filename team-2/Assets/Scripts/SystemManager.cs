@@ -10,6 +10,8 @@ public class SystemManager : MonoBehaviour
     public GameObject scanOBJ;
     public NPC npc_Cat;
     public GameManager gameManager;
+    public GameObject pause_Panel;
+    public GameObject mainMenu_Panel;
     public GameObject talkPanel;
     public GameObject Information_Panel;
     public Text talkText;
@@ -22,6 +24,33 @@ public class SystemManager : MonoBehaviour
     public int informationId = -1;
     public int contentNum = 0;
     public int informationNum = 0;
+
+    public void PauseCancel()
+    {
+        gameManager.PauseFunc();
+    }
+
+    public void MainMenuButton()
+    {
+        gameManager.PauseFunc();
+        mainMenu_Panel.SetActive(true);
+    }
+
+
+    public void NewGameButton()
+    {
+
+    }
+
+    public void ContinueGameButton()
+    {
+
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 
     public void narration(GameObject OBJ = null)
     {

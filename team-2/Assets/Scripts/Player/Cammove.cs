@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cammove : MonoBehaviour
 {
+    public GameManager gameManger;
     public Player player;
     float rotSpeed;
     float currentRot;
@@ -18,7 +19,7 @@ public class Cammove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!player.isLoading) {
+        if(!player.isLoading && !gameManger.getIsPause()) {
             float rotX = player.systemManager.isAction ? 0 : Input.GetAxis("Mouse Y") * rotSpeed;
             float rotY = player.systemManager.isAction ? 0 : Input.GetAxis("Mouse X") * rotSpeed;
 

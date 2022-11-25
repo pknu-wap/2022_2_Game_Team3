@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
     // 상태 조건
     private bool isGetArtifact = false; // Room Artifact Get?
     private bool isNeedArtifact = false; // if Get Room Artifact Player can Escape
+    private bool isPause = false;
 
+    public bool getIsPause() {return isPause;}
     // 필드 및 스폰포인트.
     public GameObject[] fields;
     public Transform[] spawnPoints;
@@ -54,6 +56,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log(pair.Key.name + "," + pair.Value);
         }
+
+        isPause = false;
     }
 
     public void Field_Change(GameObject interactionOBJ)
@@ -187,24 +191,23 @@ public class GameManager : MonoBehaviour
         artifactNum = -1;
     }
 
-
-
-    public void NewGameButton()
+    public void PauseFunc()
     {
-
+        if(isPause == true)
+        {
+            Time.timeScale = 1;
+            isPause = false;
+            systemManager.GetComponent<SystemManager>().pause_Panel.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            isPause = true;
+            systemManager.GetComponent<SystemManager>().pause_Panel.SetActive(true);
+        }
     }
 
-    public void ContinueGameButton()
-    {
 
-    }
-
-    public void Exit()
-    {
-
-    }
-
-    
     // 게임 오버
     public void GameOver()
     {
