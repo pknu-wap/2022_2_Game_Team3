@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BossPlayer : MonoBehaviour
 {
@@ -107,10 +108,12 @@ public class BossPlayer : MonoBehaviour
         movingWay = transform.TransformDirection(movingWay);
         if (isAttacked)
         {
+            print("hit");
             movingWay = (bossWay.transform.position - gameObject.transform.position).normalized;
-            movingWay = transform.TransformDirection(movingWay);
+            //movingWay = transform.TransformDirection(movingWay);
             playerController.Move(-movingWay * 100 * Time.deltaTime);
             Invoke("isAttackedFalse", 0.5f);
+            bossWay.GetComponent<BossScript>().ReturntoMove();
             return;
         }
         playerController.Move(movingWay * playerSpeed * Time.deltaTime);

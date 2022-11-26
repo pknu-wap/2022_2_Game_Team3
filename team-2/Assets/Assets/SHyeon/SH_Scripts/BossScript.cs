@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class BossScript : MonoBehaviour
 {
     Animator anim;
-    NavMeshAgent smith;
+    public NavMeshAgent smith;
     private Transform playerTransform;
     private Vector3 heading;
     private Vector3 direction;
@@ -41,12 +41,12 @@ public class BossScript : MonoBehaviour
         playerTransform = GameObject.Find("Player").transform;
         m_State = EnemyState.Move;
         smith = GetComponent<NavMeshAgent>();//���ʹ��� �׺�޽ÿ�����Ʈ ��������
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        rushCoolTime += Time.deltaTime;
         switch (m_State)
         {
             case EnemyState.Move:
@@ -70,10 +70,10 @@ public class BossScript : MonoBehaviour
 
     void Move()
     {
+        currentTime += Time.deltaTime;///////////////////////////////////********
         rushCoolTime += Time.deltaTime;
         if (rushCoolTime > 10)
         {
-            rushCoolTime = 0;
             m_State = EnemyState.Rush;
         }
         float Distance = Vector3.Distance(transform.position, playerTransform.position);//����ȭ
@@ -92,7 +92,7 @@ public class BossScript : MonoBehaviour
         {
             m_State = EnemyState.Attack;
             print("Move -> Attack");
-            currentTime = attackDelay;//���� ���� ��ȯ �� �ٷ� ������ �� �ְ� ����
+            ///////////////////////////////currentTime = attackDelay;//���� ���� ��ȯ �� �ٷ� ������ �� �ְ� ����
         }
     }
     
@@ -103,7 +103,7 @@ public class BossScript : MonoBehaviour
         {
             print("Attack");
             playerTransform.GetComponent<BossPlayer>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
-            currentTime = 0;//���� �� �����̸� ���� 0���� 
+            currentTime = 0;//���� �� �����̸� ���� 
             m_State = EnemyState.Attacking;
             anim.SetTrigger("MoveToAttack");
         }
@@ -115,22 +115,33 @@ public class BossScript : MonoBehaviour
     }
      void Rush()
      {
-         heading = playerTransform.transform.position - transform.position;
+        smith.speed = 3000;
+        //smith.angularSpeed = 5000;
+        smith.acceleration = 1000;
+        smith.stoppingDistance = 0;
+
+        //smith.stoppingDistance = attackDistance;
+
+        smith.destination = playerTransform.position;
+        print("Rush");
+        //Invoke("IsRushFalse", 1f);
+       
+        /*heading = playerTransform.transform.position - transform.position;
          float distance = heading.magnitude;
          direction = heading.normalized;
-         direction.y = 0;
-         if (distance > 30 * Time.deltaTime)
+         direction.y = 0;*/
+
+        /*if (distance > 30 * Time.deltaTime)
          {
              print("Rush");
              transform.Translate(direction * bossSpeed * Time.deltaTime);
-             Invoke("IsRushFalse", 1f);
+             
          }
          else
          {
-             print("EnemyState : Move");
-             m_State = EnemyState.Move;
-         }
-     }
+             
+         }*/
+    }
      
     void Attacking()//���� ��� ���¿��� ���� �Լ�
     {
@@ -144,13 +155,13 @@ public class BossScript : MonoBehaviour
         StopCoroutine(Attackmotion());        //Attacking ���¿��� Attacking �Լ��� ���� �� ����ʿ� ���� �ڷ�ƾ �Լ��� ���� �� �Լ��� �̿��� ���� �ڷ�ƾ �Լ� ����
     }
 
-    void IsRushFalse()
+    /*void IsRushFalse()
     {
         print("EnemyState : Move");
         m_State = EnemyState.Move;
         //anim.SetTrigger("MoveToIdle");
         anim.SetTrigger("AttackToMove");
-    }
+    }*/
 
     public void HitEnemy(int hitPower)//플레이어에 의해 호출될 보스에게 데미지를 입히는 함수
     {
@@ -198,6 +209,16 @@ public class BossScript : MonoBehaviour
         print("Die");
         Destroy(gameObject);
     }
+    
+    public void ReturntoMove()
+    {
+        print("EnemyState : Move");
+        rushCoolTime = 0;
+        smith.speed = 50;
+        smith.angularSpeed = 120;
+        smith.acceleration = 8;
+        m_State = EnemyState.Move;////////////////////////////////////////////////////////
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -205,7 +226,13 @@ public class BossScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             print("CompareTag Player");
-            PlayerAttacked.isAttacked = true;
+            if (m_State == EnemyState.Rush)
+                PlayerAttacked.isAttacked = true;
+            /*if (m_State == EnemyState.Rush)
+            {
+               
+            }*/
+           
         }
     }
 }
