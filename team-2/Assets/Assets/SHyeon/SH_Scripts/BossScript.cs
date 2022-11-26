@@ -21,7 +21,6 @@ public class BossScript : MonoBehaviour
     
     Transform player;//�÷��̾��� ��ǥ ��������
     public enum EnemyState{
-        Idle,//�⺻ ����(������ ����)
         Move,//�÷��̾ �����ϱ� ���� �����̴� ����
         Attack,//�÷��̾ �����Ϸ��� ����
         Attacking,
@@ -40,7 +39,7 @@ public class BossScript : MonoBehaviour
         anim = transform.GetComponentInChildren<Animator>();
         PlayerAttacked = GameObject.Find("Player").GetComponent<BossPlayer>();
         playerTransform = GameObject.Find("Player").transform;
-        m_State = EnemyState.Idle;
+        m_State = EnemyState.Move;
         smith = GetComponent<NavMeshAgent>();//���ʹ��� �׺�޽ÿ�����Ʈ ��������
     }
 
@@ -50,9 +49,6 @@ public class BossScript : MonoBehaviour
         rushCoolTime += Time.deltaTime;
         switch (m_State)
         {
-            case EnemyState.Idle:
-                Idle();
-                break;
             case EnemyState.Move:
                 Move();
                 break;
@@ -62,28 +58,24 @@ public class BossScript : MonoBehaviour
             case EnemyState.Attacking:
                 Attacking();
                 break;
-            /*case EnemyState.Rush:
+            case EnemyState.Rush:
                 Rush();
-                break;*/
+                break;
             case EnemyState.Damaged://///////////////////////////////////
                 break;
             case EnemyState.Die:///////////////////////
                 break;
         }
     }
-    
-    void Idle()
-    {
-        if(Vector3.Distance(transform.position, playerTransform.position) < findDistance)//�÷��̾ �ν� �Ÿ� ���� ������ �����̴� ���·� ��ȯ
-        {
-            m_State = EnemyState.Move;
-            anim.SetTrigger("IdleToMove");
-            print("Idle -> Move");
-        }
-    }
-    
+
     void Move()
     {
+        rushCoolTime += Time.deltaTime;
+        if (rushCoolTime > 10)
+        {
+            rushCoolTime = 0;
+            m_State = EnemyState.Rush;
+        }
         float Distance = Vector3.Distance(transform.position, playerTransform.position);//����ȭ
 
         if (Distance > attackDistance)//�÷��̾ ���� ��Ÿ����� �ְ�, ���� ������������ Ż������ �ʾ����� ��ã��� �÷��̾� ã�ư���
@@ -102,54 +94,44 @@ public class BossScript : MonoBehaviour
             print("Move -> Attack");
             currentTime = attackDelay;//���� ���� ��ȯ �� �ٷ� ������ �� �ְ� ����
         }
-
     }
     
     void DeafultAttack()//���� ���� ���� �÷��̾ ���� ��Ÿ� ���̸�currentTime�� ���� attackDelay���� ũ�� ����, ���� �� ���ݸ�� ���·� �ѱ�
     {
-        if(Vector3.Distance(transform.position, playerTransform.position) < attackDistance)
+        currentTime += Time.deltaTime;
+        if(currentTime > attackDelay)
         {
-            currentTime += Time.deltaTime;
-            if(currentTime > attackDelay)
-            {
-                print("Attack");
-                playerTransform.GetComponent<BossPlayer>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
-                currentTime = 0;//���� �� �����̸� ���� 0���� 
-                m_State = EnemyState.Attacking;
-                anim.SetTrigger("MoveToAttack");
-            }
-            
+            print("Attack");
+            playerTransform.GetComponent<BossPlayer>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
+            currentTime = 0;//���� �� �����̸� ���� 0���� 
+            m_State = EnemyState.Attacking;
+            anim.SetTrigger("MoveToAttack");
         }
-        else//�÷��̾ ���� ��Ÿ����� ����� Move���·� ��ȯ
         {
             m_State = EnemyState.Move;
             anim.SetTrigger("AttackToMove");
             print("Attack -> Move");
         }
     }
-    /*void Rush()
-    {
-        rushCoolTime = 0;
-        heading = playerTransform.transform.position - transform.position;
-        float distance = heading.magnitude;
-        direction = heading.normalized;
-        direction.y = 0;
-
-        if (distance > 30 * Time.deltaTime)
-        {
-            transform.Translate(direction * bossSpeed * Time.deltaTime);
-            Invoke("IsRushFalse", 1f);
-        }
-        else
-        {
-            rushCoolTime += Time.deltaTime;
-            if (rushCoolTime > 30)
-            {
-                //m_State = EnemyState.Rush;
-            }
-        }
-    }
-    */
+     void Rush()
+     {
+         heading = playerTransform.transform.position - transform.position;
+         float distance = heading.magnitude;
+         direction = heading.normalized;
+         direction.y = 0;
+         if (distance > 30 * Time.deltaTime)
+         {
+             print("Rush");
+             transform.Translate(direction * bossSpeed * Time.deltaTime);
+             Invoke("IsRushFalse", 1f);
+         }
+         else
+         {
+             print("EnemyState : Move");
+             m_State = EnemyState.Move;
+         }
+     }
+     
     void Attacking()//���� ��� ���¿��� ���� �Լ�
     {
         StartCoroutine(Attackmotion());//�ڷ�ƾ�Լ��� �̿�
@@ -164,6 +146,7 @@ public class BossScript : MonoBehaviour
 
     void IsRushFalse()
     {
+        print("EnemyState : Move");
         m_State = EnemyState.Move;
         //anim.SetTrigger("MoveToIdle");
         anim.SetTrigger("AttackToMove");
@@ -218,23 +201,11 @@ public class BossScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        print("OnCollisionEnter");
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (rushCoolTime > 30)
-            {
-                //m_State = EnemyState.Rush;
-                rushCoolTime = 0;
-                heading = playerTransform.transform.position - transform.position;
-                float distance = heading.magnitude;
-                direction = heading.normalized;
-                direction.y = 0;
-                transform.Translate(direction * bossSpeed * Time.deltaTime);
-                Invoke("IsRushFalse", 1f);
-
-                PlayerAttacked.isAttacked = true;
-            }
-            
-            //m_State = EnemyState.Rush//
+            print("CompareTag Player");
+            PlayerAttacked.isAttacked = true;
         }
     }
 }
