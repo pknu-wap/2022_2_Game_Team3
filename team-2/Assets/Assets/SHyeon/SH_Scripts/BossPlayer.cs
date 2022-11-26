@@ -8,7 +8,7 @@ public class BossPlayer : MonoBehaviour
         Normal,
         Stun
     }
-    float hp = 15f;
+    public float hp = 15f;
     public int attackPower = 3;//플레이어의 공격력
     private float hAxis, vAxis;
     private bool jDown;

@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class FlameWall : MonoBehaviour
 {
-    BoxCollider FlameCollider;
     BossPlayer PlayerAttacked;
+    private bool FlameCollider;
     void Start()
     {
         StartCoroutine("Flame");
-        FlameCollider = gameObject.GetComponent<BoxCollider>();
+        FlameCollider = gameObject.GetComponent<BoxCollider>().enabled;
         PlayerAttacked = GameObject.Find("Player").GetComponent<BossPlayer>();
     }
 
@@ -19,7 +19,7 @@ public class FlameWall : MonoBehaviour
             GameObject.Find("FlameWallGroup").transform.GetChild(i).gameObject.SetActive(true);
         }
         Debug.Log("광역기 생성됨");
-        FlameCollider.enabled = true;
+        FlameCollider = true;
         Invoke("FlameFalse", 3f);
         yield return new WaitForSeconds(10f);
         StartCoroutine("Flame");
@@ -30,7 +30,7 @@ public class FlameWall : MonoBehaviour
         {
             GameObject.Find("FlameWallGroup").transform.GetChild(i).gameObject.SetActive(false);
         }
-        FlameCollider.enabled = false;
+        FlameCollider = false;
         Debug.Log("광역기 사라짐");
     }
 
