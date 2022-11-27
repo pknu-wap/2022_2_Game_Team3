@@ -194,6 +194,14 @@ public class SystemManager : MonoBehaviour
         GetInformation(informationId, informationNum);
     }
 
+    public void BossInformation()
+    {
+        informationId = 4;
+        Information_Panel.SetActive(false);
+        isSelectInformation = false;
+        GetInformation(informationId, informationNum);
+    }
+
     IEnumerator TextPanelOut()
     {
         yield return new WaitForSeconds(2.0f);

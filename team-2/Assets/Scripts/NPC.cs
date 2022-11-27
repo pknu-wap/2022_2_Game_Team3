@@ -28,6 +28,7 @@ public class NPC : MonoBehaviour
         information_Rooms.Add(1, new string[] {"왼쪽 두번째 방은 점프맵이야.", "옛날에는 누가 살던 마을이였던거 같은데...", "들어갈때는 마을이지만 나오기 위해서는 점프맵을 통과해야 하나봐.", "떨어지지 않게 조심해!"});
         information_Rooms.Add(2, new string[] {"오른쪽 첫번째 방은 보물찾기 맵이야.", "과거 누가 살았는지 모르겠지만 지금은 폐허가된 모양이더라구.", "보물상자에 뭐가 튀어나올지 모르니 조심해!"});
         information_Rooms.Add(3, new string[] {"오른쪽 두번째 방은 가위바위보 맵이야.", "유물을 획득하기 위해서는 거기에 존재하는 누군가와 가위바위보를 해야하나봐.", "가위바위보에 지면 무슨일이 벌어질지 모르니 조심해!"});
+        information_Rooms.Add(4, new string[] {"유물을 다모으게 되면 저기 뒤에 보이는 문을 열수있어.", "저 방안에는 무시무시한 존재가 살고 있는 것 같아..", "아마 저 존재를 쓰러뜨리면 여기서 나갈 수 있지 않을까?"});
     }
 
     public string GetContent(int id, int contentNum)
