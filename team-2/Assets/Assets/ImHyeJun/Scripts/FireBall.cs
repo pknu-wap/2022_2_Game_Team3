@@ -9,9 +9,9 @@ public class FireBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Test_Player").transform;
+        player = GameObject.Find("Player").transform;
         rigid = GetComponent<Rigidbody>();
-        rigid.AddForce((player.position - transform.position).normalized * 3f, ForceMode.Impulse);//È­¿°±¸°¡ ÇÃ·¹ÀÌ¾î ¹æÇâÀ¸·Î ÇØ´ç Èû¸¸Å­ ³¯¾Æ°£´Ù.
+        rigid.AddForce((player.position - transform.position).normalized * 3f, ForceMode.Impulse);//È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½Å­ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½.
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class FireBall : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            collision.transform.GetComponent<Player2>().DamageAction(9);//ÇÃ·¹ÀÌ¾îÀÇ Ã¼·ÂÀ» °¨¼Ò½ÃÅ²´Ù.
-        Destroy(gameObject);//ÀÚ½ÅÀ» »èÁ¦
+            collision.transform.GetComponent<BossPlayer>().DamageAction(9);//ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò½ï¿½Å²ï¿½ï¿½.
+        Destroy(gameObject);//ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 }
