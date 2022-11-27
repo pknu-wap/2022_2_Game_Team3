@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: c739bd989f5c27a43843eb423bd254d0
+  - enabled: 1
+    path: Assets/Assets/SHyeon/Test 1.unity
+    guid: 6ac4ee3c69e6a4570a1fd9e768ac2ba7
   m_configObjects: {}

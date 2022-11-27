@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         
         for(int i = 0; i < rooms.Length; i++)
         {
-            roomState.Add(rooms[i], 0);
+            roomState.Add(rooms[i], 1);
         }
 
         foreach(KeyValuePair<GameObject, int> pair in roomState)
@@ -215,6 +215,19 @@ public class GameManager : MonoBehaviour
             save_Artifacts[artifactNum].SetActive(false);
         }
         artifactNum = -1;
+    }
+
+    public void BossInRoom()
+    {
+        if(save_Artifacts[0].activeSelf == true && save_Artifacts[1].activeSelf == true && save_Artifacts[2].activeSelf == true && save_Artifacts[3].activeSelf == true)
+        {
+            Debug.Log("보스방 이동");
+            SceneManager.LoadScene("Test 1");
+        }
+        else
+        {
+            Debug.Log("응 방 못들어가~");
+        }
     }
 
     public void PauseFunc()
