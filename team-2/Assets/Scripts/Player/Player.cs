@@ -106,6 +106,11 @@ public class Player : MonoBehaviour
             {
                 systemManager.PlayerText(clickObject);
             }
+            else if(clickObject.name == "BossRoom In Point")
+            {
+                Debug.Log(clickObject.name);
+                gameManager.BossInRoom();
+            }
         }
         /*
         if (iDown && clickObject.CompareTag("Door") && !isLoading)
