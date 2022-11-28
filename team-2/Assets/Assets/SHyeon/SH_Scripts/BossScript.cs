@@ -21,12 +21,13 @@ public class BossScript : MonoBehaviour
     
     Transform player;//�÷��̾��� ��ǥ ��������
     public enum EnemyState{
+        Idle,
         Move,//�÷��̾ �����ϱ� ���� �����̴� ����
         Attack,//�÷��̾ �����Ϸ��� ����
         Attacking,
         Rush,//���ݸ���� ó���ϴ� ���� 2 1.3 44
         Damaged,/////////////////////////////////////////////데미지 처리상태
-        Die/////////////////////////죽음 처리 상태
+        Die /////////////////////////죽음 처리 상태
 
     }
     private float rushCoolTime;
@@ -39,7 +40,7 @@ public class BossScript : MonoBehaviour
         anim = transform.GetComponentInChildren<Animator>();
         PlayerAttacked = GameObject.Find("Player").GetComponent<BossPlayer>();
         playerTransform = GameObject.Find("Player").transform;
-        m_State = EnemyState.Move;
+        m_State = EnemyState.Idle;
         smith = GetComponent<NavMeshAgent>();//���ʹ��� �׺�޽ÿ�����Ʈ ��������
 
     }
@@ -49,6 +50,9 @@ public class BossScript : MonoBehaviour
     {
         switch (m_State)
         {
+            case EnemyState.Idle:
+                Idle();
+                break;
             case EnemyState.Move:
                 Move();
                 break;
@@ -68,6 +72,14 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    void Idle()
+    {
+        if(Vector3.Distance(transform.position, playerTransform.position) < findDistance)//�÷��̾ �ν� �Ÿ� ���� ������ �����̴� ���·� ��ȯ
+        {
+            m_State = EnemyState.Move;
+            print("Idle -> Move");
+        }
+    }
     void Move()
     {
         currentTime += Time.deltaTime;///////////////////////////////////********

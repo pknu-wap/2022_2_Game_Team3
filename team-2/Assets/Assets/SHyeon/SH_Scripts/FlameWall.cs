@@ -4,11 +4,9 @@ using UnityEngine;
 public class FlameWall : MonoBehaviour
 {
     BossPlayer PlayerAttacked;
-    private bool FlameCollider;
     void Start()
     {
         StartCoroutine("Flame");
-        FlameCollider = gameObject.GetComponent<BoxCollider>().enabled;
         PlayerAttacked = GameObject.Find("Player").GetComponent<BossPlayer>();
     }
 
@@ -30,7 +28,6 @@ public class FlameWall : MonoBehaviour
         {
             GameObject.Find("FlameWallGroup").transform.GetChild(i).gameObject.SetActive(false);
         }
-        //FlameCollider = false;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         Debug.Log("광역기 사라짐");
     }
