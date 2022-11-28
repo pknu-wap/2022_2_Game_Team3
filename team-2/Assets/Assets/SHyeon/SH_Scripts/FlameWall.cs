@@ -19,7 +19,7 @@ public class FlameWall : MonoBehaviour
             GameObject.Find("FlameWallGroup").transform.GetChild(i).gameObject.SetActive(true);
         }
         Debug.Log("광역기 생성됨");
-        FlameCollider = true;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
         Invoke("FlameFalse", 3f);
         yield return new WaitForSeconds(10f);
         StartCoroutine("Flame");
@@ -30,7 +30,8 @@ public class FlameWall : MonoBehaviour
         {
             GameObject.Find("FlameWallGroup").transform.GetChild(i).gameObject.SetActive(false);
         }
-        FlameCollider = false;
+        //FlameCollider = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         Debug.Log("광역기 사라짐");
     }
 

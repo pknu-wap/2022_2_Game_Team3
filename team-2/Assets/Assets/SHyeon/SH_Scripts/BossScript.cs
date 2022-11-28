@@ -214,7 +214,7 @@ public class BossScript : MonoBehaviour
     {
         print("EnemyState : Move");
         rushCoolTime = 0;
-        smith.speed = 50;
+        smith.speed = 30;
         smith.angularSpeed = 120;
         smith.acceleration = 8;
         m_State = EnemyState.Move;////////////////////////////////////////////////////////
