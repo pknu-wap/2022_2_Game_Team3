@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class BossPlayer : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class BossPlayer : MonoBehaviour
     private Transform bossWay;
     private Animator anim;
     private CharacterController playerController;
-    public Transform attackPoint;//플레이어의 공격이 나가는 위치
+    public Transform attackPoint; //플레이어의 공격이 나가는 위치
 
     
     
@@ -38,9 +39,15 @@ public class BossPlayer : MonoBehaviour
     public Transform enemypos;
     float currentTime;// 공격 딜레이용 변수
     float attackDelay = 1;// 공격 간 딜레이값
+    
+    private BoxCollider boxTest;
+
+    private GameObject boss;
     // Start is called before the first frame update
     private void Awake()
     {
+        boss = GameObject.Find("Boss");
+        boxTest = boss.GetComponent<BoxCollider>();
         playerController = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
         bossWay = GameObject.Find("Boss").transform;
@@ -168,7 +175,13 @@ public class BossPlayer : MonoBehaviour
                 if (hit.collider.CompareTag("Test"))
                 {
                     Destroy(hit.transform.gameObject);
-                    bossWay.transform.position = transform.position + new Vector3(10, 0, 10);
+                    for (int i = 0; i < 3; i++)
+                    {
+                        GameObject.Find("Boss").transform.GetChild(i).gameObject.SetActive(true);
+                        boss.GetComponent<BoxCollider>().enabled = true;
+                        boss.GetComponent<BossScript>().enabled = true;
+                        boss.GetComponent<EnemySkill>().enabled = true;
+                    }
                 }
             }
         }

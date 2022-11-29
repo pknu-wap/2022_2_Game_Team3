@@ -74,11 +74,13 @@ public class BossScript : MonoBehaviour
 
     void Idle()
     {
-        if(Vector3.Distance(transform.position, playerTransform.position) < findDistance)//�÷��̾ �ν� �Ÿ� ���� ������ �����̴� ���·� ��ȯ
-        {
+        if (transform.GetComponent<BoxCollider>().enabled == true)
             m_State = EnemyState.Move;
-            print("Idle -> Move");
-        }
+        //     if(Vector3.Distance(transform.position, playerTransform.position) < findDistance)//�÷��̾ �ν� �Ÿ� ���� ������ �����̴� ���·� ��ȯ
+        // {
+        //     m_State = EnemyState.Move;
+        //     print("Idle -> Move");
+        // }
     }
     void Move()
     {
