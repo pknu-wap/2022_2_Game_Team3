@@ -68,6 +68,7 @@ public class SystemManager : MonoBehaviour
     {
         Tutorial_Panel.SetActive(false);
         Cursor.visible = false;
+        TutorialMessage();
     }
 
     public void Exit()
@@ -106,6 +107,21 @@ public class SystemManager : MonoBehaviour
         nameText.text = "NPC_CAT";
         talkText.text = "안녕? 나랑 대화하지 않을래?";
         talkPanel.SetActive(true);
+        StartCoroutine(TextPanelOut());
+    }
+
+    public void TutorialMessage()
+    {
+        player.isLoading = true;
+        nameText.text = "Player";
+        talkText.text = "등산을 하던 와중에 길을 잃어버리고 비도 오기 시작한다.";
+        talkPanel.SetActive(true);
+        Invoke("nextTutorialMessage", 2.0f);
+    }
+
+    void nextTutorialMessage()
+    {
+        talkText.text = "비를 피할 곳을 찾아보자.";
         StartCoroutine(TextPanelOut());
     }
 
@@ -220,7 +236,9 @@ public class SystemManager : MonoBehaviour
 
     IEnumerator TextPanelOut()
     {
+        player.isLoading = true;
         yield return new WaitForSeconds(2.0f);
         talkPanel.SetActive(false);
+        player.isLoading = false;
     }
 }
