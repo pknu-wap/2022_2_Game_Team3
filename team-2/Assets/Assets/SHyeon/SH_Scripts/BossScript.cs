@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,7 +13,7 @@ public class BossScript : MonoBehaviour
 
     BossPlayer PlayerAttacked;
 
-    public int hp = 50;//보스 체력
+    public int hp = 9;//보스 체력
     public float bossSpeed = 75f;
     public float attackDistance = 20f;//���� ��Ÿ�
     public float findDistance = 50f;//�÷��̾� �ν� �Ÿ�
@@ -223,7 +224,12 @@ public class BossScript : MonoBehaviour
         print("Die");
         Destroy(gameObject);
     }
-    
+
+    private void OnDestroy()
+    {
+        GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(true);
+    }
+
     public void ReturntoMove()
     {
         print("EnemyState : Move");
