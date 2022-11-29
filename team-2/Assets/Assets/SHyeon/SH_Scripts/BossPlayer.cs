@@ -164,8 +164,13 @@ public class BossPlayer : MonoBehaviour
                     gameManager.Field_Change(clickObject);
                     isLoading = true;
                 }
+
+                if (hit.collider.CompareTag("Test"))
+                {
+                    Destroy(hit.transform.gameObject);
+                    bossWay.transform.position = transform.position + new Vector3(10, 0, 10);
+                }
             }
-            Debug.Log(clickObject.name);
         }
     }
     private void OnTriggerEnter(Collider other)
