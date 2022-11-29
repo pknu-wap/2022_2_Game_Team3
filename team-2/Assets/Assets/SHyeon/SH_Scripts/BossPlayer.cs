@@ -1,6 +1,8 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 
 public class BossPlayer : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class BossPlayer : MonoBehaviour
     private float hAxis, vAxis;
     private bool jDown;
     private bool iDown;
-    
+    public Image redScreen;
     public float playerSpeed;
 
     public bool isAttacked = false;
@@ -216,6 +218,14 @@ public class BossPlayer : MonoBehaviour
     public void DamageAction(int damage)
     {
         hp -= damage;
+        StartCoroutine(shpwredScreen());
         print("현재 남은 체력: " + hp);
+    }
+    IEnumerator shpwredScreen()//���� ��� �� ó��
+    {
+        print("hit");
+        redScreen.color = new Color(255, 0, 0, UnityEngine.Random.Range(0.2f, 0.3f));
+        yield return new WaitForSeconds(0.1f);//0.5�� �Ŀ� ���¸� attack���� ����->0.5�� ���� Attacking ���°� �����Ǹ� �� ������ ���ʹ̰� ������ ����
+        redScreen.color = Color.clear;
     }
 }

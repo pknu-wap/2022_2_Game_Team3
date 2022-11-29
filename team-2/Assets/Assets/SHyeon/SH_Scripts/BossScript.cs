@@ -118,6 +118,7 @@ public class BossScript : MonoBehaviour
         {
             print("Attack");
             playerTransform.GetComponent<BossPlayer>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
+
             currentTime = 0;//���� �� �����̸� ���� 
             m_State = EnemyState.Attacking;
             anim.SetTrigger("MoveToAttack");
