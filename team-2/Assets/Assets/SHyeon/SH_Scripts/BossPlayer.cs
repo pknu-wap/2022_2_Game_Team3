@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class BossPlayer : MonoBehaviour
 {
+    private GameObject ending;
     public enum playState//�÷��̾� ���� ����
     {
         Normal,
@@ -48,6 +49,7 @@ public class BossPlayer : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        ending = GameObject.Find("Canvas");
         boss = GameObject.Find("Boss");
         boxTest = boss.GetComponent<BoxCollider>();
         playerController = GetComponent<CharacterController>();
@@ -117,7 +119,6 @@ public class BossPlayer : MonoBehaviour
         movingWay = transform.TransformDirection(movingWay);
         if (isAttacked)
         {
-            print("hit");
             movingWay = (bossWay.transform.position - gameObject.transform.position).normalized;
             //movingWay = transform.TransformDirection(movingWay);
             playerController.Move(-movingWay * 100 * Time.deltaTime);
