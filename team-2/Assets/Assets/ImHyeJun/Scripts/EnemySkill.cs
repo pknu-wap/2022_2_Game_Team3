@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySkill : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class EnemySkill : MonoBehaviour
     //CharacterController playercc;
     Transform playerpos;
     BossScript.EnemyState enemyState;
+    public Image yellowScreen;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +29,10 @@ public class EnemySkill : MonoBehaviour
     {
         grep_currentTime += Time.deltaTime;
         fireball_currentTIme += Time.deltaTime;
-        if (grep_currentTime > grepTime)//��ų ��Ÿ���� ���� �÷��̾� ������� ���� �÷��̾� ���¸� �������� ����
+        if ((grep_currentTime > grepTime) && (enemyState != BossScript.EnemyState.Attack))//��ų ��Ÿ���� ���� �÷��̾� ������� ���� �÷��̾� ���¸� �������� ����
         {
             playerpos.GetComponent<BossPlayer>().p_State = BossPlayer.playState.Stun;
+            StartCoroutine(shpwyellowScreen());
             StartCoroutine(grepingend());
             /*Vector3 way = (transform.position - playerpos.position).normalized;
             playercc.Move(way * 2 *Time.deltaTime);*/
@@ -48,4 +52,11 @@ public class EnemySkill : MonoBehaviour
         yield return new WaitForSeconds(1f);//0.5�� �Ŀ� ���¸� attack���� ����->0.5�� ���� Attacking ���°� �����Ǹ� �� ������ ���ʹ̰� ������ ����
         playerpos.GetComponent<BossPlayer>().p_State = BossPlayer.playState.Normal;//
     }
+    IEnumerator shpwyellowScreen()//���� ��� �� ó��
+    {
+        yellowScreen.color = new Color(255, 220, 0, UnityEngine.Random.Range(0.2f, 0.3f));
+        yield return new WaitForSeconds(1f);//0.5�� �Ŀ� ���¸� attack���� ����->0.5�� ���� Attacking ���°� �����Ǹ� �� ������ ���ʹ̰� ������ ����
+        yellowScreen.color = Color.clear;
+    }
+
 }

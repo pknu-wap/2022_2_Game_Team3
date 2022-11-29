@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,7 +13,7 @@ public class BossScript : MonoBehaviour
 
     BossPlayer PlayerAttacked;
 
-    public int hp = 50;//보스 체력
+    public int hp = 9;//보스 체력
     public float bossSpeed = 75f;
     public float attackDistance = 20f;//���� ��Ÿ�
     public float findDistance = 50f;//�÷��̾� �ν� �Ÿ�
@@ -74,11 +75,13 @@ public class BossScript : MonoBehaviour
 
     void Idle()
     {
-        if(Vector3.Distance(transform.position, playerTransform.position) < findDistance)//�÷��̾ �ν� �Ÿ� ���� ������ �����̴� ���·� ��ȯ
-        {
+        if (transform.GetComponent<BoxCollider>().enabled == true)
             m_State = EnemyState.Move;
-            print("Idle -> Move");
-        }
+        //     if(Vector3.Distance(transform.position, playerTransform.position) < findDistance)//�÷��̾ �ν� �Ÿ� ���� ������ �����̴� ���·� ��ȯ
+        // {
+        //     m_State = EnemyState.Move;
+        //     print("Idle -> Move");
+        // }
     }
     void Move()
     {
@@ -115,6 +118,7 @@ public class BossScript : MonoBehaviour
         {
             print("Attack");
             playerTransform.GetComponent<BossPlayer>().DamageAction(attackPower);//수정 필요함 player��ũ��Ʈ�� �ִ� �÷��̾� ���� �Լ��� ������ ����
+
             currentTime = 0;//���� �� �����̸� ���� 
             m_State = EnemyState.Attacking;
             anim.SetTrigger("MoveToAttack");
@@ -221,7 +225,12 @@ public class BossScript : MonoBehaviour
         print("Die");
         Destroy(gameObject);
     }
-    
+
+    private void OnDestroy()
+    {
+        GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(true);
+    }
+
     public void ReturntoMove()
     {
         print("EnemyState : Move");
