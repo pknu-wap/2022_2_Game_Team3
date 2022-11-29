@@ -16,6 +16,7 @@ public class SystemManager : MonoBehaviour
     public GameObject mainMenu_Panel;
     public GameObject talkPanel;
     public GameObject Information_Panel;
+    public GameObject Tutorial_Panel;
     public Text talkText;
     public Text nameText;
     public bool isAction;
@@ -40,6 +41,7 @@ public class SystemManager : MonoBehaviour
         mainMenu_Panel.SetActive(true);
         player.gameObject.SetActive(false);
         MainMenu.gameObject.SetActive(true);
+        Cursor.visible = true;
     }
 
     public void NewGameButton()
@@ -50,6 +52,7 @@ public class SystemManager : MonoBehaviour
         MainMenu.gameObject.SetActive(false);
         player.gameObject.SetActive(true);
         startMessage.SetActive(true);
+        Tutorial_Panel.SetActive(true);
     }
 
     public void ContinueGameButton()
@@ -58,6 +61,13 @@ public class SystemManager : MonoBehaviour
         gameManager.Gameload();
         MainMenu.gameObject.SetActive(false);
         player.gameObject.SetActive(true);
+        Cursor.visible = false;
+    }
+
+    public void TutorialButton()
+    {
+        Tutorial_Panel.SetActive(false);
+        Cursor.visible = false;
     }
 
     public void Exit()
@@ -138,6 +148,7 @@ public class SystemManager : MonoBehaviour
     public void SetInformationPanel()
     {
         isSelectInformation = true;
+        Cursor.visible = true;
         Information_Panel.SetActive(true);
     }
 
@@ -164,6 +175,7 @@ public class SystemManager : MonoBehaviour
 
     public void MazeInformation()
     {
+        Cursor.visible = false;
         informationId = 0;
         Information_Panel.SetActive(false);
         isSelectInformation = false;
@@ -172,6 +184,7 @@ public class SystemManager : MonoBehaviour
 
     public void JumpInformation()
     {
+        Cursor.visible = false;
         informationId = 1;
         Information_Panel.SetActive(false);
         isSelectInformation = false;
@@ -180,6 +193,7 @@ public class SystemManager : MonoBehaviour
 
     public void TreasureInformation()
     {
+        Cursor.visible = false;
         informationId = 2;
         Information_Panel.SetActive(false);
         isSelectInformation = false;
@@ -188,6 +202,7 @@ public class SystemManager : MonoBehaviour
 
     public void RCPInformation()
     {
+        Cursor.visible = false;
         informationId = 3;
         Information_Panel.SetActive(false);
         isSelectInformation = false;
@@ -196,6 +211,7 @@ public class SystemManager : MonoBehaviour
 
     public void BossInformation()
     {
+        Cursor.visible = false;
         informationId = 4;
         Information_Panel.SetActive(false);
         isSelectInformation = false;

@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         }
 
         isPause = false;
+        Cursor.visible = true;
     }
 
     public void Field_Change(GameObject interactionOBJ)
@@ -234,12 +235,14 @@ public class GameManager : MonoBehaviour
     {
         if(isPause == true)
         {
+            Cursor.visible = false;
             Time.timeScale = 1;
             isPause = false;
             systemManager.GetComponent<SystemManager>().pause_Panel.SetActive(false);
         }
         else
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
             isPause = true;
             systemManager.GetComponent<SystemManager>().pause_Panel.SetActive(true);
