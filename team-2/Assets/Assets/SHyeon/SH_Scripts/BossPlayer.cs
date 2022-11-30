@@ -41,7 +41,7 @@ public class BossPlayer : MonoBehaviour
     public playState p_State;
     public Transform enemypos;
     float currentTime;// 공격 딜레이용 변수
-    float attackDelay = 1;// 공격 간 딜레이값
+    float attackDelay = 0.5f;// 공격 간 딜레이값
     
     private BoxCollider boxTest;
 
@@ -96,10 +96,10 @@ public class BossPlayer : MonoBehaviour
             {
                 print("공격 시전");
                 Ray ray = new Ray(attackPoint.position, attackPoint.forward);
-                Debug.DrawRay(ray.origin, ray.direction * 1.5f, Color.blue);
+                Debug.DrawRay(ray.origin, ray.direction * 3f, Color.blue);
                 RaycastHit hit;
                 currentTime = 0;//공격 쿨타임 돌리기
-                if (Physics.Raycast(ray, out hit, 1.5f)) //1,5.길이의 짧은 레이(근접 공격)에 보스가 맞으면 보스의 데미지 처리 함수를 불러와 공격 
+                if (Physics.Raycast(ray, out hit, 3f)) //1,5.길이의 짧은 레이(근접 공격)에 보스가 맞으면 보스의 데미지 처리 함수를 불러와 공격 
                 {
                     if (hit.collider.CompareTag("Test"))///////////////////////////////보스 태그이름
                     {
