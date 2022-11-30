@@ -142,6 +142,12 @@ public class GameManager : MonoBehaviour
             roomState[rooms[2]] = 1;
             artifactNum = 2;
         }
+        else if(artifact.name == room_Artifacts[3].name)
+        {
+            room_Artifacts[3].SetActive(false);
+            roomState[rooms[3]] = 1;
+            artifactNum = 3;
+        }
         if(isNeedArtifact)
         {
             isNeedArtifact = false;
@@ -213,6 +219,16 @@ public class GameManager : MonoBehaviour
         }
         if(artifactNum == 2) 
         {
+            save_Artifacts[artifactNum].SetActive(false);
+        }
+        artifactNum = -1;
+    }
+
+    public void RSP_First_Phase()
+    {
+        if(artifactNum == 3)
+        {
+            room_Artifacts[artifactNum].SetActive(true);
             save_Artifacts[artifactNum].SetActive(false);
         }
         artifactNum = -1;
@@ -314,6 +330,20 @@ public class GameManager : MonoBehaviour
             save_Artifacts[2].SetActive(false);
             Treasure_First_Phase();
         }
+
+        if(PlayerPrefs.HasKey("RCP_state"))
+        {
+            roomState[rooms[3]] = 1;
+            rooms[3].SetActive(false);
+            save_Artifacts[3].SetActive(true);
+        }
+        else
+        {
+            roomState[rooms[3]] = 0;
+            rooms[3].SetActive(true);
+            save_Artifacts[3].SetActive(false);
+            RSP_First_Phase();
+        }
     }
     IEnumerator Current_Save()
     {
@@ -360,6 +390,11 @@ public class GameManager : MonoBehaviour
         {
             roomState[rooms[artifactNum]] = 0;
             Treasure_First_Phase();
+        }
+        else if(artifactNum == 3)
+        {
+            roomState[rooms[artifactNum]] = 0;
+            RSP_First_Phase();
         }
     }
 }

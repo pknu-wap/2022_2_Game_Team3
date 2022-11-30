@@ -16,6 +16,7 @@ public class RSP : MonoBehaviour
     public SystemManager systemManger;
     public Player player;
     public GameObject[] screen_s;
+    public GameObject[] stairs;
     bool isPlay;
 
     public int PlayerWinCount = 0;
@@ -41,7 +42,7 @@ public class RSP : MonoBehaviour
         int randomNum = Random.Range(4,7);
         randomRCP = ((RCPNum)randomNum).ToString();
         Debug.Log("randomRCP ÀÇ °ª : " + randomRCP);
-        
+
         screen_s[7].SetActive(false);
         screen_s[8].SetActive(false);
         screen_s[0].SetActive(true);
@@ -68,6 +69,7 @@ public class RSP : MonoBehaviour
         {
             if(randomRSP == "Scissor")
             {
+                stairs[PlayerWinCount].SetActive(true);
                 PlayerWinCount++;
                 screen_s[(int)RCPNum.Scissor].SetActive(false);
                 screen_s[7].SetActive(true);
@@ -75,15 +77,26 @@ public class RSP : MonoBehaviour
             else
             {
                 screen_s[(int)RCPNum.Scissor].SetActive(false);
-                screen_s[8].SetActive(false);
-                player.live = false;
-                gameManager.GameOver();
+                screen_s[8].SetActive(true);
+
+                for(int i = 0; i < stairs.Length; i++)
+                {
+                    stairs[i].SetActive(false);
+                }
+                PlayerWinCount = 0;
+
+                if(player.live)
+                {
+                    player.live = false;
+                    gameManager.GameOver();
+                }
             }
         }
         else if(playerRSP == "Scissor")
         {
             if(randomRSP == "Paper")
             {
+                stairs[PlayerWinCount].SetActive(true);
                 PlayerWinCount++;
                 screen_s[(int)RCPNum.Paper].SetActive(false);
                 screen_s[7].SetActive(true);
@@ -91,15 +104,26 @@ public class RSP : MonoBehaviour
             else
             {
                 screen_s[(int)RCPNum.Paper].SetActive(false);
-                screen_s[8].SetActive(false);
-                player.live = false;
-                gameManager.GameOver();
+                screen_s[8].SetActive(true);
+                
+                for(int i = 0; i < stairs.Length; i++)
+                {
+                    stairs[i].SetActive(false);
+                }
+                PlayerWinCount = 0;
+
+                if(player.live)
+                {
+                    player.live = false;
+                    gameManager.GameOver();
+                }
             }
         }
         else if(playerRSP == "Paper")
         {
             if(randomRSP == "Rock")
             {
+                stairs[PlayerWinCount].SetActive(true);
                 PlayerWinCount++;
                 screen_s[(int)RCPNum.Rock].SetActive(false);
                 screen_s[7].SetActive(true);
@@ -107,9 +131,19 @@ public class RSP : MonoBehaviour
             else
             {
                 screen_s[(int)RCPNum.Rock].SetActive(false);
-                screen_s[8].SetActive(false);
-                player.live = false;
-                gameManager.GameOver();
+                screen_s[8].SetActive(true);
+                
+                for(int i = 0; i < stairs.Length; i++)
+                {
+                    stairs[i].SetActive(false);
+                }
+                PlayerWinCount = 0;
+
+                if(player.live)
+                {
+                    player.live = false;
+                    gameManager.GameOver();
+                }
             }
         }
         yield return new WaitForSeconds(2.0f);
