@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     public GameManager gameManager; // 게임매니저
     public SystemManager systemManager; // 시스템 매니저
+    public RSP rsp;
 
     //public GameObject feildPointObj; // 필드이동에 사용되는 포인트 지점 체크하는 변수 
 
@@ -150,6 +151,11 @@ public class Player : MonoBehaviour
         {
             live = false;
             gameManager.GameOver();
+        }
+        else if(other.gameObject.name == "Paper" || other.gameObject.name == "Scissor" || other.gameObject.name == "Rock")
+        {
+            Debug.Log("내가 밟고 있는거 " + other.gameObject.name);
+            rsp.SetPlayerRCP(other.gameObject.name);
         }
     }
 

@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         
         for(int i = 0; i < rooms.Length; i++)
         {
-            roomState.Add(rooms[i], 1);
+            roomState.Add(rooms[i], 0);
         }
 
         foreach(KeyValuePair<GameObject, int> pair in roomState)
