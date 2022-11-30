@@ -4,38 +4,33 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public float turnSpeed = 4.0f;
-    private float xRotate = 0.0f;
-    private Transform playerTransform;
-
-    private Vector3 offset;
+    public GameObject player;
+    float rotSpeed;
+    float currentRot;
+    
+    // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GameObject.FindWithTag("Player").transform;
-        offset = transform.position - playerTransform.position;
+        rotSpeed = 3.0f;
+        currentRot = 0f;
     }
 
-    void LateUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        transform.position = playerTransform.position + offset;
-        //MouseRotation();
-    }
-    
-    void MouseRotation()
-    {
-        // 좌우로 움직인 마우스의 이동량 * 속도에 따라 카메라가 좌우로 회전할 양 계산
-        float yRotateSize = Input.GetAxis("Mouse X") * turnSpeed;
-        // 현재 y축 회전값에 더한 새로운 회전각도 계산
-        float yRotate = transform.eulerAngles.y + yRotateSize;
+        float rotX = Input.GetAxis("Mouse Y") * rotSpeed;
+        float rotY = Input.GetAxis("Mouse X") * rotSpeed;
 
-        // 위아래로 움직인 마우스의 이동량 * 속도에 따라 카메라가 회전할 양 계산(하늘, 바닥을 바라보는 동작)
-        float xRotateSize = -Input.GetAxis("Mouse Y") * turnSpeed;
-        // 위아래 회전량을 더해주지만 -45도 ~ 80도로 제한 (-45:하늘방향, 80:바닥방향)
-        // Clamp 는 값의 범위를 제한하는 함수
-        xRotate = Mathf.Clamp(xRotate + xRotateSize, -45, 80);
-    
-        // 카메라 회전량을 카메라에 반영(X, Y축만 회전)
-        transform.eulerAngles = new Vector3(xRotate, yRotate, 0);
-        playerTransform.LookAt(transform.eulerAngles);
+        // ���콺 ����
+        currentRot -= rotX;
+
+        // ���콺�� Ư�� ������ �Ѿ�� �ʰ� ����ó��
+        currentRot = Mathf.Clamp(currentRot, -60f, 60f);
+
+
+        player.transform.localRotation *= Quaternion.Euler(0, rotY, 0);
+        // Camera�� transform ������Ʈ�� ���÷����̼��� ���Ϸ����� 
+        // ����X�� �����̼��� ��Ÿ���� ���Ϸ����� �Ҵ����ش�.
+        transform.localEulerAngles = new Vector3(currentRot, 0f, 0f);
     }
 }
