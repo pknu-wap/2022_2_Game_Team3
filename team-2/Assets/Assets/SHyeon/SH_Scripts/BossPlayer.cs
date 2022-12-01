@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -31,10 +32,9 @@ public class BossPlayer : MonoBehaviour
     private CharacterController playerController;
     public Transform attackPoint;
 
-    public AudioClip clip;//플레이어의 공격이 나가는 위치
+    public AudioClip clip;
 
-    
-    
+
     public bool isLoading;  // �ε����϶� �÷��̾� �Ͻ��������(������ �� ���� x).
     
     GameObject clickObject;  // �÷��̾ ��ȣ�ۿ� �� ������Ʈ�� �־��� ����.
@@ -48,11 +48,14 @@ public class BossPlayer : MonoBehaviour
     private BoxCollider boxTest;
 
     private GameObject boss;
+    private GameObject camObject;
+    public String bgmName = "";
 
     public Image yellowScreen;
     // Start is called before the first frame update
     private void Awake()
     {
+        camObject = GameObject.Find("Main Camera");
         ending = GameObject.Find("Canvas");
         boss = GameObject.Find("Boss");
         boxTest = boss.GetComponent<BoxCollider>();
@@ -184,10 +187,12 @@ public class BossPlayer : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                     for (int i = 0; i < 3; i++)
                     {
+                        camObject.GetComponent<PlayMusicOperator>().PlayBGM(bgmName);
                         GameObject.Find("Boss").transform.GetChild(i).gameObject.SetActive(true);
                         boss.GetComponent<BoxCollider>().enabled = true;
                         boss.GetComponent<BossScript>().enabled = true;
                         boss.GetComponent<EnemySkill>().enabled = true;
+                        
                     }
                 }
             }

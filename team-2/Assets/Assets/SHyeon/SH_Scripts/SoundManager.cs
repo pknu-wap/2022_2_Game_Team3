@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public AudioSource bgSound;
     public static SoundManager instance;
 
     private void Awake()
@@ -29,7 +30,6 @@ public class SoundManager : MonoBehaviour
         
         Destroy(go, clip.length);
     }
-
     // Start is called before the first frame update
     void Start()
     {
