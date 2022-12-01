@@ -29,7 +29,9 @@ public class BossPlayer : MonoBehaviour
     private Transform bossWay;
     private Animator anim;
     private CharacterController playerController;
-    public Transform attackPoint; //플레이어의 공격이 나가는 위치
+    public Transform attackPoint;
+
+    public AudioClip clip;//플레이어의 공격이 나가는 위치
 
     
     
@@ -144,7 +146,7 @@ public class BossPlayer : MonoBehaviour
         {
             playerSpeed *= 2;
             isDodge = true;
-            
+            SoundManager.instance.SFXPlay("Dodge", clip);
             Invoke("DodgeOut", 0.5f);
         }
     }
