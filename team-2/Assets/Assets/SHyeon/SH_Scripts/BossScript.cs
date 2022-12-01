@@ -103,7 +103,7 @@ public class BossScript : MonoBehaviour
 
             smith.destination = playerTransform.position;
         }
-        else//�÷��̾ ���ݻ�Ÿ� ���϶�(else if��?)
+        else
         {
             m_State = EnemyState.Attack;
             print("Move -> Attack");

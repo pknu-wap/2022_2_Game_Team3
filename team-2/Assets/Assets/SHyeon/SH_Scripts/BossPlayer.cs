@@ -46,6 +46,8 @@ public class BossPlayer : MonoBehaviour
     private BoxCollider boxTest;
 
     private GameObject boss;
+
+    public Image yellowScreen;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -175,7 +177,7 @@ public class BossPlayer : MonoBehaviour
                     isLoading = true;
                 }
 
-                if (hit.collider.CompareTag("Test"))
+                if (hit.collider.CompareTag("NPC"))
                 {
                     Destroy(hit.transform.gameObject);
                     for (int i = 0; i < 3; i++)
